@@ -1199,7 +1199,11 @@
     .check-gold   { color: var(--gold-mem); }
 
     /* ===== RESPONSIVE ===== */
+    /* Factory grid responsive */
+    .factory-grid { grid-template-columns: repeat(4, 1fr); }
+
     @media (max-width: 900px) {
+      .factory-grid { grid-template-columns: repeat(2, 1fr); }
       .hero-content { grid-template-columns: 1fr; text-align: center; }
       .hero-visual { display: none; }
       .hero-stats { justify-content: center; }
@@ -1220,6 +1224,7 @@
       .products-grid { gap: 1.5rem; }
     }
     @media (max-width: 600px) {
+      .factory-grid { grid-template-columns: 1fr; }
       .nav-links, .nav-actions { display: none; }
       .hamburger { display: flex; }
       section { padding: 3rem 4%; }
@@ -1604,33 +1609,33 @@
       <!-- Factory Locations Map -->
       <div class="factory-locations" style="background:#fff;border-radius:24px;padding:2.5rem;box-shadow:0 8px 40px rgba(0,0,0,0.08);margin-top:2rem;">
         <h3 style="text-align:center;font-size:1.3rem;color:#1a3a2f;margin-bottom:1.5rem;font-weight:600;">🏭 Our Manufacturing Footprint</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;">
+        <div class="factory-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;">
           <div style="display:flex;align-items:center;gap:1rem;padding:1rem;background:#faf8f5;border-radius:12px;">
-            <div style="width:48px;height:48px;background:#e8dcc8;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">🇨🇳</div>
-            <div>
-              <div style="font-weight:600;color:#1a3a2f;">China (4 factories)</div>
-              <div style="font-size:0.8rem;color:#666;">Henan, Dongguan, Huizhou, Anhui</div>
+            <div style="width:48px;height:48px;background:#e8dcc8;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;">🇨🇳</div>
+            <div style="min-width:0;overflow:hidden;">
+              <div style="font-weight:600;color:#1a3a2f;white-space:normal;word-break:break-word;">China (4 factories)</div>
+              <div style="font-size:0.8rem;color:#666;white-space:normal;word-break:break-word;">Henan, Dongguan, Huizhou, Anhui</div>
             </div>
           </div>
           <div style="display:flex;align-items:center;gap:1rem;padding:1rem;background:#faf8f5;border-radius:12px;">
-            <div style="width:48px;height:48px;background:#e8dcc8;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">🇰🇭</div>
-            <div>
-              <div style="font-weight:600;color:#1a3a2f;">Cambodia (2 factories)</div>
-              <div style="font-size:0.8rem;color:#666;">Bavet, Phnom Penh</div>
+            <div style="width:48px;height:48px;background:#e8dcc8;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;">🇰🇭</div>
+            <div style="min-width:0;overflow:hidden;">
+              <div style="font-weight:600;color:#1a3a2f;white-space:normal;word-break:break-word;">Cambodia (2 factories)</div>
+              <div style="font-size:0.8rem;color:#666;white-space:normal;word-break:break-word;">Bavet, Phnom Penh</div>
             </div>
           </div>
           <div style="display:flex;align-items:center;gap:1rem;padding:1rem;background:#faf8f5;border-radius:12px;">
-            <div style="width:48px;height:48px;background:#e8dcc8;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">🇻🇳</div>
-            <div>
-              <div style="font-weight:600;color:#1a3a2f;">Vietnam (2 factories)</div>
-              <div style="font-size:0.8rem;color:#666;">Binh Duong</div>
+            <div style="width:48px;height:48px;background:#e8dcc8;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;">🇻🇳</div>
+            <div style="min-width:0;overflow:hidden;">
+              <div style="font-weight:600;color:#1a3a2f;white-space:normal;word-break:break-word;">Vietnam (2 factories)</div>
+              <div style="font-size:0.8rem;color:#666;white-space:normal;word-break:break-word;">Binh Duong</div>
             </div>
           </div>
           <div style="display:flex;align-items:center;gap:1rem;padding:1rem;background:#faf8f5;border-radius:12px;">
-            <div style="width:48px;height:48px;background:#e8dcc8;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">🇹🇭</div>
-            <div>
-              <div style="font-weight:600;color:#1a3a2f;">Thailand (1 factory)</div>
-              <div style="font-size:0.8rem;color:#666;">Bangkok</div>
+            <div style="width:48px;height:48px;background:#e8dcc8;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;">🇹🇭</div>
+            <div style="min-width:0;overflow:hidden;">
+              <div style="font-weight:600;color:#1a3a2f;white-space:normal;word-break:break-word;">Thailand (1 factory)</div>
+              <div style="font-size:0.8rem;color:#666;white-space:normal;word-break:break-word;">Bangkok</div>
             </div>
           </div>
         </div>
