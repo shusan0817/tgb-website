@@ -1201,6 +1201,37 @@
     /* ===== RESPONSIVE ===== */
     /* Factory grid responsive */
     .factory-grid { grid-template-columns: repeat(4, 1fr); }
+    
+    /* Factory card - centered vertical layout for stable bilingual display */
+    .factory-card {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+      padding: 1.2rem 0.8rem !important;
+      background: #faf8f5;
+      border-radius: 12px;
+      min-width: 0 !important;
+      overflow: visible !important;
+    }
+    .factory-flag { font-size: 2rem; margin-bottom: 0.6rem; flex-shrink: 0; }
+    .factory-title {
+      font-weight: 600;
+      color: #1a1a1a;
+      font-size: 0.92rem;
+      line-height: 1.4;
+      word-break: normal;
+      overflow-wrap: break-word;
+      max-width: 100%;
+    }
+    .factory-desc {
+      font-size: 0.78rem;
+      color: #555;
+      margin-top: 0.3rem;
+      line-height: 1.4;
+      word-break: normal;
+      overflow-wrap: break-word;
+    }
 
     @media (max-width: 900px) {
       .factory-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1608,35 +1639,27 @@
 
       <!-- Factory Locations Map -->
       <div class="factory-locations" style="background:#fff;border-radius:24px;padding:2.5rem;box-shadow:0 8px 40px rgba(0,0,0,0.08);margin-top:2rem;">
-        <h3 style="text-align:center;font-size:1.3rem;color:#1a3a2f;margin-bottom:1.5rem;font-weight:600;">🏭 Our Manufacturing Footprint</h3>
-        <div class="factory-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;">
-          <div style="display:flex;align-items:center;gap:1rem;padding:1rem;background:#faf8f5;border-radius:12px;">
-            <div style="width:48px;height:48px;background:#e8dcc8;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;">🇨🇳</div>
-            <div style="min-width:0;overflow:hidden;">
-              <div style="font-weight:600;color:#1a3a2f;white-space:normal;word-break:break-word;">China (4 factories)</div>
-              <div style="font-size:0.8rem;color:#666;white-space:normal;word-break:break-word;">Henan, Dongguan, Huizhou, Anhui</div>
-            </div>
+        <h3 style="text-align:center;font-size:1.3rem;color:#1a1a1a;margin-bottom:1.5rem;font-weight:600;">🏭 Our Manufacturing Footprint</h3>
+        <div class="factory-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;">
+          <div class="factory-card" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.2rem 0.8rem;background:#faf8f5;border-radius:12px;">
+            <div class="factory-flag" style="font-size:2rem;margin-bottom:0.6rem;">🇨🇳</div>
+            <div class="factory-title" style="font-weight:600;color:#1a1a1a;font-size:0.92rem;line-height:1.4;word-break:normal;">China (4 factories)</div>
+            <div class="factory-desc" style="font-size:0.78rem;color:#555;margin-top:0.3rem;line-height:1.4;">Henan, Dongguan, Huizhou, Anhui</div>
           </div>
-          <div style="display:flex;align-items:center;gap:1rem;padding:1rem;background:#faf8f5;border-radius:12px;">
-            <div style="width:48px;height:48px;background:#e8dcc8;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;">🇰🇭</div>
-            <div style="min-width:0;overflow:hidden;">
-              <div style="font-weight:600;color:#1a3a2f;white-space:normal;word-break:break-word;">Cambodia (2 factories)</div>
-              <div style="font-size:0.8rem;color:#666;white-space:normal;word-break:break-word;">Bavet, Phnom Penh</div>
-            </div>
+          <div class="factory-card" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.2rem 0.8rem;background:#faf8f5;border-radius:12px;">
+            <div class="factory-flag" style="font-size:2rem;margin-bottom:0.6rem;">🇰🇭</div>
+            <div class="factory-title" style="font-weight:600;color:#1a1a1a;font-size:0.92rem;line-height:1.4;word-break:normal;">Cambodia (2 factories)</div>
+            <div class="factory-desc" style="font-size:0.78rem;color:#555;margin-top:0.3rem;line-height:1.4;">Bavet, Phnom Penh</div>
           </div>
-          <div style="display:flex;align-items:center;gap:1rem;padding:1rem;background:#faf8f5;border-radius:12px;">
-            <div style="width:48px;height:48px;background:#e8dcc8;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;">🇻🇳</div>
-            <div style="min-width:0;overflow:hidden;">
-              <div style="font-weight:600;color:#1a3a2f;white-space:normal;word-break:break-word;">Vietnam (2 factories)</div>
-              <div style="font-size:0.8rem;color:#666;white-space:normal;word-break:break-word;">Binh Duong</div>
-            </div>
+          <div class="factory-card" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.2rem 0.8rem;background:#faf8f5;border-radius:12px;">
+            <div class="factory-flag" style="font-size:2rem;margin-bottom:0.6rem;">🇻🇳</div>
+            <div class="factory-title" style="font-weight:600;color:#1a1a1a;font-size:0.92rem;line-height:1.4;word-break:normal;">Vietnam (2 factories)</div>
+            <div class="factory-desc" style="font-size:0.78rem;color:#555;margin-top:0.3rem;line-height:1.4;">Binh Duong</div>
           </div>
-          <div style="display:flex;align-items:center;gap:1rem;padding:1rem;background:#faf8f5;border-radius:12px;">
-            <div style="width:48px;height:48px;background:#e8dcc8;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;">🇹🇭</div>
-            <div style="min-width:0;overflow:hidden;">
-              <div style="font-weight:600;color:#1a3a2f;white-space:normal;word-break:break-word;">Thailand (1 factory)</div>
-              <div style="font-size:0.8rem;color:#666;white-space:normal;word-break:break-word;">Bangkok</div>
-            </div>
+          <div class="factory-card" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.2rem 0.8rem;background:#faf8f5;border-radius:12px;">
+            <div class="factory-flag" style="font-size:2rem;margin-bottom:0.6rem;">🇹🇭</div>
+            <div class="factory-title" style="font-weight:600;color:#1a1a1a;font-size:0.92rem;line-height:1.4;word-break:normal;">Thailand (1 factory)</div>
+            <div class="factory-desc" style="font-size:0.78rem;color:#555;margin-top:0.3rem;line-height:1.4;">Bangkok</div>
           </div>
         </div>
       </div>
@@ -2884,19 +2907,19 @@
         if (timelineItems[3]) timelineItems[3].querySelector('div:last-child').innerHTML = lang === 'en' ? 'New Cambodia<br/>Factory' : '柬埔寨<br/>新工厂';
         
         // Update factory locations
-        const factoryLocationDivs = aboutSection.querySelectorAll('.factory-locations > div > div');
+        const factoryCards = document.querySelectorAll('.factory-card');
         const factoryData = [
           { title: lang === 'en' ? 'China (4 factories)' : '中国 (4家工厂)', desc: lang === 'en' ? 'Henan, Dongguan, Huizhou, Anhui' : '河南、东莞、惠州、安徽' },
           { title: lang === 'en' ? 'Cambodia (2 factories)' : '柬埔寨 (2家工厂)', desc: lang === 'en' ? 'Bavet, Phnom Penh' : '巴域、金边' },
           { title: lang === 'en' ? 'Vietnam (2 factories)' : '越南 (2家工厂)', desc: lang === 'en' ? 'Binh Duong' : '平阳' },
           { title: lang === 'en' ? 'Thailand (1 factory)' : '泰国 (1家工厂)', desc: lang === 'en' ? 'Bangkok' : '曼谷' }
         ];
-        factoryLocationDivs.forEach((div, i) => {
+        factoryCards.forEach((card, i) => {
           if (factoryData[i]) {
-            const h4 = div.querySelector('div:first-child');
-            const p = div.querySelector('div:last-child');
-            if (h4) h4.textContent = factoryData[i].title;
-            if (p) p.textContent = factoryData[i].desc;
+            const titleEl = card.querySelector('.factory-title');
+            const descEl = card.querySelector('.factory-desc');
+            if (titleEl) titleEl.textContent = factoryData[i].title;
+            if (descEl) descEl.textContent = factoryData[i].desc;
           }
         });
         
