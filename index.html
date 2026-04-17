@@ -1262,7 +1262,10 @@
     }
     @media (max-width: 600px) {
       .factory-grid { grid-template-columns: 1fr; }
-      .nav-links, .nav-actions { display: none; }
+      .nav-links { display: none; }
+      .nav-actions { display: flex; }
+      .btn-nav { display: none; }
+      .lang-switcher { background: rgba(107,76,42,0.12); }
       .hamburger { display: flex; }
       section { padding: 3rem 4%; }
       .section-header { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
@@ -1669,6 +1672,10 @@
     <a href="craft.html" id="mNavCraft">Craft</a>
     <a href="process.html" id="mNavProcess">Process</a>
     <a href="gallery.html" id="mNavGallery">Gallery</a>
+    <div style="display:flex;justify-content:center;gap:0.5rem;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(107,76,42,0.15);">
+      <button class="lang-btn active" onclick="setLang('en')" style="padding:0.4rem 1.2rem;border-radius:20px;border:none;cursor:pointer;font-size:0.85rem;font-weight:600;">EN</button>
+      <button class="lang-btn" onclick="setLang('zh')" style="padding:0.4rem 1.2rem;border-radius:20px;border:none;cursor:pointer;font-size:0.85rem;font-weight:600;">中</button>
+    </div>
   </div>
 
   <section class="hero" id="home">

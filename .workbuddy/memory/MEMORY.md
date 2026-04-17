@@ -31,9 +31,11 @@ images 文件夹内的英文文件名对应关系：
 - 2026-04-12：从 Netlify 迁移至 GitHub Pages 部署
 - 2026-04-13：**移除视频上的英文字幕叠加层**（`.video-overlay` div 及相关 CSS），让 Gallery 视频播放界面更简洁
 - 2026-04-16：**新增生产工艺流程板块**（`#process`），整合PPT第13-19页的端到端制造流程和测试实验室展示
+- 2026-04-17：**修复移动端字体溢出和布局问题**
+- 2026-04-17：**将单页网站拆分为6个独立页面**（index.html首页 + about.html + products.html + craft.html + process.html + gallery.html），导航栏统一链接到各独立页面（全局 break-word、clamp() 响应式字号、Process 改为网格布局、Cambodia/Timeline/Clients 字号适配、Lightbox nowrap 修复等）
 
 ## 用户偏好
 - 简洁直接，用"ok了"确认任务完成
-- 遇到技术问题让 AI 处理，部署仍需手动 push 至 GitHub
+- 遇到技术问题让 AI 处理，部署可以让 AI 帮忙 push
 - 顺序迭代式工作流程
 - 本地预览命令：`python -m http.server 8080`（在工作目录执行）

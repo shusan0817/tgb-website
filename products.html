@@ -1262,7 +1262,10 @@
     }
     @media (max-width: 600px) {
       .factory-grid { grid-template-columns: 1fr; }
-      .nav-links, .nav-actions { display: none; }
+      .nav-links { display: none; }
+      .nav-actions { display: flex; }
+      .btn-nav { display: none; }
+      .lang-switcher { background: rgba(107,76,42,0.12); }
       .hamburger { display: flex; }
       section { padding: 3rem 4%; }
       .section-header { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
@@ -1608,6 +1611,42 @@
       background: rgba(201,169,98,0.15);
       border-color: rgba(201,169,98,0.3);
     }
+    /* PPT Showcase Grid */
+    .ppt-showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .ppt-showcase-grid.ppt-showcase-3col {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .ppt-showcase-item {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      transition: transform 0.3s, box-shadow 0.3s;
+      aspect-ratio: 4/3;
+    }
+    .ppt-showcase-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    }
+    .ppt-showcase-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    @media (max-width: 900px) {
+      .ppt-showcase-grid { grid-template-columns: repeat(2, 1fr); }
+      .ppt-showcase-grid.ppt-showcase-3col { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .ppt-showcase-grid { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+      .ppt-showcase-grid.ppt-showcase-3col { grid-template-columns: repeat(2, 1fr); }
+      .ppt-showcase-item { border-radius: 12px; }
+    }
   </style>
 
 </head>
@@ -1647,6 +1686,10 @@
     <a href="craft.html" id="mNavCraft">Craft</a>
     <a href="process.html" id="mNavProcess">Process</a>
     <a href="gallery.html" id="mNavGallery">Gallery</a>
+    <div style="display:flex;justify-content:center;gap:0.5rem;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(107,76,42,0.15);">
+      <button class="lang-btn active" onclick="setLang('en')" style="padding:0.4rem 1.2rem;border-radius:20px;border:none;cursor:pointer;font-size:0.85rem;font-weight:600;">EN</button>
+      <button class="lang-btn" onclick="setLang('zh')" style="padding:0.4rem 1.2rem;border-radius:20px;border:none;cursor:pointer;font-size:0.85rem;font-weight:600;">中</button>
+    </div>
   </div>
 
   <section class="features">
@@ -1817,6 +1860,115 @@
         <h3>Garden Lounge</h3>
         <p>Sink into luxury with our all-weather wicker lounge range.</p>
         <a href="#products">Shop Now →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PPT SHOWCASE: Outdoor Decor ===== -->
+  <section style="padding:5rem 5%;background:#faf8f5;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="section-header" style="margin-bottom:2.5rem;">
+        <div class="section-header-left">
+          <div class="section-label" id="decorLabel">Sample Display</div>
+          <h2 class="section-title" id="decorTitle">Outdoor <span>Decor</span></h2>
+          <p class="section-desc" id="decorDesc">Decorative pieces that bring life and character to any outdoor space.</p>
+        </div>
+      </div>
+      <div class="ppt-showcase-grid">
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_decor1.png" alt="Outdoor Decor 1"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_decor2.png" alt="Outdoor Decor 2"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_decor3.png" alt="Outdoor Decor 3"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_decor4.png" alt="Outdoor Decor 4"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_decor5.jpeg" alt="Outdoor Decor 5"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_decor6.png" alt="Outdoor Decor 6"/></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PPT SHOWCASE: Inflatable Series ===== -->
+  <section style="padding:5rem 5%;background:linear-gradient(180deg,#f0ebe3 0%,#faf8f5 100%);">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="section-header" style="margin-bottom:2.5rem;">
+        <div class="section-header-left">
+          <div class="section-label" id="inflateLabel">Sample Display</div>
+          <h2 class="section-title" id="inflateTitle">Inflatable <span>Series</span></h2>
+          <p class="section-desc" id="inflateDesc">Fun and durable inflatable products for poolside and beach enjoyment.</p>
+        </div>
+      </div>
+      <div class="ppt-showcase-grid">
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_inflatable1.png" alt="Inflatable 1"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_inflatable2.png" alt="Inflatable 2"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_inflatable3.png" alt="Inflatable 3"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_inflatable4.png" alt="Inflatable 4"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_inflatable5.png" alt="Inflatable 5"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_inflatable6.png" alt="Inflatable 6"/></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PPT SHOWCASE: Materials ===== -->
+  <section style="padding:5rem 5%;background:#faf8f5;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="section-header" style="margin-bottom:2.5rem;">
+        <div class="section-header-left">
+          <div class="section-label" id="matLabel">Material Options</div>
+          <h2 class="section-title" id="matTitle">Furniture <span>Materials</span></h2>
+          <p class="section-desc" id="matDesc">PE Rattan + Metal, PE Wood + Metal, and Textilene + Metal combinations.</p>
+        </div>
+      </div>
+      <div class="ppt-showcase-grid ppt-showcase-3col">
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_material1.jpeg" alt="PE Rattan + Metal 1"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_material2.jpeg" alt="PE Rattan + Metal 2"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_material3.jpeg" alt="PE Rattan + Metal 3"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_material4.jpeg" alt="PE Wood + Metal 1"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_material5.png" alt="PE Wood + Metal 2"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_material6.png" alt="PE Wood + Metal 3"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_material7.png" alt="Textilene + Metal 1"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_material8.jpeg" alt="Textilene + Metal 2"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_material9.png" alt="Textilene + Metal 3"/></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PPT SHOWCASE: Furniture Products ===== -->
+  <section style="padding:5rem 5%;background:linear-gradient(180deg,#faf8f5 0%,#f0ebe3 100%);">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="section-header" style="margin-bottom:2.5rem;">
+        <div class="section-header-left">
+          <div class="section-label" id="furnLabel">Sample Display</div>
+          <h2 class="section-title" id="furnTitle">Outdoor <span>Furniture</span></h2>
+          <p class="section-desc" id="furnDesc">Complete outdoor furniture sets — from lounge chairs to dining sets and cat trees.</p>
+        </div>
+      </div>
+      <div class="ppt-showcase-grid ppt-showcase-3col">
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_furniture1.png" alt="Furniture 1"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_furniture2.png" alt="Furniture 2"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_furniture3.png" alt="Furniture 3"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_furniture4.png" alt="Furniture 4"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_furniture5.png" alt="Furniture 5"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_furniture6.png" alt="Furniture 6"/></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PPT SHOWCASE: Product Details ===== -->
+  <section style="padding:5rem 5%;background:#faf8f5;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="section-header" style="margin-bottom:2.5rem;">
+        <div class="section-header-left">
+          <div class="section-label" id="detailLabel">Product Range</div>
+          <h2 class="section-title" id="detailTitle">Product <span>Details</span></h2>
+          <p class="section-desc" id="detailDesc">Cat houses, cat trees, sectional sofas, cooler carts, lounge chairs, rocking chairs, and conversation tables.</p>
+        </div>
+      </div>
+      <div class="ppt-showcase-grid">
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_product1.png" alt="Cat House"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_product2.png" alt="Cat Tree"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_product3.png" alt="Sectional Sofa"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_product4.png" alt="Cooler Cart"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_product5.png" alt="Lounge Chair"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_product6.png" alt="Rocking Chair"/></div>
+        <div class="ppt-showcase-item fade-in"><img src="images/ppt_product7.png" alt="Conversation Table"/></div>
       </div>
     </div>
   </section>
@@ -2214,6 +2366,22 @@
         gstat2: 'Photos',
         gstat3: 'Video Contents',
         gstat4: 'Virtual Access',
+        // PPT Showcase sections
+        decorLabel: 'Sample Display',
+        decorTitle: 'Outdoor <span>Decor</span>',
+        decorDesc: 'Decorative pieces that bring life and character to any outdoor space.',
+        inflateLabel: 'Sample Display',
+        inflateTitle: 'Inflatable <span>Series</span>',
+        inflateDesc: 'Fun and durable inflatable products for poolside and beach enjoyment.',
+        matLabel: 'Material Options',
+        matTitle: 'Furniture <span>Materials</span>',
+        matDesc: 'PE Rattan + Metal, PE Wood + Metal, and Textilene + Metal combinations.',
+        furnLabel: 'Sample Display',
+        furnTitle: 'Outdoor <span>Furniture</span>',
+        furnDesc: 'Complete outdoor furniture sets — from lounge chairs to dining sets and cat trees.',
+        detailLabel: 'Product Range',
+        detailTitle: 'Product <span>Details</span>',
+        detailDesc: 'Cat houses, cat trees, sectional sofas, cooler carts, lounge chairs, rocking chairs, and conversation tables.',
       },
       zh: {
         // Nav & Hero
@@ -2466,6 +2634,22 @@
         gstat2: '照片素材',
         gstat3: '视频内容',
         gstat4: '随时访问',
+        // PPT Showcase sections
+        decorLabel: '样品展示',
+        decorTitle: '户外<span>装饰</span>',
+        decorDesc: '为任何户外空间增添生机与个性的装饰品。',
+        inflateLabel: '样品展示',
+        inflateTitle: '充气<span>系列</span>',
+        inflateDesc: '适合泳池和沙滩的趣味耐用户外充气产品。',
+        matLabel: '材料选择',
+        matTitle: '家具<span>材料</span>',
+        matDesc: 'PE仿藤+金属、PE仿木+金属、特斯林+金属组合。',
+        furnLabel: '样品展示',
+        furnTitle: '户外<span>家具</span>',
+        furnDesc: '完整户外家具系列——从休闲椅到餐桌套装和猫爬架。',
+        detailLabel: '产品系列',
+        detailTitle: '产品<span>详情</span>',
+        detailDesc: '猫窝、猫爬树、组合沙发、冰桶、躺椅、摇椅、会话桌等。',
       }
     };
 
@@ -2841,6 +3025,22 @@
         document.getElementById('gstat2').textContent = t.gstat2;
         document.getElementById('gstat3').textContent = t.gstat3;
         document.getElementById('gstat4').textContent = t.gstat4;
+        // PPT Showcase sections
+        document.getElementById('decorLabel').textContent = t.decorLabel;
+        document.getElementById('decorTitle').innerHTML = t.decorTitle;
+        document.getElementById('decorDesc').textContent = t.decorDesc;
+        document.getElementById('inflateLabel').textContent = t.inflateLabel;
+        document.getElementById('inflateTitle').innerHTML = t.inflateTitle;
+        document.getElementById('inflateDesc').textContent = t.inflateDesc;
+        document.getElementById('matLabel').textContent = t.matLabel;
+        document.getElementById('matTitle').innerHTML = t.matTitle;
+        document.getElementById('matDesc').textContent = t.matDesc;
+        document.getElementById('furnLabel').textContent = t.furnLabel;
+        document.getElementById('furnTitle').innerHTML = t.furnTitle;
+        document.getElementById('furnDesc').textContent = t.furnDesc;
+        document.getElementById('detailLabel').textContent = t.detailLabel;
+        document.getElementById('detailTitle').innerHTML = t.detailTitle;
+        document.getElementById('detailDesc').textContent = t.detailDesc;
       }
       
       // Save preference
