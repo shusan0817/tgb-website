@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<p:sld xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main">
+  <p:cSld>
+    <p:spTree>
+      <p:nvGrpSpPr>
+        <p:cNvPr id="1" name=""/>
+        <p:cNvGrpSpPr/>
+        <p:nvPr/>
+      </p:nvGrpSpPr>
+      <p:grpSpPr>
+        <a:xfrm>
+          <a:off x="0" y="0"/>
+          <a:ext cx="0" cy="0"/>
+          <a:chOff x="0" y="0"/>
+          <a:chExt cx="0" cy="0"/>
+        </a:xfrm>
+      </p:grpSpPr>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2" name="TextBox 1"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="431800" y="771525"/>
+            <a:ext cx="6370955" cy="2653030"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr vert="horz" lIns="91440" tIns="45720" rIns="91440" bIns="45720" rtlCol="0" anchor="t">
+            <a:noAutofit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr>
+              <a:lnSpc>
+                <a:spcPct val="90000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="600"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="zh-CN" altLang="en-US" sz="2800" dirty="0">
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t>机遇：供应链安全的战略定位</a:t>
+            </a:r>
+            <a:endParaRPr lang="zh-CN" altLang="en-US" sz="2800" dirty="0">
+              <a:latin typeface="+mn-lt"/>
+              <a:ea typeface="+mn-ea"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr>
+              <a:lnSpc>
+                <a:spcPct val="90000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="600"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:endParaRPr lang="en-US" sz="2800" dirty="0">
+              <a:latin typeface="+mn-lt"/>
+              <a:ea typeface="+mn-ea"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr>
+              <a:lnSpc>
+                <a:spcPct val="90000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="600"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="zh-CN" altLang="en-US" sz="2800" dirty="0">
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t>扩展到柬埔寨的户外家具是一个深思熟虑的，有目的的计划，以抓住当前全球供应链重组的机会</a:t>
+            </a:r>
+            <a:endParaRPr lang="zh-CN" altLang="en-US" sz="2800" dirty="0">
+              <a:latin typeface="+mn-lt"/>
+              <a:ea typeface="+mn-ea"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="3" name="Slide Number Placeholder 2"/>
+          <p:cNvSpPr>
+            <a:spLocks noGrp="1"/>
+          </p:cNvSpPr>
+          <p:nvPr>
+            <p:ph type="sldNum" sz="quarter" idx="12"/>
+          </p:nvPr>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6457950" y="4767262"/>
+            <a:ext cx="2057400" cy="273844"/>
+          </a:xfrm>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr vert="horz" lIns="91440" tIns="45720" rIns="91440" bIns="45720" rtlCol="0" anchor="ctr">
+            <a:normAutofit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr fontAlgn="auto">
+              <a:lnSpc>
+                <a:spcPct val="90000"/>
+              </a:lnSpc>
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="600"/>
+              </a:spcAft>
+              <a:defRPr/>
+            </a:pPr>
+            <a:fld id="{9A0DB2DC-4C9A-4742-B13C-FB6460FD3503}" type="slidenum">
+              <a:rPr lang="en-US" altLang="zh-CN">
+                <a:solidFill>
+                  <a:schemeClr val="tx1">
+                    <a:lumMod val="50000"/>
+                    <a:lumOff val="50000"/>
+                  </a:schemeClr>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+            </a:fld>
+            <a:endParaRPr lang="en-US" altLang="zh-CN">
+              <a:solidFill>
+                <a:schemeClr val="tx1">
+                  <a:lumMod val="50000"/>
+                  <a:lumOff val="50000"/>
+                </a:schemeClr>
+              </a:solidFill>
+              <a:latin typeface="+mn-lt"/>
+              <a:ea typeface="+mn-ea"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+    </p:spTree>
+  </p:cSld>
+  <p:clrMapOvr>
+    <a:masterClrMapping/>
+  </p:clrMapOvr>
+</p:sld>

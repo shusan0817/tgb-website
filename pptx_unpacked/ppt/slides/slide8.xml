@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="utf-8"?>
+<p:sld xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main">
+  <p:cSld>
+    <p:bg>
+      <p:bgPr>
+        <a:blipFill rotWithShape="0">
+          <a:blip r:embed="rId1"/>
+          <a:stretch>
+            <a:fillRect/>
+          </a:stretch>
+        </a:blipFill>
+        <a:effectLst/>
+      </p:bgPr>
+    </p:bg>
+    <p:spTree>
+      <p:nvGrpSpPr>
+        <p:cNvPr id="1" name=""/>
+        <p:cNvGrpSpPr/>
+        <p:nvPr/>
+      </p:nvGrpSpPr>
+      <p:grpSpPr>
+        <a:xfrm>
+          <a:off x="0" y="0"/>
+          <a:ext cx="0" cy="0"/>
+          <a:chOff x="0" y="0"/>
+          <a:chExt cx="0" cy="0"/>
+        </a:xfrm>
+      </p:grpSpPr>
+      <p:sp useBgFill="1">
+        <p:nvSpPr>
+          <p:cNvPr id="18" name="Rectangle 17"/>
+          <p:cNvSpPr>
+            <a:spLocks noGrp="1" noRot="1" noChangeAspect="1" noMove="1" noResize="1" noEditPoints="1" noAdjustHandles="1" noChangeArrowheads="1" noChangeShapeType="1" noTextEdit="1"/>
+          </p:cNvSpPr>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="2540" y="0"/>
+            <a:ext cx="9141713" cy="5143500"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+        <p:style>
+          <a:lnRef idx="2">
+            <a:schemeClr val="accent1">
+              <a:shade val="50000"/>
+            </a:schemeClr>
+          </a:lnRef>
+          <a:fillRef idx="1">
+            <a:schemeClr val="accent1"/>
+          </a:fillRef>
+          <a:effectRef idx="0">
+            <a:schemeClr val="accent1"/>
+          </a:effectRef>
+          <a:fontRef idx="minor">
+            <a:schemeClr val="lt1"/>
+          </a:fontRef>
+        </p:style>
+        <p:txBody>
+          <a:bodyPr rtlCol="0" anchor="ctr"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="ctr"/>
+            <a:endParaRPr lang="en-US"/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="6" name="TextBox 5"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6192520" y="-128905"/>
+            <a:ext cx="5100955" cy="3432810"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr vert="horz" lIns="91440" tIns="45720" rIns="91440" bIns="45720" rtlCol="0"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr indent="-228600">
+              <a:lnSpc>
+                <a:spcPct val="90000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="600"/>
+              </a:spcAft>
+              <a:buFont typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+              <a:buChar char="•"/>
+            </a:pPr>
+            <a:endParaRPr lang="en-US" sz="1400" dirty="0">
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:latin typeface="+mn-lt"/>
+              <a:ea typeface="+mn-ea"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr marL="285750" indent="-228600">
+              <a:lnSpc>
+                <a:spcPct val="90000"/>
+              </a:lnSpc>
+              <a:buFont typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+              <a:buChar char="•"/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en-US" altLang="zh-CN" sz="1800" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t>2025</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="zh-CN" altLang="en-US" sz="1800" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t>年</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="en-US" altLang="zh-CN" sz="1800" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t>7</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="zh-CN" altLang="en-US" sz="1800" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t>月投产</a:t>
+            </a:r>
+            <a:endParaRPr lang="zh-CN" altLang="en-US" sz="1800" dirty="0">
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:latin typeface="+mn-lt"/>
+              <a:ea typeface="+mn-ea"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr marL="57150">
+              <a:lnSpc>
+                <a:spcPct val="90000"/>
+              </a:lnSpc>
+              <a:buFont typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+            </a:pPr>
+            <a:endParaRPr lang="zh-CN" altLang="en-US" sz="1800" dirty="0">
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:latin typeface="+mn-lt"/>
+              <a:ea typeface="+mn-ea"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr marL="285750" indent="-228600">
+              <a:lnSpc>
+                <a:spcPct val="90000"/>
+              </a:lnSpc>
+              <a:buFont typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+              <a:buChar char="•"/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en-US" altLang="zh-CN" sz="1800" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t> </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="zh-CN" altLang="en-US" sz="1800" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t>占地</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="en-US" altLang="zh-CN" sz="1800" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t>260000</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="zh-CN" altLang="en-US" sz="1800" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t>㎡</a:t>
+            </a:r>
+            <a:endParaRPr lang="zh-CN" altLang="en-US" sz="1800" dirty="0">
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:latin typeface="+mn-lt"/>
+              <a:ea typeface="+mn-ea"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr marL="57150">
+              <a:lnSpc>
+                <a:spcPct val="90000"/>
+              </a:lnSpc>
+              <a:buFont typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+            </a:pPr>
+            <a:endParaRPr lang="zh-CN" altLang="en-US" sz="1800" dirty="0">
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:latin typeface="+mn-lt"/>
+              <a:ea typeface="+mn-ea"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr marL="57150">
+              <a:lnSpc>
+                <a:spcPct val="90000"/>
+              </a:lnSpc>
+              <a:buFont typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en-US" altLang="zh-CN" sz="1800" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t>  </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="zh-CN" altLang="en-US" sz="1800" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t>实际生产面积：</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="en-US" altLang="zh-CN" sz="1800" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t>100000</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="zh-CN" altLang="en-US" sz="1800" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t>㎡</a:t>
+            </a:r>
+            <a:endParaRPr lang="zh-CN" altLang="en-US" sz="1800" dirty="0">
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:latin typeface="+mn-lt"/>
+              <a:ea typeface="+mn-ea"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr marL="57150">
+              <a:lnSpc>
+                <a:spcPct val="90000"/>
+              </a:lnSpc>
+              <a:buFont typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+            </a:pPr>
+            <a:endParaRPr lang="en-US" altLang="zh-CN" sz="1800" dirty="0">
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:latin typeface="+mn-lt"/>
+              <a:ea typeface="+mn-ea"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr marL="285750" indent="-228600">
+              <a:lnSpc>
+                <a:spcPct val="90000"/>
+              </a:lnSpc>
+              <a:buFont typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+              <a:buChar char="•"/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en-US" altLang="zh-CN" sz="1800" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t>1500</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="zh-CN" altLang="en-US" sz="1800" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t>名技术员工</a:t>
+            </a:r>
+            <a:endParaRPr lang="zh-CN" altLang="en-US" sz="1800" dirty="0">
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:latin typeface="+mn-lt"/>
+              <a:ea typeface="+mn-ea"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr marL="57150">
+              <a:lnSpc>
+                <a:spcPct val="90000"/>
+              </a:lnSpc>
+              <a:buFont typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en-US" altLang="zh-CN" sz="1800" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t> </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="zh-CN" altLang="en-US" sz="1800" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t>（第一期计划招收）</a:t>
+            </a:r>
+            <a:endParaRPr lang="zh-CN" altLang="en-US" sz="1800" dirty="0">
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:latin typeface="+mn-lt"/>
+              <a:ea typeface="+mn-ea"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr marL="57150">
+              <a:lnSpc>
+                <a:spcPct val="90000"/>
+              </a:lnSpc>
+              <a:buFont typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+            </a:pPr>
+            <a:endParaRPr lang="zh-CN" altLang="en-US" sz="1800" dirty="0">
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:latin typeface="+mn-lt"/>
+              <a:ea typeface="+mn-ea"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr marL="285750" indent="-228600">
+              <a:lnSpc>
+                <a:spcPct val="90000"/>
+              </a:lnSpc>
+              <a:buFont typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+              <a:buChar char="•"/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="zh-CN" altLang="en-US" sz="1800" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t>预估</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="en-US" altLang="zh-CN" sz="1800" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t>2026</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="zh-CN" altLang="en-US" sz="1800" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t>年</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="en-US" altLang="zh-CN" sz="1800" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t>产能</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="zh-CN" altLang="en-US" sz="1800" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t>：</a:t>
+            </a:r>
+            <a:endParaRPr lang="zh-CN" altLang="en-US" sz="1800" dirty="0">
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:latin typeface="+mn-lt"/>
+              <a:ea typeface="+mn-ea"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr marL="57150">
+              <a:lnSpc>
+                <a:spcPct val="90000"/>
+              </a:lnSpc>
+              <a:buFont typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en-US" altLang="zh-CN" sz="1800" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t>   10-15个集装箱/天</a:t>
+            </a:r>
+            <a:endParaRPr lang="en-US" altLang="zh-CN" sz="1800" dirty="0">
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:latin typeface="+mn-lt"/>
+              <a:ea typeface="+mn-ea"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr marL="57150">
+              <a:lnSpc>
+                <a:spcPct val="90000"/>
+              </a:lnSpc>
+              <a:buFont typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+            </a:pPr>
+            <a:endParaRPr lang="en-US" altLang="zh-CN" sz="1800" dirty="0">
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:latin typeface="+mn-lt"/>
+              <a:ea typeface="+mn-ea"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr marL="285750" indent="-228600">
+              <a:lnSpc>
+                <a:spcPct val="90000"/>
+              </a:lnSpc>
+              <a:buFont typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+              <a:buChar char="•"/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="zh-CN" altLang="en-US" sz="1800" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t>年营收</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="en-US" altLang="zh-CN" sz="1800" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t>8000多万美元</a:t>
+            </a:r>
+            <a:endParaRPr lang="en-US" altLang="zh-CN" sz="1800" dirty="0">
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:latin typeface="+mn-lt"/>
+              <a:ea typeface="+mn-ea"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr marL="285750" indent="-228600">
+              <a:lnSpc>
+                <a:spcPct val="90000"/>
+              </a:lnSpc>
+              <a:buFont typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+              <a:buChar char="•"/>
+            </a:pPr>
+            <a:endParaRPr lang="en-US" altLang="zh-CN" sz="1400" dirty="0">
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:latin typeface="+mn-lt"/>
+              <a:ea typeface="+mn-ea"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr>
+              <a:lnSpc>
+                <a:spcPct val="90000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="600"/>
+              </a:spcAft>
+              <a:buFont typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+            </a:pPr>
+            <a:endParaRPr lang="en-US" altLang="zh-CN" sz="1400" dirty="0">
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:latin typeface="+mn-lt"/>
+              <a:ea typeface="+mn-ea"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="8" name="TextBox 7"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="2771653" y="51235"/>
+            <a:ext cx="3450487" cy="534035"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr>
+              <a:lnSpc>
+                <a:spcPct val="90000"/>
+              </a:lnSpc>
+              <a:spcAft>
+                <a:spcPts val="600"/>
+              </a:spcAft>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="zh-CN" altLang="en-US" sz="3200" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+                <a:latin typeface="+mn-lt"/>
+                <a:ea typeface="+mn-ea"/>
+              </a:rPr>
+              <a:t>为您量身打造</a:t>
+            </a:r>
+            <a:endParaRPr lang="zh-CN" altLang="en-US" sz="3200" dirty="0">
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:latin typeface="+mn-lt"/>
+              <a:ea typeface="+mn-ea"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="3" name="Slide Number Placeholder 2"/>
+          <p:cNvSpPr>
+            <a:spLocks noGrp="1"/>
+          </p:cNvSpPr>
+          <p:nvPr>
+            <p:ph type="sldNum" sz="quarter" idx="12"/>
+          </p:nvPr>
+        </p:nvSpPr>
+        <p:spPr/>
+        <p:txBody>
+          <a:bodyPr/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr lvl="0" eaLnBrk="1" hangingPunct="1">
+              <a:buNone/>
+            </a:pPr>
+            <a:fld id="{9A0DB2DC-4C9A-4742-B13C-FB6460FD3503}" type="slidenum">
+              <a:rPr lang="zh-CN" altLang="en-US" smtClean="0">
+                <a:latin typeface="Calibri" panose="020F0502020204030204" pitchFamily="34" charset="0"/>
+              </a:rPr>
+            </a:fld>
+            <a:endParaRPr lang="zh-CN" altLang="en-US" dirty="0">
+              <a:latin typeface="Calibri" panose="020F0502020204030204" pitchFamily="34" charset="0"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+    </p:spTree>
+  </p:cSld>
+  <p:clrMapOvr>
+    <a:masterClrMapping/>
+  </p:clrMapOvr>
+</p:sld>

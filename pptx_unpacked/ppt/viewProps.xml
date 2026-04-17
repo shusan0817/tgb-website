@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<p:viewPr xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main">
+  <p:normalViewPr>
+    <p:restoredLeft sz="19060"/>
+    <p:restoredTop sz="94773"/>
+  </p:normalViewPr>
+  <p:slideViewPr>
+    <p:cSldViewPr showGuides="1">
+      <p:cViewPr varScale="1">
+        <p:scale>
+          <a:sx n="160" d="100"/>
+          <a:sy n="160" d="100"/>
+        </p:scale>
+        <p:origin x="560" y="168"/>
+      </p:cViewPr>
+      <p:guideLst>
+        <p:guide orient="horz" pos="1762"/>
+        <p:guide pos="2722"/>
+      </p:guideLst>
+    </p:cSldViewPr>
+  </p:slideViewPr>
+  <p:notesTextViewPr>
+    <p:cViewPr>
+      <p:scale>
+        <a:sx n="100" d="100"/>
+        <a:sy n="100" d="100"/>
+      </p:scale>
+      <p:origin x="0" y="0"/>
+    </p:cViewPr>
+  </p:notesTextViewPr>
+  <p:sorterViewPr>
+    <p:cViewPr>
+      <p:scale>
+        <a:sx n="100" d="100"/>
+        <a:sy n="100" d="100"/>
+      </p:scale>
+      <p:origin x="0" y="-3370"/>
+    </p:cViewPr>
+  </p:sorterViewPr>
+  <p:gridSpacing cx="90012" cy="90012"/>
+</p:viewPr>

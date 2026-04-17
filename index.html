@@ -677,26 +677,7 @@
       background: var(--primary);
     }
     .video-text { color: #fff; font-size: 1.2rem; font-weight: 500; }
-    .video-overlay {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      padding: 2rem;
-      background: linear-gradient(transparent, rgba(0,0,0,0.8));
-    }
-    .video-badge {
-      display: inline-block;
-      background: var(--primary);
-      color: #fff;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      padding: 0.4rem 1rem;
-      border-radius: 4px;
-      margin-bottom: 0.75rem;
-      text-transform: uppercase;
-    }
-    .video-overlay h3 { color: #fff; font-size: 1.5rem; margin-bottom: 0.5rem; }
-    .video-overlay p { color: rgba(255,255,255,0.7); font-size: 0.9rem; }
+
 
     /* Photo Grid */
     .gallery-grid {
@@ -1199,7 +1180,49 @@
     .check-gold   { color: var(--gold-mem); }
 
     /* ===== RESPONSIVE ===== */
+    /* Factory grid responsive */
+    .factory-grid { grid-template-columns: repeat(3, 1fr); }
+    
+    /* Factory card - centered vertical layout for stable bilingual display */
+    .factory-card {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+      padding: 1.5rem 1rem !important;
+      background: rgba(255,255,255,0.08);
+      border-radius: 16px;
+      border: 1px solid rgba(201,169,98,0.3);
+      min-width: 0 !important;
+      overflow: visible !important;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .factory-card:hover {
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.14);
+    }
+    .factory-flag { font-size: 2rem; margin-bottom: 0.7rem; flex-shrink: 0; }
+    .factory-title {
+      font-weight: 700;
+      color: #c9a962;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      word-break: normal;
+      overflow-wrap: break-word;
+      max-width: 100%;
+    }
+    .factory-desc {
+      font-size: 0.82rem;
+      color: #fff;
+      margin-top: 0.35rem;
+      line-height: 1.4;
+      word-break: normal;
+      overflow-wrap: break-word;
+      font-weight: 500;
+    }
+
     @media (max-width: 900px) {
+      .factory-grid { grid-template-columns: repeat(2, 1fr); }
       .hero-content { grid-template-columns: 1fr; text-align: center; }
       .hero-visual { display: none; }
       .hero-stats { justify-content: center; }
@@ -1220,6 +1243,7 @@
       .products-grid { gap: 1.5rem; }
     }
     @media (max-width: 600px) {
+      .factory-grid { grid-template-columns: 1fr; }
       .nav-links, .nav-actions { display: none; }
       .hamburger { display: flex; }
       section { padding: 3rem 4%; }
@@ -1249,12 +1273,236 @@
       .hero-stats-item { font-size: 0.85rem; }
       /* Gallery mobile fix */
       .video-showcase { aspect-ratio: 16/9; }
-      .video-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
-      .video-overlay { padding: 1rem; }
-      .video-overlay h3 { font-size: 1.1rem; }
-      .video-overlay p { font-size: 0.8rem; }
       .gallery-grid { grid-template-columns: 1fr; gap: 1rem; }
       .gallery-item.gallery-large { grid-column: span 1; aspect-ratio: 16/9; }
+      /* Process mobile fix */
+      .process-step { width: 100px !important; padding: 1rem 0.5rem !important; }
+      .process-step div:first-child { width: 44px !important; height: 44px !important; }
+      /* Process Flow mobile */
+      .process-flow-container { gap: 0 !important; }
+      .process-item { width: 80px !important; padding: 0.5rem 0.2rem !important; }
+      .process-icon-wrap { width: 40px !important; height: 40px !important; }
+      .process-icon-wrap svg { width: 20px !important; height: 20px !important; }
+      .process-num { font-size: 0.6rem !important; }
+      .process-name { font-size: 0.65rem !important; }
+      .process-sub { font-size: 0.55rem !important; }
+      .process-arrow { padding-bottom: 1.2rem !important; font-size: 0.7rem !important; }
+      /* Stats & Factory mobile */
+      .factory-grid { grid-template-columns: 1fr !important; }
+      .factory-locations { padding: 1.5rem !important; }
+    }
+
+    /* Process step clickable hover */
+    .process-step[onclick] { transition: transform 0.2s, box-shadow 0.2s; border-radius: 12px; }
+    .process-step[onclick]:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+
+    /* ===== Process Flow Enhanced ===== */
+    .process-flow-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0;
+      max-width: 100%;
+      margin: 0 auto 2.5rem;
+    }
+    .process-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0.8rem 0.5rem;
+      position: relative;
+      flex: 0 0 auto;
+      width: 110px;
+      cursor: default;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      border-radius: 14px;
+    }
+    .process-item.clickable {
+      cursor: pointer;
+    }
+    .process-item.clickable:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(26,58,47,0.12);
+      background: rgba(201,169,98,0.06);
+    }
+    .process-item:not(.clickable) {
+      opacity: 0.7;
+    }
+    .process-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #c9a962;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+    }
+    .process-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.6rem;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      position: relative;
+    }
+    .process-item.clickable:hover .process-icon-wrap {
+      transform: scale(1.08);
+      box-shadow: 0 4px 16px rgba(201,169,98,0.3);
+    }
+    .process-icon-wrap.green {
+      background: linear-gradient(135deg, #1a3a2f, #2d5a47);
+    }
+    .process-icon-wrap.gold {
+      background: linear-gradient(135deg, #c9a962, #a8893e);
+    }
+    .process-name {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #1a3a2f;
+      line-height: 1.2;
+      margin-bottom: 0.15rem;
+    }
+    .process-sub {
+      font-size: 0.65rem;
+      color: #999;
+      line-height: 1.3;
+    }
+    /* Clickable indicator - small camera icon */
+    .process-item.clickable .process-name::after {
+      content: ' 🔍';
+      font-size: 0.55rem;
+      vertical-align: middle;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .process-item.clickable:hover .process-name::after {
+      opacity: 1;
+    }
+    /* Arrow connector between steps */
+    .process-arrow {
+      display: flex;
+      align-items: center;
+      color: #c9a962;
+      font-size: 0.9rem;
+      padding-bottom: 1.8rem;
+      user-select: none;
+      opacity: 0.6;
+    }
+
+    /* Lightbox enhanced */
+    #processLightbox {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    #processLightbox.active {
+      opacity: 1;
+    }
+    #processLightboxImg {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    #processLightbox .lb-title {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,0.85);
+      font-size: 1rem;
+      font-weight: 600;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      white-space: nowrap;
+      display: none;
+    }
+    #processLightbox .lb-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(4px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: #fff;
+      font-size: 1.8rem;
+      transition: background 0.2s;
+      user-select: none;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    #processLightbox .lb-nav-btn:hover {
+      background: rgba(255,255,255,0.2);
+    }
+    #processLightbox .lb-nav-btn.prev { left: 20px; }
+    #processLightbox .lb-nav-btn.next { right: 20px; }
+    #processLightbox .lb-close-btn {
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: #fff;
+      font-size: 1.5rem;
+      transition: background 0.2s;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    #processLightbox .lb-close-btn:hover {
+      background: rgba(255,255,255,0.25);
+    }
+    #processLightbox .lb-counter {
+      position: absolute;
+      top: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,0.6);
+      font-size: 0.85rem;
+      display: none;
+    }
+    /* Dot indicators */
+    #processLightbox .lb-dots {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: none;
+      gap: 6px;
+    }
+    #processLightbox .lb-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    #processLightbox .lb-dot.active {
+      background: #c9a962;
+      transform: scale(1.3);
+    }
+    /* Lab test cards clickable */
+    .lab-card {
+      background: rgba(255,255,255,0.08);
+      padding: 1.5rem;
+      border-radius: 16px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.08);
+      cursor: pointer;
+      transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+    }
+    .lab-card:hover {
+      transform: translateY(-4px);
+      background: rgba(201,169,98,0.15);
+      border-color: rgba(201,169,98,0.3);
     }
   </style>
 </head>
@@ -1279,6 +1527,7 @@
       <a href="#products" id="navProducts">Products</a>
       <a href="#about" id="navAbout">About Us</a>
       <a href="#craft" id="navCraft">Craftsmanship</a>
+      <a href="#process" id="navProcess">Process</a>
       <a href="#gallery" id="navGallery">Gallery</a>
       <a href="#membership" id="navMembership">Membership</a>
       <a href="#contact" id="navContact">Contact</a>
@@ -1306,6 +1555,7 @@
     <a href="#products" onclick="toggleMenu()">Products</a>
     <a href="#about" onclick="toggleMenu()">About Us</a>
     <a href="#craft" onclick="toggleMenu()">Craftsmanship</a>
+    <a href="#process" onclick="toggleMenu()">Process</a>
     <a href="#gallery" onclick="toggleMenu()">Gallery</a>
     <a href="#membership" onclick="toggleMenu()">Membership</a>
     <a href="#contact" onclick="toggleMenu()">Contact</a>
@@ -1319,12 +1569,12 @@
     <div class="hero-shapes"></div>
     <div class="hero-content">
       <div class="hero-text">
-        <div class="hero-badge">Premium Outdoor Furniture</div>
-        <h1 class="hero-title">
-          Elevate Your <span>Outdoor</span><br>Living Space
+        <div class="hero-badge" id="heroBadge">Leading Manufacturer Since 2008</div>
+        <h1 class="hero-title" id="heroTitle">
+          Unlock Global Supply Chain<br><span>Scale, Security & Value</span>
         </h1>
-        <p class="hero-desc">
-          Industry-leading seasonal decorations & outdoor furniture manufacturer, trusted by major retailers worldwide since 2008. With 9 factories across 4 countries and 4,500+ skilled workers, we deliver premium quality at competitive prices.
+        <p class="hero-desc" id="heroDesc">
+          Industry-leading manufacturer of seasonal decorations & outdoor furniture. Trusted by major US retailers since 2008. 8 factories across 3 countries, 4M+ m² production space, 4,500+ experienced workers.
         </p>
         <div class="hero-actions">
           <a href="#products" class="btn-primary">Explore Collection</a>
@@ -1332,20 +1582,20 @@
         </div>
         <div class="hero-stats">
           <div class="stat-item">
-            <div class="stat-num">9</div>
-            <div class="stat-label">Global Factories</div>
+            <div class="stat-num" id="stat1Num">8</div>
+            <div class="stat-label" id="stat1Label">Factories in 3 Countries</div>
           </div>
           <div class="stat-item">
-            <div class="stat-num">400k+</div>
-            <div class="stat-label">m² Production Space</div>
+            <div class="stat-num" id="stat2Num">4M+</div>
+            <div class="stat-label" id="stat2Label">m² Production Space</div>
           </div>
           <div class="stat-item">
-            <div class="stat-num">4500+</div>
-            <div class="stat-label">Skilled Workers</div>
+            <div class="stat-num" id="stat3Num">4500+</div>
+            <div class="stat-label" id="stat3Label">Experienced Workers</div>
           </div>
           <div class="stat-item">
-            <div class="stat-num">40+</div>
-            <div class="stat-label">Countries Served</div>
+            <div class="stat-num" id="stat4Num">17+</div>
+            <div class="stat-label" id="stat4Label">Years of Excellence</div>
           </div>
         </div>
       </div>
@@ -1571,124 +1821,255 @@
   <section class="about" id="about" style="background: linear-gradient(180deg, #faf8f5 0%, #f0ebe3 100%);">
     <div style="max-width:1200px;margin:0 auto;">
       <div class="section-header" style="text-align:center;display:block;">
-        <div class="section-label" style="text-align:center;">Company Overview</div>
-        <h2 class="section-title" style="text-align:center;">From Local Factory to <span>Global Leader</span></h2>
-        <p class="section-desc" style="text-align:center;margin:1rem auto 0;max-width:700px;">
-          Since 2008, we've grown from a single factory in China to a multinational manufacturing powerhouse. Our journey reflects our commitment to quality, sustainability, and customer satisfaction.
+        <div class="section-label" id="aboutLabel" style="text-align:center;">Company Overview</div>
+        <h2 class="section-title" id="aboutTitle" style="text-align:center;">TGB <span>Development History</span></h2>
+        <p class="section-desc" id="aboutDesc" style="text-align:center;margin:1rem auto 0;max-width:800px;">
+          From a single factory in 2008 to 8 manufacturing bases across 3 countries. Our group includes: 正阳县合兴灯饰有限公司, Boxu Crafts Co., Ltd, Season Plus Arts & Crafts, 东莞市合兴圣诞礼品有限公司, 惠州市凯德新能源灯饰有限公司, TGB Electronic Lighting, TGB Outdoor Furniture, BENE HOME TREE & CRAFTS CO.LTD, 安徽凯德工艺品有限公司
         </p>
       </div>
       
-      <!-- Company Timeline -->
-      <div class="company-timeline" style="display:flex;justify-content:center;gap:1rem;margin:3rem 0;flex-wrap:wrap;">
-        <div class="timeline-item" style="text-align:center;padding:1.5rem 2rem;background:#fff;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);min-width:140px;">
-          <div style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#1a3a2f;">2008</div>
-          <div style="font-size:0.8rem;color:#666;margin-top:0.5rem;">Founded in<br/>China</div>
+      <!-- Company Timeline - PPT Slide 3 -->
+      <div class="company-timeline" id="companyTimeline" style="display:flex;justify-content:center;gap:0.8rem;margin:3rem 0;flex-wrap:wrap;align-items:flex-end;">
+        <div class="timeline-item" style="text-align:center;padding:1.2rem 1.4rem;background:#fff;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);min-width:110px;border-top:4px solid #c9a962;">
+          <div style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#1a3a2f;">2008</div>
+          <div style="font-size:0.75rem;color:#666;margin-top:0.4rem;line-height:1.4;">中国·河南<br>正阳合兴成立</div>
         </div>
-        <div class="timeline-arrow" style="display:flex;align-items:center;font-size:1.5rem;color:#c9a962;">→</div>
-        <div class="timeline-item" style="text-align:center;padding:1.5rem 2rem;background:#fff;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);min-width:140px;">
-          <div style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#1a3a2f;">9</div>
-          <div style="font-size:0.8rem;color:#666;margin-top:0.5rem;">Factories<br/>Worldwide</div>
+        <div class="timeline-arrow" style="display:flex;align-items:center;font-size:1.2rem;color:#c9a962;">→</div>
+        <div class="timeline-item" style="text-align:center;padding:1.2rem 1.4rem;background:#fff;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);min-width:110px;border-top:4px solid #1a3a2f;">
+          <div style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#1a3a2f;">2013</div>
+          <div style="font-size:0.75rem;color:#666;margin-top:0.4rem;line-height:1.4;">中国·惠州<br>凯德灯饰</div>
         </div>
-        <div class="timeline-arrow" style="display:flex;align-items:center;font-size:1.5rem;color:#c9a962;">→</div>
-        <div class="timeline-item" style="text-align:center;padding:1.5rem 2rem;background:#fff;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);min-width:140px;">
-          <div style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#1a3a2f;">4</div>
-          <div style="font-size:0.8rem;color:#666;margin-top:0.5rem;">Countries<br/>(CN/KH/VN/TH)</div>
+        <div class="timeline-arrow" style="display:flex;align-items:center;font-size:1.2rem;color:#c9a962;">→</div>
+        <div class="timeline-item" style="text-align:center;padding:1.2rem 1.4rem;background:#fff;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);min-width:110px;border-top:4px solid #c9a962;">
+          <div style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#1a3a2f;">2015</div>
+          <div style="font-size:0.75rem;color:#666;margin-top:0.4rem;line-height:1.4;">中国·东莞<br>合兴圣诞礼品</div>
         </div>
-        <div class="timeline-arrow" style="display:flex;align-items:center;font-size:1.5rem;color:#c9a962;">→</div>
-        <div class="timeline-item" style="text-align:center;padding:1.5rem 2rem;background:#1a3a2f;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);min-width:140px;">
-          <div style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#c9a962;">2025</div>
-          <div style="font-size:0.8rem;color:rgba(255,255,255,0.8);margin-top:0.5rem;">New Cambodia<br/>Factory</div>
+        <div class="timeline-arrow" style="display:flex;align-items:center;font-size:1.2rem;color:#c9a962;">→</div>
+        <div class="timeline-item" style="text-align:center;padding:1.2rem 1.4rem;background:#fff;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);min-width:110px;border-top:4px solid #c9a962;">
+          <div style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#1a3a2f;">2017</div>
+          <div style="font-size:0.75rem;color:#666;margin-top:0.4rem;line-height:1.4;">柬埔寨<br>Bene Home</div>
+        </div>
+        <div class="timeline-arrow" style="display:flex;align-items:center;font-size:1.2rem;color:#c9a962;">→</div>
+        <div class="timeline-item" style="text-align:center;padding:1.2rem 1.4rem;background:#fff;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);min-width:110px;border-top:4px solid #1a3a2f;">
+          <div style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#1a3a2f;">2019</div>
+          <div style="font-size:0.75rem;color:#666;margin-top:0.4rem;line-height:1.4;">柬埔寨<br>TGB Electronic</div>
+        </div>
+        <div class="timeline-arrow" style="display:flex;align-items:center;font-size:1.2rem;color:#c9a962;">→</div>
+        <div class="timeline-item" style="text-align:center;padding:1.2rem 1.4rem;background:#fff;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);min-width:110px;border-top:4px solid #c9a962;">
+          <div style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#1a3a2f;">2023</div>
+          <div style="font-size:0.75rem;color:#666;margin-top:0.4rem;line-height:1.4;">越南<br>TGB Outdoor</div>
+        </div>
+        <div class="timeline-arrow" style="display:flex;align-items:center;font-size:1.2rem;color:#c9a962;">→</div>
+        <div class="timeline-item" style="text-align:center;padding:1.2rem 1.4rem;background:#1a3a2f;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.15);min-width:130px;border-top:4px solid #c9a962;">
+          <div style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:#c9a962;">2025</div>
+          <div style="font-size:0.78rem;color:rgba(255,255,255,0.85);margin-top:0.4rem;line-height:1.4;">柬埔寨新工厂<br>投产 (260000㎡)</div>
+        </div>
+      </div>
+
+      <!-- Summary Stats -->
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin:2.5rem 0;">
+        <div style="text-align:center;padding:2.2rem 1.5rem;background:#1e3d32;border-radius:20px;border:1px solid #c9a962;position:relative;overflow:hidden;">
+          <div style="position:absolute;top:0;left:0;right:0;height:4px;background:#c9a962;"></div>
+          <div style="font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:700;color:#c9a962;line-height:1;" id="statFactoriesNum">8</div>
+          <div style="font-size:0.85rem;color:#fff;margin-top:0.6rem;font-weight:600;" id="statFactories">Factories Across 3 Countries</div>
+        </div>
+        <div style="text-align:center;padding:2.2rem 1.5rem;background:#1e3d32;border-radius:20px;border:1px solid #c9a962;position:relative;overflow:hidden;">
+          <div style="position:absolute;top:0;left:0;right:0;height:4px;background:#c9a962;"></div>
+          <div style="font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:700;color:#c9a962;line-height:1;">4M+</div>
+          <div style="font-size:0.85rem;color:#fff;margin-top:0.6rem;font-weight:600;" id="statSpace">m² Production Space</div>
+        </div>
+        <div style="text-align:center;padding:2.2rem 1.5rem;background:#1e3d32;border-radius:20px;border:1px solid #c9a962;position:relative;overflow:hidden;">
+          <div style="position:absolute;top:0;left:0;right:0;height:4px;background:#c9a962;"></div>
+          <div style="font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:700;color:#c9a962;line-height:1;">4,500+</div>
+          <div style="font-size:0.85rem;color:#fff;margin-top:0.6rem;font-weight:600;" id="statWorkers">Experienced Workers</div>
         </div>
       </div>
 
       <!-- Factory Locations Map -->
-      <div class="factory-locations" style="background:#fff;border-radius:24px;padding:2.5rem;box-shadow:0 8px 40px rgba(0,0,0,0.08);margin-top:2rem;">
-        <h3 style="text-align:center;font-size:1.3rem;color:#1a3a2f;margin-bottom:1.5rem;font-weight:600;">🏭 Our Manufacturing Footprint</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;">
-          <div style="display:flex;align-items:center;gap:1rem;padding:1rem;background:#faf8f5;border-radius:12px;">
-            <div style="width:48px;height:48px;background:#e8dcc8;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">🇨🇳</div>
-            <div>
-              <div style="font-weight:600;color:#1a3a2f;">China (4 factories)</div>
-              <div style="font-size:0.8rem;color:#666;">Henan, Dongguan, Huizhou, Anhui</div>
-            </div>
+      <div class="factory-locations" style="background:#1e3d32;border-radius:24px;padding:2.5rem;margin-top:2rem;border:1px solid #c9a962;">
+        <h3 style="text-align:center;font-size:1.3rem;color:#c9a962;margin-bottom:1.8rem;font-weight:700;letter-spacing:0.3px;" id="factoryTitle">🏭 Our Manufacturing Footprint</h3>
+        <div class="factory-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;">
+          <div class="factory-card">
+            <div class="factory-flag">🇨🇳</div>
+            <div class="factory-title">China (4 factories)</div>
+            <div class="factory-desc">Henan, Dongguan, Huizhou, Anhui</div>
           </div>
-          <div style="display:flex;align-items:center;gap:1rem;padding:1rem;background:#faf8f5;border-radius:12px;">
-            <div style="width:48px;height:48px;background:#e8dcc8;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">🇰🇭</div>
-            <div>
-              <div style="font-weight:600;color:#1a3a2f;">Cambodia (2 factories)</div>
-              <div style="font-size:0.8rem;color:#666;">Bavet, Phnom Penh</div>
-            </div>
+          <div class="factory-card">
+            <div class="factory-flag">🇰🇭</div>
+            <div class="factory-title">Cambodia (2 factories)</div>
+            <div class="factory-desc">Bavet, Phnom Penh</div>
           </div>
-          <div style="display:flex;align-items:center;gap:1rem;padding:1rem;background:#faf8f5;border-radius:12px;">
-            <div style="width:48px;height:48px;background:#e8dcc8;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">🇻🇳</div>
-            <div>
-              <div style="font-weight:600;color:#1a3a2f;">Vietnam (2 factories)</div>
-              <div style="font-size:0.8rem;color:#666;">Binh Duong</div>
-            </div>
+          <div class="factory-card">
+            <div class="factory-flag">🇻🇳</div>
+            <div class="factory-title">Vietnam (2 factories)</div>
+            <div class="factory-desc">Binh Duong</div>
           </div>
-          <div style="display:flex;align-items:center;gap:1rem;padding:1rem;background:#faf8f5;border-radius:12px;">
-            <div style="width:48px;height:48px;background:#e8dcc8;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">🇹🇭</div>
-            <div>
-              <div style="font-weight:600;color:#1a3a2f;">Thailand (1 factory)</div>
-              <div style="font-size:0.8rem;color:#666;">Bangkok</div>
+        </div>
+      </div>
+
+      <!-- Why Partner With TGB - PPT Slide 26 -->
+      <div id="whyPartnerSection" style="margin-top:4rem;">
+        <h3 style="text-align:center;font-size:1.5rem;color:#1a3a2f;margin-bottom:2rem;font-family:'Playfair Display',serif;" id="whyPartnerTitle">Why Partner with <span style="color:#c9a962;">TGB</span>?</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;">
+          <div style="background:#fff;padding:2.2rem 2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border-left:4px solid #c9a962;">
+            <div style="font-size:2rem;margin-bottom:1rem;">🤝</div>
+            <h4 style="color:#1a3a2f;margin-bottom:0.6rem;font-weight:600;font-size:1rem;" id="why1Title">Proven Retailer Track Record</h4>
+            <p style="font-size:0.88rem;color:#666;line-height:1.7;" id="why1Desc">Strong track record working with US retail giants through trading partners since 2008.</p>
+          </div>
+          <div style="background:#fff;padding:2.2rem 2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border-left:4px solid #1a3a2f;">
+            <div style="font-size:2rem;margin-bottom:1rem;">👥</div>
+            <h4 style="color:#1a3a2f;margin-bottom:0.6rem;font-weight:600;font-size:1rem;" id="why2Title>Elite Professional Team</h4>
+            <p style="font-size:0.88rem;color:#666;line-height:1.7;" id="why2Desc">Dedicated specialists in Business, R&D, Production & Quality — ensuring your project executes at its best.</p>
+          </div>
+          <div style="background:#fff;padding:2.2rem 2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border-left:4px solid #c9a962;">
+            <div style="font-size:2rem;margin-bottom:1rem;">📦</div>
+            <h4 style="color:#1a3a2f;margin-bottom:0.6rem;font-weight:600;font-size:1rem;" id="why3Title">Scalable Capacity in Strategic Locations</h4>
+            <p style="font-size:0.88rem;color:#666;line-height:1.7;" id="why3Desc">Expandable production capacity in strategic locations to strengthen your supply chain competitiveness and resilience.</p>
+          </div>
+          <div style="background:#fff;padding:2.2rem 2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border-left:4px solid #1a3a2f;">
+            <div style="font-size:2rem;margin-bottom:1rem;">🔬</div>
+            <h4 style="color:#1a3a2f;margin-bottom:0.6rem;font-weight:600;font-size:1rem;" id="why4Title">ERP & ISO Vertical Integration</h4>
+            <p style="font-size:0.88rem;color:#666;line-height:1.7;" id="why4Desc">Full vertical integration with ERP and ISO systems — maximum control over cost and quality from raw material to packaging.</p>
+          </div>
+        </div>
+
+        <!-- Team Members - PPT Slide 11 -->
+        <div style="margin-top:3rem;background:#fff;border-radius:20px;padding:2.5rem;box-shadow:0 4px 24px rgba(0,0,0,0.06);">
+          <h4 style="text-align:center;font-size:1.2rem;color:#1a3a2f;margin-bottom:2rem;font-family:'Playfair Display',serif;" id="teamTitle">Outdoor Furniture Leadership Team</h4>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;">
+            <div style="text-align:center;padding:1.5rem;background:#faf8f5;border-radius:14px;">
+              <div style="width:64px;height:64px;background:linear-gradient(135deg,#1a3a2f,#2d5a47);border-radius:50%;margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.6rem;font-weight:700;">EC</div>
+              <h5 style="color:#1a3a2f;font-weight:600;font-size:0.95rem;" id="team1Name">Eric Chen</h5>
+              <p style="font-size:0.8rem;color:#c9a962;font-weight:600;margin-bottom:0.4rem;" id="team1Role">Business Director</p>
+              <p style="font-size:0.78rem;color:#888;line-height:1.5;" id="team1Info">20+ years experience in outdoor furniture industry</p>
+            </div>
+            <div style="text-align:center;padding:1.5rem;background:#faf8f5;border-radius:14px;">
+              <div style="width:64px;height:64px;background:linear-gradient(135deg,#c9a962,#9a7b3d);border-radius:50%;margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.6rem;font-weight:700;">QB</div>
+              <h5 style="color:#1a3a2f;font-weight:600;font-size:0.95rem;" id="team2Name">齐本海 / Qi Benhai</h5>
+              <p style="font-size:0.8rem;color:#c9a962;font-weight:600;margin-bottom:0.4rem;" id="team2Role">R&D Manager</p>
+              <p style="font-size:0.78rem;color:#888;line-height:1.5;" id="team2Info">20+ years of outdoor furniture design & R&D</p>
+            </div>
+            <div style="text-align:center;padding:1.5rem;background:#faf8f5;border-radius:14px;">
+              <div style="width:64px;height:64px;background:linear-gradient(135deg,#1a3a2f,#2d5a47);border-radius:50%;margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.6rem;font-weight:700;">YC</div>
+              <h5 style="color:#1a3a2f;font-weight:600;font-size:0.95rem;" id="team3Name">杨朝勇 / Yang Chaoyong</h5>
+              <p style="font-size:0.8rem;color:#c9a962;font-weight:600;margin-bottom:0.4rem;" id="team3Role">Production Manager</p>
+              <p style="font-size:0.78rem;color:#888;line-height:1.5;" id="team3Info">22 years of outdoor furniture production management</p>
+            </div>
+            <div style="text-align:center;padding:1.5rem;background:#faf8f5;border-radius:14px;">
+              <div style="width:64px;height:64px;background:linear-gradient(135deg,#c9a962,#9a7b3d);border-radius:50%;margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.6rem;font-weight:700;">LG</div>
+              <h5 style="color:#1a3a2f;font-weight:600;font-size:0.95rem;" id="team4Name">雷桂霞 / Lei Guixia</h5>
+              <p style="font-size:0.8rem;color:#c9a962;font-weight:600;margin-bottom:0.4rem;" id="team4Role">Quality Deputy Manager</p>
+              <p style="font-size:0.78rem;color:#888;line-height:1.5;" id="team4Info">20+ years, established quality control processes & supplier audits</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Why Partner With Us -->
-      <div style="margin-top:4rem;">
-        <h3 style="text-align:center;font-size:1.5rem;color:#1a3a2f;margin-bottom:2rem;font-family:'Playfair Display',serif;">Why Partner with <span style="color:#c9a962;">TGB</span>?</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;">
-          <div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.06);text-align:center;">
-            <div style="font-size:2.5rem;margin-bottom:1rem;">🤝</div>
-            <h4 style="color:#1a3a2f;margin-bottom:0.5rem;font-weight:600;">Retailer Trusted</h4>
-            <p style="font-size:0.9rem;color:#666;line-height:1.6;">Long-term partnerships with major US retailers including Lowe's, Michaels, Home Depot, and more.</p>
-          </div>
-          <div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.06);text-align:center;">
-            <div style="font-size:2.5rem;margin-bottom:1rem;">📦</div>
-            <h4 style="color:#1a3a2f;margin-bottom:0.5rem;font-weight:600;">Vertical Integration</h4>
-            <p style="font-size:0.9rem;color:#666;line-height:1.6;">Full control from raw materials to packaging. ERP & ISO certified quality management.</p>
-          </div>
-          <div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.06);text-align:center;">
-            <div style="font-size:2.5rem;margin-bottom:1rem;">🔬</div>
-            <h4 style="color:#1a3a2f;margin-bottom:0.5rem;font-weight:600;">In-house Testing</h4>
-            <p style="font-size:0.9rem;color:#666;line-height:1.6;">Advanced lab with vibration, salt spray, impact & drop tests. ISO standards compliance.</p>
-          </div>
-          <div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.06);text-align:center;">
-            <div style="font-size:2.5rem;margin-bottom:1rem;">🌱</div>
-            <h4 style="color:#1a3a2f;margin-bottom:0.5rem;font-weight:600;">Sustainability</h4>
-            <p style="font-size:0.9rem;color:#666;line-height:1.6;">FSC-certified materials, recycled aluminum, and eco-friendly manufacturing processes.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Products Range -->
+      <!-- Products Range - PPT Slide 20-25 -->
       <div style="margin-top:4rem;background:linear-gradient(135deg,#1a3a2f,#2d5a47);border-radius:24px;padding:3rem;color:#fff;text-align:center;">
-        <h3 style="font-size:1.5rem;margin-bottom:1.5rem;font-family:'Playfair Display',serif;">📐 Our Product Categories</h3>
-        <div style="display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;">
-          <div style="background:rgba(255,255,255,0.15);padding:1rem 2rem;border-radius:30px;">
-            <span style="font-size:1.5rem;">🪑</span>
-            <div style="margin-top:0.5rem;font-weight:500;">Outdoor Furniture</div>
+        <h3 style="font-size:1.5rem;margin-bottom:0.8rem;font-family:'Playfair Display',serif;" id="prodCatTitle">📐 Product Focus: Comprehensive Outdoor Living Solutions</h3>
+        <p style="font-size:0.9rem;color:rgba(255,255,255,0.7);margin-bottom:2rem;max-width:700px;margin-left:auto;margin-right:auto;" id="prodCatDesc">From seasonal decorations to full outdoor furniture collections — everything under one roof.</p>
+        <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;">
+          <div style="background:rgba(255,255,255,0.15);padding:1.2rem 2rem;border-radius:16px;text-align:center;min-width:140px;">
+            <span style="font-size:2rem;">🎄</span>
+            <div style="margin-top:0.5rem;font-weight:600;font-size:0.92rem;" id="cat1">Seasonal Decor</div>
+            <div style="font-size:0.75rem;color:rgba(255,255,255,0.55);margin-top:0.2rem;">户外装饰</div>
           </div>
-          <div style="background:rgba(255,255,255,0.15);padding:1rem 2rem;border-radius:30px;">
-            <span style="font-size:1.5rem;">🎄</span>
-            <div style="margin-top:0.5rem;font-weight:500;">Seasonal Decorations</div>
+          <div style="background:rgba(255,255,255,0.15);padding:1.2rem 2rem;border-radius:16px;text-align:center;min-width:140px;">
+            <span style="font-size:2rem;">🎈</span>
+            <div style="margin-top:0.5rem;font-weight:600;font-size:0.92rem;" id="cat2">Inflatables</div>
+            <div style="font-size:0.75rem;color:rgba(255,255,255,0.55);margin-top:0.2rem;">充气系列</div>
           </div>
-          <div style="background:rgba(255,255,255,0.15);padding:1rem 2rem;border-radius:30px;">
-            <span style="font-size:1.5rem;">💡</span>
-            <div style="margin-top:0.5rem;font-weight:500;">Holiday Lighting</div>
+          <div style="background:rgba(255,255,255,0.15);padding:1.2rem 2rem;border-radius:16px;text-align:center;min-width:140px;">
+            <span style="font-size:2rem;">🪑</span>
+            <div style="margin-top:0.5rem;font-weight:600;font-size:0.92rem;" id="cat3">Outdoor Furniture</div>
+            <div style="font-size:0.75rem;color:rgba(255,255,255,0.55);margin-top:0.2rem;">PE Rattan · PE Wood · Textilene</div>
           </div>
-          <div style="background:rgba(255,255,255,0.15);padding:1rem 2rem;border-radius:30px;">
-            <span style="font-size:1.5rem;">🛋️</span>
-            <div style="margin-top:0.5rem;font-weight:500;">Indoor Furniture</div>
+          <div style="background:rgba(255,255,255,0.15);padding:1.2rem 2rem;border-radius:16px;text-align:center;min-width:140px;">
+            <span style="font-size:2rem;">💡</span>
+            <div style="margin-top:0.5rem;font-weight:600;font-size:0.92rem;" id="cat4">Holiday Lighting</div>
+            <div style="font-size:0.75rem;color:rgba(255,255,255,0.55);margin-top:0.2rem;">节日灯饰</div>
           </div>
+        </div>
+
+        <!-- Material Types - PPT Slide 23 -->
+        <div style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.15);">
+          <h4 style="font-size:1rem;margin-bottom:1.5rem;color:rgba(255,255,255,0.85);" id="materialTitle">Materials We Work With:</h4>
+          <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;">
+            <div style="background:rgba(201,169,98,0.2);padding:0.8rem 1.6rem;border-radius:30px;font-size:0.88rem;font-weight:500;">PE Rattan + Metal (Iron & Aluminum)</div>
+            <div style="background:rgba(201,169,98,0.2);padding:0.8rem 1.6rem;border-radius:30px;font-size:0.88rem;font-weight:500;">PE Wood + Metal (Iron & Aluminum)</div>
+            <div style="background:rgba(201,169,98,0.2);padding:0.8rem 1.6rem;border-radius:30px;font-size:0.88rem;font-weight:500;">Textilene + Metal (Iron & Aluminum)</div>
+          </div>
+        </div>
+
+        <!-- Featured Products - PPT Slide 25 -->
+        <div style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.15);">
+          <h4 style="font-size:1rem;margin-bottom:1.5rem;color:rgba(255,255,255,0.85);" id="featuredTitle">Featured Products:</h4>
+          <div style="display:flex;justify-content:center;gap:1.2rem;flex-wrap:wrap;">
+            <div style="background:rgba(255,255,255,0.08);padding:0.7rem 1.4rem;border-radius:12px;font-size:0.82rem;">🐱 Cat Tree / 猫爬树</div>
+            <div style="background:rgba(255,255,255,0.08);padding:0.7rem 1.4rem;border-radius:12px;font-size:0.82rem;">🧊 Ice Bucket / 冰桶</div>
+            <div style="background:rgba(255,255,255,0.08);padding:0.7rem 1.4rem;border-radius:12px;font-size:0.82rem">🐾 Cat House / 猫窝</div>
+            <div style="background:rgba(255,255,255,0.08);padding:0.7rem 1.4rem;border-radius:12px;font-size:0.82rem;">🛋️ Lounge Chair / 躺椅</div>
+            <div style="background:rgba(255,255,255,0.08);padding:0.7rem 1.4rem;border-radius:12px;font-size:0.82rem;">🪑 Rocking Chair / 摇椅</div>
+            <div style="background:rgba(255,255,255,0.08);padding:0.7rem 1.4rem;border-radius:12px;font-size:0.82rem;">🍽️ Conversation Table / 会话桌</div>
+            <div style="background:rgba(255,255,255,0.08);padding:0.7rem 1.4rem;border-radius:12px;font-size:0.82rem;">🛋️ Sectional Sofa / 组合沙发</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cambodia Factory Details - PPT Slide 7-8 -->
+      <div id="cambodiaFactory" style="margin-top:3rem;background:linear-gradient(135deg,#1a3a2f 0%,#2d5a47 100%);border-radius:24px;padding:3rem;color:#fff;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:-40px;right:-40px;width:200px;height:200px;border-radius:50%;background:rgba(201,169,98,0.08);"></div>
+        <div style="position:relative;z-index:1;">
+          <div style="text-align:center;margin-bottom:2.5rem;">
+            <span id="cambodiaBadge" style="display:inline-block;padding:0.4rem 1.5rem;background:rgba(201,169,98,0.25);border-radius:30px;font-size:0.78rem;font-weight:700;color:#c9a962;letter-spacing:2px;text-transform:uppercase;">Strategic Location</span>
+            <h3 id="cambodiaTitle" style="font-family:'Playfair Display',serif;font-size:1.6rem;margin-top:1rem;">🌏 TGB (Cambodia) — Your Supply Chain Advantage</h3>
+            <p id="cambodiaDesc" style="color:rgba(255,255,255,0.75);max-width:650px;margin:0.8rem auto 0;font-size:0.92rem;line-height:1.7;">Established to help customers expand production beyond China. Strategically located near Sihanoukville Port and Phnom Penh Airport.</p>
+          </div>
+
+          <!-- Location Advantages -->
+          <div style="display:flex;justify-content:center;gap:2.5rem;margin-bottom:2.5rem;flex-wrap:wrap;">
+            <div style="text-align:center;background:rgba(255,255,255,0.08);padding:1.5rem 2.5rem;border-radius:16px;min-width:180px;">
+              <div style="font-size:1.8rem;">⚓</div>
+              <div style="font-size:1.3rem;font-weight:700;color:#c9a962;margin-top:0.5rem;">140 km</div>
+              <div id="loc1" style="font-size:0.82rem;color:rgba(255,255,255,0.65);">to Sihanoukville Port (2h)</div>
+            </div>
+            <div style="text-align:center;background:rgba(255,255,255,0.08);padding:1.5rem 2.5rem;border-radius:16px;min-width:180px;">
+              <div style="font-size:1.8rem;">✈️</div>
+              <div style="font-size:1.3rem;font-weight:700;color:#c9a962;margin-top:0.5rem;">120 km</div>
+              <div id="loc2" style="font-size:0.82rem;color:rgba(255,255,255,0.65);">to Pochentong Airport (1.5h)</div>
+            </div>
+          </div>
+
+          <!-- Factory Specs -->
+          <h4 id="factorySpecTitle" style="text-align:center;font-size:1.05rem;color:rgba(255,255,255,0.85);margin-bottom:1.5rem;">July 2025 Production Launch:</h4>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;max-width:900px;margin:0 auto;">
+            <div style="background:rgba(201,169,98,0.12);padding:1.3rem;border-radius:14px;text-align:center;">
+              <div style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:#c9a962;">260,000㎡</div>
+              <div id="spec1" style="font-size:0.8rem;color:rgba(255,255,255,0.7);margin-top:0.3rem;">Total Land Area</div>
+            </div>
+            <div style="background:rgba(201,169,98,0.12);padding:1.3rem;border-radius:14px;text-align:center;">
+              <div style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:#c9a962;">100,000㎡</div>
+              <div id="spec2" style="font-size:0.8rem;color:rgba(255,255,255,0.7);margin-top:0.3rem;">Production Area</div>
+            </div>
+            <div style="background:rgba(201,169,98,0.12);padding:1.3rem;border-radius:14px;text-align:center;">
+              <div style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:#c9a962;">1,500+</div>
+              <div id="spec3" style="font-size:0.8rem;color:rgba(255,255,255,0.7);margin-top:0.3rem;">Skilled Workers (Phase 1)</div>
+            </div>
+            <div style="background:rgba(201,169,98,0.12);padding:1.3rem;border-radius:14px;text-align:center;">
+              <div style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:#c9a962;">10-15</div>
+              <div id="spec4" style="font-size:0.8rem;color:rgba(255,255,255,0.7);margin-top:0.3rem;">Containers/Day (2026 Est.)</div>
+            </div>
+            <div style="background:rgba(201,169,98,0.12);padding:1.3rem;border-radius:14px;text-align:center;">
+              <div style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:#c9a962;">$80M+</div>
+              <div id="spec5" style="font-size:0.8rem;color:rgba(255,255,255,0.7);margin-top:0.3rem;">Annual Revenue</div>
+            </div>
+          </div>
+          <p id="customMade" style="text-align:center;margin-top:1.8rem;font-size:1.1rem;font-weight:600;color:#c9a962;">✨ Tailored Solutions for You ✨</p>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- ===== COLLECTIONS BANNER ===== -->
   <section class="collection-banner" id="collections">
     <div class="collection-inner">
       <div class="coll-card coll-card-1 fade-in">
@@ -1826,6 +2207,191 @@
           <div class="cert-icon">♻️</div>
           <div class="cert-name">RECYCLED</div>
           <div class="cert-sub" id="cert6Sub">Eco Materials</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTION PROCESS 生产工艺流程 ===== -->
+  <section class="production-section" id="process" style="background:linear-gradient(180deg,#fff 0%,#f7f5f2 100%);padding:5rem 5%;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:3rem;" class="fade-in">
+        <div class="section-label" id="processLabel">Production Process</div>
+        <h2 class="section-title" id="processTitle">End-to-End <span>Vertical Integration</span></h2>
+        <p class="section-desc" id="processDesc" style="max-width:700px;margin:1rem auto 0;">From raw material inspection to finished product shipping — every step is controlled in-house to ensure the highest quality and competitive pricing.</p>
+      </div>
+
+      <!-- Process Flow - Single Row with Connectors -->
+      <div class="process-flow-container fade-in" id="processFlow">
+
+        <!-- Step 1 - IQC (no image) -->
+        <div class="process-item">
+          <div class="process-num">01</div>
+          <div class="process-icon-wrap green">
+            <svg width="26" height="26" fill="none" viewBox="0 0 24 24"><path d="M3 6h18v4H3V6zm0 4l9 8 9-8" stroke="#c9a962" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="process-name" id="step1Title">Incoming QC</div>
+          <div class="process-sub" id="step1Desc">IQC Inspection</div>
+        </div>
+        <div class="process-arrow">→</div>
+
+        <!-- Step 2 - Cutting -->
+        <div class="process-item clickable" onclick="openProcessGallery(['images/process/step2-cutting.jpg'], 'Cutting · 激光/冲压切割')">
+          <div class="process-num">02</div>
+          <div class="process-icon-wrap gold">
+            <svg width="26" height="26" fill="none" viewBox="0 0 24 24"><path d="M6 3l12 9-12 9V3z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="process-name" id="step2Title">Cutting</div>
+          <div class="process-sub" id="step2Desc">激光/冲压切割</div>
+        </div>
+        <div class="process-arrow">→</div>
+
+        <!-- Step 3 - Bending -->
+        <div class="process-item clickable" onclick="openProcessGallery(['images/process/step3-bending.png'], 'Bending · 折弯成型')">
+          <div class="process-num">03</div>
+          <div class="process-icon-wrap green">
+            <svg width="26" height="26" fill="none" viewBox="0 0 24 24"><path d="M4 20L20 4M4 4l16 16" stroke="#c9a962" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="process-name" id="step3Title">Bending</div>
+          <div class="process-sub" id="step3Desc">折弯成型</div>
+        </div>
+        <div class="process-arrow">→</div>
+
+        <!-- Step 4 - Welding -->
+        <div class="process-item clickable" onclick="openProcessGallery(['images/process/step4-welding.png'], 'Welding · 焊接')">
+          <div class="process-num">04</div>
+          <div class="process-icon-wrap gold">
+            <svg width="26" height="26" fill="none" viewBox="0 0 24 24"><path d="M12 2v4m0 12v4M2 12h4m12 0h4" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="process-name" id="step4Title">Welding</div>
+          <div class="process-sub" id="step4Desc">焊接</div>
+        </div>
+        <div class="process-arrow">→</div>
+
+        <!-- Step 5 - Grinding -->
+        <div class="process-item clickable" onclick="openProcessGallery(['images/process/step5-grinding.png'], 'Grinding · 研磨/抛光')">
+          <div class="process-num">05</div>
+          <div class="process-icon-wrap green">
+            <svg width="26" height="26" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke="#c9a962" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="#c9a962" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="process-name" id="step5Title">Grinding</div>
+          <div class="process-sub" id="step5Desc">研磨/抛光</div>
+        </div>
+        <div class="process-arrow">→</div>
+
+        <!-- Step 6 - Alkaline Wash -->
+        <div class="process-item clickable" onclick="openProcessGallery(['images/process/step6-alkaline.png'], 'Alkaline Wash · 碱洗/电泳')">
+          <div class="process-num">06</div>
+          <div class="process-icon-wrap gold">
+            <svg width="26" height="26" fill="none" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V6h2v6zm4 4h-2v-2h2v2zm0-4h-2V6h2v6z" fill="#fff"/></svg>
+          </div>
+          <div class="process-name" id="step6Title">Alkaline Wash</div>
+          <div class="process-sub" id="step6Desc">碱洗/电泳</div>
+        </div>
+        <div class="process-arrow">→</div>
+
+        <!-- Step 7 - Powder Coating (3 images) -->
+        <div class="process-item clickable" onclick="openProcessGallery(['images/process/step7-coating1.png','images/process/step7-coating2.png','images/process/step7-coating3.png'], 'Powder Coating · 烤粉 & 手刷漆')">
+          <div class="process-num">07</div>
+          <div class="process-icon-wrap green">
+            <svg width="26" height="26" fill="none" viewBox="0 0 24 24"><path d="M3 21h18M9 21V8l-3 4M15 21V8l3 4" stroke="#c9a962" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="process-name" id="step7Title">Powder Coating</div>
+          <div class="process-sub" id="step7Desc">烤粉 & 手刷漆</div>
+        </div>
+        <div class="process-arrow">→</div>
+
+        <!-- Step 8 - Rattan Weaving (3 images) -->
+        <div class="process-item clickable" onclick="openProcessGallery(['images/process/step8-rattan1.png','images/process/step8-rattan2.png','images/process/step8-rattan3.png'], 'Rattan Weaving · 编藤')">
+          <div class="process-num">08</div>
+          <div class="process-icon-wrap gold">
+            <svg width="26" height="26" fill="none" viewBox="0 0 24 24"><path d="M4 20h16M8 20V8a2 2 0 012-2h4a2 2 0 012 2v12" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="process-name" id="step8Title">Rattan Weaving</div>
+          <div class="process-sub" id="step8Desc">编藤</div>
+        </div>
+        <div class="process-arrow">→</div>
+
+        <!-- Step 9 - Sewing (3 images) -->
+        <div class="process-item clickable" onclick="openProcessGallery(['images/process/step9-sewing1.png','images/process/step9-sewing2.png','images/process/step9-sewing3.png'], 'Sewing · 裁剪/车缝/充棉')">
+          <div class="process-num">09</div>
+          <div class="process-icon-wrap green">
+            <svg width="26" height="26" fill="none" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8L12 4z" stroke="#c9a962" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="process-name" id="step9Title">Sewing</div>
+          <div class="process-sub" id="step9Desc">裁剪/车缝/充棉</div>
+        </div>
+        <div class="process-arrow">→</div>
+
+        <!-- Step 10 - Assembly -->
+        <div class="process-item clickable" onclick="openProcessGallery(['images/process/step10-assembly.png'], 'Assembly · 组装')">
+          <div class="process-num">10</div>
+          <div class="process-icon-wrap gold">
+            <svg width="26" height="26" fill="none" viewBox="0 0 24 24"><path d="M12 2l3 6h7l-5.5 4.5 2 7L12 15l-6.5 4.5 2-7L2 8h7l3-6z" fill="#fff"/></svg>
+          </div>
+          <div class="process-name" id="step10Title">Assembly</div>
+          <div class="process-sub" id="step10Desc">组装</div>
+        </div>
+        <div class="process-arrow">→</div>
+
+        <!-- Step 11 - Final Inspection (no image) -->
+        <div class="process-item">
+          <div class="process-num">11</div>
+          <div class="process-icon-wrap green">
+            <svg width="26" height="26" fill="none" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#c9a962" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="process-name" id="step11Title">Final Inspection</div>
+          <div class="process-sub" id="step11Desc">最终检验</div>
+        </div>
+        <div class="process-arrow">→</div>
+
+        <!-- Step 12 - Packaging -->
+        <div class="process-item clickable" onclick="openProcessGallery(['images/process/step12-packaging.png'], 'Packaging · 包装出货')">
+          <div class="process-num">12</div>
+          <div class="process-icon-wrap gold">
+            <svg width="26" height="26" fill="none" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0022 16z" stroke="#fff" stroke-width="1.5"/><path d="M12 22V12M22 8.5l-10 6L2 8.5" stroke="#fff" stroke-width="1.5"/></svg>
+          </div>
+          <div class="process-name" id="step12Title">Packaging</div>
+          <div class="process-sub" id="step12Desc">包装出货</div>
+        </div>
+
+      </div>
+
+      <!-- Testing Lab Section - PPT Slide 12 -->
+      <div class="fade-in" style="background:#1a3a2f;border-radius:24px;padding:3rem;color:#fff;margin-top:1rem;">
+        <h3 style="text-align:center;font-size:1.4rem;margin-bottom:0.5rem;font-family:'Playfair Display',serif;" id="labTitle">🔬 Advanced Testing Laboratory</h3>
+        <p style="text-align:center;font-size:0.9rem;color:rgba(255,255,255,0.7);margin-bottom:2rem;max-width:600px;margin-left:auto;margin-right:auto;" id="labDesc">Every product undergoes rigorous testing before shipment to ensure it meets international quality standards.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1.2rem;max-width:1000px;margin:0 auto;">
+          <div class="lab-card" onclick="openProcessGallery(['images/process/test1-vibration.png'], 'Vibration Test · 振动测试')">
+            <div style="font-size:2rem;margin-bottom:0.8rem;">📳</div>
+            <h5 style="font-weight:600;margin-bottom:0.4rem;font-size:0.92rem;" id="test1Title">Vibration Test</h5>
+            <p style="font-size:0.78rem;color:rgba(255,255,255,0.6);" id="test1Desc">振动测试</p>
+          </div>
+          <div class="lab-card" onclick="openProcessGallery(['images/process/test2-colorfastness.png'], 'Color Fastness · 摩擦色牢度')">
+            <div style="font-size:2rem;margin-bottom:0.8rem;">🎨</div>
+            <h5 style="font-weight:600;margin-bottom:0.4rem;font-size:0.92rem;" id="test2Title">Color Fastness</h5>
+            <p style="font-size:0.78rem;color:rgba(255,255,255,0.6);" id="test2Desc">摩擦色牢度</p>
+          </div>
+          <div class="lab-card" onclick="openProcessGallery(['images/process/test3-burst.png'], 'Burst Strength · 耐破强度')">
+            <div style="font-size:2rem;margin-bottom:0.8rem;">💨</div>
+            <h5 style="font-weight:600;margin-bottom:0.4rem;font-size:0.92rem;" id="test3Title">Burst Strength</h5>
+            <p style="font-size:0.78rem;color:rgba(255,255,255,0.6);" id="test3Desc">耐破强度</p>
+          </div>
+          <div class="lab-card" onclick="openProcessGallery(['images/process/test4-impact.png'], 'Impact Test · 冲击测试')">
+            <div style="font-size:2rem;margin-bottom:0.8rem;">⚡</div>
+            <h5 style="font-weight:600;margin-bottom:0.4rem;font-size:0.92rem;" id="test4Title">Impact Test</h5>
+            <p style="font-size:0.78rem;color:rgba(255,255,255,0.6);" id="test4Desc">冲击测试</p>
+          </div>
+          <div class="lab-card" onclick="openProcessGallery(['images/process/test5-drop.png'], 'Drop Test · 落地测试')">
+            <div style="font-size:2rem;margin-bottom:0.8rem;">📦</div>
+            <h5 style="font-weight:600;margin-bottom:0.4rem;font-size:0.92rem;" id="test5Title">Drop Test</h5>
+            <p style="font-size:0.78rem;color:rgba(255,255,255,0.6);" id="test5Desc">落地测试</p>
+          </div>
+          <div class="lab-card" onclick="openProcessGallery(['images/process/test6-saltspray.png'], 'Salt Spray · 盐雾测试')">
+            <div style="font-size:2rem;margin-bottom:0.8rem;">🧪</div>
+            <h5 style="font-weight:600;margin-bottom:0.4rem;font-size:0.92rem;" id="test6Title">Salt Spray</h5>
+            <p style="font-size:0.78rem;color:rgba(255,255,255,0.6);" id="test6Desc">盐雾测试</p>
+          </div>
         </div>
       </div>
     </div>
@@ -2025,11 +2591,7 @@
             <source src="images/video01.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <div class="video-overlay" id="videoOverlay">
-            <div class="video-badge" id="videoBadge">Featured Video</div>
-            <h3 id="videoTitle">Product Showcase</h3>
-            <p id="videoDesc">Watch Our Furniture in Action</p>
-          </div>
+
         </div>
       </div>
 
@@ -2299,7 +2861,7 @@
         navQuote: 'Get a Quote',
         heroBadge: 'Leading Manufacturer Since 2008',
         heroTitle: 'Your Trusted <span>Global</span> Partner',
-        heroDesc: "Industry-leading manufacturer, trusted by major US retailers worldwide. With 9 factories across 4 countries and 4,500+ skilled workers, we deliver premium quality at competitive prices.",
+        heroDesc: "Industry-leading manufacturer, trusted by major US retailers worldwide. With 8 factories across 3 countries and 4,500+ skilled workers, we deliver premium quality at competitive prices.",
         heroBtn1: 'Explore Products',
         heroBtn2: 'Visit Factory',
         heroStatsProducts: 'Global Factories',
@@ -2352,8 +2914,8 @@
         tagsSale: 'Sale',
         // About
         aboutLabel: 'Company Overview',
-        aboutTitle: 'From Local Factory to <span>Global Leader</span>',
-        aboutDesc: "Since 2008, we've grown from a single factory in China to a multinational manufacturing powerhouse. Our journey reflects our commitment to quality and customer satisfaction.",
+        aboutTitle: 'TGB <span>Development History</span>',
+        aboutDesc: 'From a single factory in 2008 to 8 manufacturing bases across 3 countries. Our group includes: 正阳县合兴灯饰有限公司, Boxu Crafts Co., Ltd, Season Plus Arts & Crafts, 东莞市合兴圣诞礼品有限公司, 惠州市凯德新能源灯饰有限公司, TGB Electronic Lighting, TGB Outdoor Furniture, BENE HOME TREE & CRAFTS CO.LTD, 安徽凯德工艺品有限公司',
         aboutPt1Title: 'Sustainably Sourced',
         aboutPt1Desc: 'FSC-certified teak, reclaimed wood, and recycled aluminum form the backbone of our range.',
         aboutPt2Title: 'Expert Craftsmanship',
@@ -2431,6 +2993,31 @@
         craft6Badge: '10-YEAR WARRANTY',
         cert1Sub: 'Certified Wood', cert2Sub: 'Quality System', cert3Sub: 'Environmental Mgmt',
         cert4Sub: 'Social Compliance', cert5Sub: 'Safety Standards', cert6Sub: 'Eco Materials',
+        // Process
+        navProcess: 'Process',
+        processLabel: 'Production Process',
+        processTitle: 'End-to-End <span>Vertical Integration</span>',
+        processDesc: 'From raw material inspection to finished product shipping — every step is controlled in-house to ensure the highest quality and competitive pricing.',
+        step1Title: 'Incoming QC', step1Desc: 'IQC Inspection',
+        step2Title: 'Cutting', step2Desc: 'Laser/Punch',
+        step3Title: 'Bending', step3Desc: '成型折弯',
+        step4Title: 'Welding', step4Desc: '焊接',
+        step5Title: 'Grinding', step5Desc: '研磨抛光',
+        step6Title: 'Alkaline Wash', step6Desc: '碱洗/电泳',
+        step7Title: 'Powder Coating', step7Desc: '烤粉 & 手刷漆',
+        step8Title: 'Rattan Weaving', step8Desc: '编藤',
+        step9Title: 'Sewing', step9Desc: '裁剪/车缝/充棉',
+        step10Title: 'Assembly', step10Desc: '组装',
+        step11Title: 'Final Inspection', step11Desc: '最终检验',
+        step12Title: 'Packaging', step12Desc: '包装出货',
+        labTitle: '🔬 Advanced Testing Laboratory',
+        labDesc: 'Every product undergoes rigorous testing before shipment to ensure it meets international quality standards.',
+        test1Title: 'Vibration Test', test1Desc: '振动测试',
+        test2Title: 'Color Fastness', test2Desc: '摩擦色牢度',
+        test3Title: 'Burst Strength', test3Desc: '耐破强度',
+        test4Title: 'Impact Test', test4Desc: '冲击测试',
+        test5Title: 'Drop Test', test5Desc: '落地测试',
+        test6Title: 'Salt Spray', test6Desc: '盐雾测试',
         // Membership
         memLabel: 'B2B Partner Program',
         memTitle: 'TGB <span>Dealer Membership</span>',
@@ -2526,7 +3113,7 @@
         navQuote: '获取报价',
         heroBadge: '自2008年起领先的制造商',
         heroTitle: '您值得信赖的<span>全球</span>合作伙伴',
-        heroDesc: '行业领先制造商，2008年以来深受全球主要美国零售商信赖。我们在4个国家拥有9家工厂和4500多名熟练工人，以优惠价格提供优质产品。',
+        heroDesc: '行业领先制造商，2008年以来深受全球主要美国零售商信赖。我们在3个国家拥有8家工厂和4500多名熟练工人，以优惠价格提供优质产品。',
         heroBtn1: '探索产品',
         heroBtn2: '参观工厂',
         heroStatsProducts: '全球工厂',
@@ -2658,6 +3245,31 @@
         craft6Badge: '10年质量保证',
         cert1Sub: '认证木材', cert2Sub: '质量管理体系', cert3Sub: '环境管理',
         cert4Sub: '社会合规', cert5Sub: '安全标准', cert6Sub: '环保材料',
+        // 生产流程
+        navProcess: '生产工艺',
+        processLabel: '生产工艺流程',
+        processTitle: '端到端 <span>垂直整合</span>',
+        processDesc: '从来料检验到成品出货——每一步都在厂内完成，确保最高品质和最具竞争力的价格。',
+        step1Title: '来料检验', step1Desc: 'IQC检验',
+        step2Title: '切割', step2Desc: '激光/冲压',
+        step3Title: '折弯', step3Desc: '成型折弯',
+        step4Title: '焊接', step4Desc: '焊接',
+        step5Title: '研磨抛光', step5Desc: '研磨/抛光',
+        step6Title: '碱洗电泳', step6Desc: '碱洗/电泳',
+        step7Title: '烤粉喷漆', step7Desc: '烤粉 & 手刷漆',
+        step8Title: '编藤', step8Desc: '编藤',
+        step9Title: '车缝', step9Desc: '裁剪/车缝/充棉',
+        step10Title: '组装', step10Desc: '组装',
+        step11Title: '最终检验', step11Desc: '最终检验',
+        step12Title: '包装出货', step12Desc: '包装出货',
+        labTitle: '🔬 先进测试实验室',
+        labDesc: '每件产品出货前都经过严格测试，确保符合国际质量标准。',
+        test1Title: '振动测试', test1Desc: 'Vibration Test',
+        test2Title: '摩擦色牢度', test2Desc: 'Color Fastness',
+        test3Title: '耐破强度', test3Desc: 'Burst Strength',
+        test4Title: '冲击测试', test4Desc: 'Impact Test',
+        test5Title: '落地测试', test5Desc: 'Drop Test',
+        test6Title: '盐雾测试', test6Desc: 'Salt Spray',
         // 会员体系
         memLabel: 'B2B经销商计划',
         memTitle: 'TGB <span>经销商会员</span>',
@@ -2871,33 +3483,40 @@
         const timelineItems = aboutSection.querySelectorAll('.timeline-item');
         if (timelineItems[0]) timelineItems[0].querySelector('div:first-child').textContent = lang === 'en' ? '2008' : '2008';
         if (timelineItems[0]) timelineItems[0].querySelector('div:last-child').innerHTML = lang === 'en' ? 'Founded in<br/>China' : '在中国<br/>成立';
-        if (timelineItems[1]) timelineItems[1].querySelector('div:first-child').textContent = lang === 'en' ? '9' : '9';
+        if (timelineItems[1]) timelineItems[1].querySelector('div:first-child').textContent = lang === 'en' ? '8' : '8';
         if (timelineItems[1]) timelineItems[1].querySelector('div:last-child').innerHTML = lang === 'en' ? 'Factories<br/>Worldwide' : '家工厂<br/>全球';
-        if (timelineItems[2]) timelineItems[2].querySelector('div:first-child').textContent = lang === 'en' ? '4' : '4';
-        if (timelineItems[2]) timelineItems[2].querySelector('div:last-child').innerHTML = lang === 'en' ? 'Countries<br/>(CN/KH/VN/TH)' : '个国家<br/>(中/柬/越/泰)';
+        if (timelineItems[2]) timelineItems[2].querySelector('div:first-child').textContent = lang === 'en' ? '3' : '3';
+        if (timelineItems[2]) timelineItems[2].querySelector('div:last-child').innerHTML = lang === 'en' ? 'Countries<br/>(CN/KH/VN)' : '个国家<br/>(中/柬/越)';
         if (timelineItems[3]) timelineItems[3].querySelector('div:first-child').textContent = lang === 'en' ? '2025' : '2025';
         if (timelineItems[3]) timelineItems[3].querySelector('div:last-child').innerHTML = lang === 'en' ? 'New Cambodia<br/>Factory' : '柬埔寨<br/>新工厂';
         
         // Update factory locations
-        const factoryLocationDivs = aboutSection.querySelectorAll('.factory-locations > div > div');
+        const factoryCards = document.querySelectorAll('.factory-card');
         const factoryData = [
           { title: lang === 'en' ? 'China (4 factories)' : '中国 (4家工厂)', desc: lang === 'en' ? 'Henan, Dongguan, Huizhou, Anhui' : '河南、东莞、惠州、安徽' },
           { title: lang === 'en' ? 'Cambodia (2 factories)' : '柬埔寨 (2家工厂)', desc: lang === 'en' ? 'Bavet, Phnom Penh' : '巴域、金边' },
-          { title: lang === 'en' ? 'Vietnam (2 factories)' : '越南 (2家工厂)', desc: lang === 'en' ? 'Binh Duong' : '平阳' },
-          { title: lang === 'en' ? 'Thailand (1 factory)' : '泰国 (1家工厂)', desc: lang === 'en' ? 'Bangkok' : '曼谷' }
+          { title: lang === 'en' ? 'Vietnam (2 factories)' : '越南 (2家工厂)', desc: lang === 'en' ? 'Binh Duong' : '平阳' }
         ];
-        factoryLocationDivs.forEach((div, i) => {
+        factoryCards.forEach((card, i) => {
           if (factoryData[i]) {
-            const h4 = div.querySelector('div:first-child');
-            const p = div.querySelector('div:last-child');
-            if (h4) h4.textContent = factoryData[i].title;
-            if (p) p.textContent = factoryData[i].desc;
+            const titleEl = card.querySelector('.factory-title');
+            const descEl = card.querySelector('.factory-desc');
+            if (titleEl) titleEl.textContent = factoryData[i].title;
+            if (descEl) descEl.textContent = factoryData[i].desc;
           }
         });
         
         // Factory section title
         const factoryTitle = aboutSection.querySelector('.factory-locations h3');
         if (factoryTitle) factoryTitle.textContent = lang === 'en' ? '🏭 Our Manufacturing Footprint' : '🏭 我们的制造布局';
+        
+        // Summary Stats
+        const sf = document.getElementById('statFactories');
+        if (sf) sf.textContent = lang === 'en' ? 'Factories Across 3 Countries' : '覆盖3个国家的8家工厂';
+        const ss = document.getElementById('statSpace');
+        if (ss) ss.textContent = lang === 'en' ? 'm² Production Space' : 'm² 生产空间';
+        const sw = document.getElementById('statWorkers');
+        if (sw) sw.textContent = lang === 'en' ? 'Experienced Workers' : '名经验丰富的工人';
       }
       
       // Collections
@@ -3119,6 +3738,144 @@
     if (savedLang && translations[savedLang]) {
       setLang(savedLang);
     }
+  </script>
+
+  <!-- Process Image Lightbox (Enhanced) -->
+  <div id="processLightbox" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.92);z-index:10000;justify-content:center;align-items:center;flex-direction:column;" onclick="closeLightbox(event)">
+    <!-- Title -->
+    <div class="lb-title" id="lbTitle"></div>
+    <!-- Counter -->
+    <div class="lb-counter" id="lbCounter"></div>
+    <!-- Close -->
+    <div class="lb-close-btn" onclick="closeLightbox(event)">&times;</div>
+    <!-- Navigation -->
+    <div class="lb-nav-btn prev" id="lbPrev" onclick="event.stopPropagation();lbNav(-1)">‹</div>
+    <div class="lb-nav-btn next" id="lbNext" onclick="event.stopPropagation();lbNav(1)">›</div>
+    <!-- Image -->
+    <img id="processLightboxImg" src="" style="max-width:88vw;max-height:82vh;border-radius:10px;box-shadow:0 12px 48px rgba(0,0,0,0.5);object-fit:contain;" onclick="event.stopPropagation()">
+    <!-- Dot Indicators -->
+    <div class="lb-dots" id="lbDots"></div>
+  </div>
+  <script>
+    var lbImages = [];
+    var lbIndex = 0;
+    var lbTitle = '';
+
+    function openProcessGallery(imgs, title) {
+      lbImages = imgs;
+      lbIndex = 0;
+      lbTitle = title || '';
+      updateLightbox();
+      var lb = document.getElementById('processLightbox');
+      lb.style.display = 'flex';
+      // Trigger fade-in
+      requestAnimationFrame(function() {
+        lb.classList.add('active');
+      });
+      document.body.style.overflow = 'hidden';
+    }
+
+    function openProcessImg(src) {
+      openProcessGallery([src]);
+    }
+
+    function updateLightbox() {
+      var img = document.getElementById('processLightboxImg');
+      img.style.opacity = '0';
+      img.style.transform = 'scale(0.95)';
+      setTimeout(function() {
+        img.src = lbImages[lbIndex];
+        img.onload = function() {
+          img.style.opacity = '1';
+          img.style.transform = 'scale(1)';
+        };
+        if (img.complete) {
+          img.style.opacity = '1';
+          img.style.transform = 'scale(1)';
+        }
+      }, 150);
+
+      var counter = document.getElementById('lbCounter');
+      var prev = document.getElementById('lbPrev');
+      var next = document.getElementById('lbNext');
+      var title = document.getElementById('lbTitle');
+      var dots = document.getElementById('lbDots');
+
+      // Title
+      if (lbTitle) {
+        title.style.display = 'block';
+        title.textContent = lbTitle;
+      } else {
+        title.style.display = 'none';
+      }
+
+      if (lbImages.length > 1) {
+        counter.style.display = 'block';
+        counter.textContent = (lbIndex + 1) + ' / ' + lbImages.length;
+        prev.style.display = 'flex';
+        next.style.display = 'flex';
+        // Dots
+        dots.style.display = 'flex';
+        dots.innerHTML = '';
+        for (var i = 0; i < lbImages.length; i++) {
+          var dot = document.createElement('div');
+          dot.className = 'lb-dot' + (i === lbIndex ? ' active' : '');
+          dot.setAttribute('data-index', i);
+          dot.onclick = function(e) {
+            e.stopPropagation();
+            lbIndex = parseInt(this.getAttribute('data-index'));
+            updateLightbox();
+          };
+          dots.appendChild(dot);
+        }
+      } else {
+        counter.style.display = 'none';
+        prev.style.display = 'none';
+        next.style.display = 'none';
+        dots.style.display = 'none';
+      }
+    }
+
+    function lbNav(dir) {
+      lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
+      updateLightbox();
+    }
+
+    function closeLightbox(e) {
+      if (e && e.target !== e.currentTarget) return;
+      var lb = document.getElementById('processLightbox');
+      lb.classList.remove('active');
+      setTimeout(function() {
+        lb.style.display = 'none';
+        document.body.style.overflow = '';
+      }, 300);
+    }
+
+    document.addEventListener('keydown', function(e) {
+      var lb = document.getElementById('processLightbox');
+      if (lb.style.display === 'flex') {
+        if (e.key === 'Escape') closeLightbox(e);
+        if (e.key === 'ArrowLeft') lbNav(-1);
+        if (e.key === 'ArrowRight') lbNav(1);
+      }
+    });
+
+    // Swipe support for mobile
+    (function() {
+      var startX = 0, startY = 0;
+      var lb = document.getElementById('processLightbox');
+      lb.addEventListener('touchstart', function(e) {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+      }, {passive: true});
+      lb.addEventListener('touchend', function(e) {
+        var diffX = e.changedTouches[0].clientX - startX;
+        var diffY = e.changedTouches[0].clientY - startY;
+        if (Math.abs(diffX) > 50 && Math.abs(diffX) > Math.abs(diffY)) {
+          lbNav(diffX > 0 ? -1 : 1);
+        }
+      }, {passive: true});
+    })();
   </script>
 </body>
 </html>

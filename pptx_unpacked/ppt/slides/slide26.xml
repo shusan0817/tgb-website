@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<p:sld xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main">
+  <p:cSld>
+    <p:spTree>
+      <p:nvGrpSpPr>
+        <p:cNvPr id="1" name=""/>
+        <p:cNvGrpSpPr/>
+        <p:nvPr/>
+      </p:nvGrpSpPr>
+      <p:grpSpPr>
+        <a:xfrm>
+          <a:off x="0" y="0"/>
+          <a:ext cx="0" cy="0"/>
+          <a:chOff x="0" y="0"/>
+          <a:chExt cx="0" cy="0"/>
+        </a:xfrm>
+      </p:grpSpPr>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="3" name="TextBox 2"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="71120" y="321310"/>
+            <a:ext cx="9006840" cy="3538220"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" rtlCol="0">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:r>
+              <a:rPr lang="en-US" altLang="zh-CN" sz="3200" dirty="0"/>
+              <a:t>                </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="zh-CN" altLang="en-US" sz="3200" dirty="0"/>
+              <a:t>为什么与合兴合作</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="en-US" sz="3200" dirty="0"/>
+              <a:t>: </a:t>
+            </a:r>
+            <a:endParaRPr lang="en-US" sz="3200" dirty="0"/>
+          </a:p>
+          <a:p>
+            <a:endParaRPr lang="en-US" sz="3200" dirty="0"/>
+          </a:p>
+          <a:p>
+            <a:pPr marL="800100" lvl="1" indent="-342900">
+              <a:buFont typeface="Wingdings" panose="05000000000000000000" pitchFamily="2" charset="2"/>
+              <a:buChar char="Ø"/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="zh-CN" altLang="en-US" sz="2000" dirty="0"/>
+              <a:t>通过</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="zh-CN" altLang="en-US" sz="2000" dirty="0"/>
+              <a:t>贸易商与美国零售巨头有良好的合作记录</a:t>
+            </a:r>
+            <a:endParaRPr lang="zh-CN" altLang="en-US" sz="2000" dirty="0"/>
+          </a:p>
+          <a:p>
+            <a:pPr lvl="1">
+              <a:buFont typeface="Wingdings" panose="05000000000000000000" pitchFamily="2" charset="2"/>
+            </a:pPr>
+            <a:endParaRPr lang="en-US" sz="2000" dirty="0"/>
+          </a:p>
+          <a:p>
+            <a:pPr marL="800100" lvl="1" indent="-342900">
+              <a:buFont typeface="Wingdings" panose="05000000000000000000" pitchFamily="2" charset="2"/>
+              <a:buChar char="Ø"/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="zh-CN" altLang="en-US" sz="2000" dirty="0"/>
+              <a:t>精英管理的专业（业务</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="en-US" altLang="zh-CN" sz="2000" dirty="0"/>
+              <a:t> </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="zh-CN" altLang="en-US" sz="2000" dirty="0"/>
+              <a:t>研发</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="en-US" altLang="zh-CN" sz="2000" dirty="0"/>
+              <a:t> </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="zh-CN" altLang="en-US" sz="2000" dirty="0"/>
+              <a:t>生产</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="en-US" altLang="zh-CN" sz="2000" dirty="0"/>
+              <a:t> </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="zh-CN" altLang="en-US" sz="2000" dirty="0"/>
+              <a:t>品质）团队</a:t>
+            </a:r>
+            <a:endParaRPr lang="zh-CN" altLang="en-US" sz="2000" dirty="0"/>
+          </a:p>
+          <a:p>
+            <a:pPr lvl="1">
+              <a:buFont typeface="Wingdings" panose="05000000000000000000" pitchFamily="2" charset="2"/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en-US" altLang="zh-CN" sz="2000" dirty="0"/>
+              <a:t>      </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="zh-CN" altLang="en-US" sz="2000" dirty="0"/>
+              <a:t>以确保您的项目能最佳执行</a:t>
+            </a:r>
+            <a:endParaRPr lang="zh-CN" altLang="en-US" sz="2000" dirty="0"/>
+          </a:p>
+          <a:p>
+            <a:pPr lvl="1">
+              <a:buFont typeface="Wingdings" panose="05000000000000000000" pitchFamily="2" charset="2"/>
+            </a:pPr>
+            <a:endParaRPr lang="zh-CN" altLang="en-US" sz="2000" dirty="0"/>
+          </a:p>
+          <a:p>
+            <a:pPr marL="800100" lvl="1" indent="-342900">
+              <a:buFont typeface="Wingdings" panose="05000000000000000000" pitchFamily="2" charset="2"/>
+              <a:buChar char="Ø"/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="zh-CN" altLang="en-US" sz="2000" dirty="0"/>
+              <a:t>在战略位置的可扩展容量，以加强您的供应链竞争力和弹性</a:t>
+            </a:r>
+            <a:endParaRPr lang="zh-CN" altLang="en-US" sz="2000" dirty="0"/>
+          </a:p>
+          <a:p>
+            <a:pPr lvl="1">
+              <a:buFont typeface="Wingdings" panose="05000000000000000000" pitchFamily="2" charset="2"/>
+            </a:pPr>
+            <a:endParaRPr lang="zh-CN" altLang="en-US" sz="2000" dirty="0"/>
+          </a:p>
+          <a:p>
+            <a:pPr marL="800100" lvl="1" indent="-342900">
+              <a:buFont typeface="Wingdings" panose="05000000000000000000" pitchFamily="2" charset="2"/>
+              <a:buChar char="Ø"/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en-US" altLang="zh-CN" sz="2000" dirty="0"/>
+              <a:t>ERP &amp; ISO</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="zh-CN" altLang="en-US" sz="2000" dirty="0"/>
+              <a:t>垂直整合，最大限度地控制成本和质量</a:t>
+            </a:r>
+            <a:endParaRPr lang="zh-CN" altLang="en-US" sz="2000" dirty="0"/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2" name="Slide Number Placeholder 1"/>
+          <p:cNvSpPr>
+            <a:spLocks noGrp="1"/>
+          </p:cNvSpPr>
+          <p:nvPr>
+            <p:ph type="sldNum" sz="quarter" idx="12"/>
+          </p:nvPr>
+        </p:nvSpPr>
+        <p:spPr/>
+        <p:txBody>
+          <a:bodyPr/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr lvl="0" eaLnBrk="1" hangingPunct="1">
+              <a:buNone/>
+            </a:pPr>
+            <a:fld id="{9A0DB2DC-4C9A-4742-B13C-FB6460FD3503}" type="slidenum">
+              <a:rPr lang="zh-CN" altLang="en-US" smtClean="0">
+                <a:latin typeface="Calibri" panose="020F0502020204030204" pitchFamily="34" charset="0"/>
+              </a:rPr>
+            </a:fld>
+            <a:endParaRPr lang="zh-CN" altLang="en-US" dirty="0">
+              <a:latin typeface="Calibri" panose="020F0502020204030204" pitchFamily="34" charset="0"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+    </p:spTree>
+  </p:cSld>
+  <p:clrMapOvr>
+    <a:masterClrMapping/>
+  </p:clrMapOvr>
+</p:sld>
