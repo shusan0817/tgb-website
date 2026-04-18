@@ -2572,13 +2572,14 @@
       });
       
       // Nav
-      document.getElementById('navProducts').textContent = t.navProducts;
-      document.getElementById('navAbout').textContent = t.navAbout;
-      document.getElementById('navCraft').textContent = t.navCraft;
-      document.getElementById('navGallery').textContent = t.navGallery;
-      document.getElementById('navMembership').textContent = t.navMembership;
-      document.getElementById('navContact').textContent = t.navContact;
-      document.getElementById('navQuoteBtn').textContent = t.navQuote;
+      if (document.getElementById('navProducts')) document.getElementById('navProducts').textContent = t.navProducts;
+      if (document.getElementById('navAbout')) document.getElementById('navAbout').textContent = t.navAbout;
+      if (document.getElementById('navCraft')) document.getElementById('navCraft').textContent = t.navCraft;
+      if (document.getElementById('navProcess')) document.getElementById('navProcess').textContent = t.navProcess || 'Process';
+      if (document.getElementById('navGallery')) document.getElementById('navGallery').textContent = t.navGallery;
+      if (document.getElementById('navMembership')) document.getElementById('navMembership').textContent = t.navMembership;
+      if (document.getElementById('navContact')) document.getElementById('navContact').textContent = t.navContact;
+      if (document.getElementById('navQuoteBtn')) document.getElementById('navQuoteBtn').textContent = t.navQuote;
       
       // Mobile menu
       const mmLinks = document.querySelectorAll('#mobileMenu > a:not(.btn-nav)');
