@@ -2465,37 +2465,37 @@
       if (mmQuote) mmQuote.textContent = t.navQuote;
       
       // Hero
-      document.querySelector('.hero-badge').textContent = t.heroBadge;
-      document.querySelector('.hero-title').innerHTML = lang === 'en' 
+      (document.querySelector('.hero-badge') || {}).textContent = t.heroBadge;
+      (document.querySelector('.hero-title') || {}).innerHTML = lang === 'en' 
         ? 'Elevate Your <span>Outdoor</span><br>Living Space' 
         : '提升您的<span>户外</span>生活空间';
-      document.querySelector('.hero-desc').textContent = t.heroDesc;
-      document.querySelector('.hero-actions .btn-primary').textContent = t.heroBtn1;
-      document.querySelector('.hero-actions .btn-secondary').textContent = t.heroBtn2;
-      document.querySelectorAll('.stat-label')[0].textContent = t.heroStatsProducts;
-      document.querySelectorAll('.stat-label')[1].textContent = t.heroStatsClients;
-      document.querySelectorAll('.stat-label')[2].textContent = t.heroStatsWorkers;
-      document.querySelectorAll('.stat-label')[3].textContent = t.heroStatsCountries;
-      document.querySelector('.hero-card-info h3').textContent = t.heroCardTitle;
-      document.querySelector('.hero-card-info p').textContent = t.heroCardMeta;
-      document.querySelector('.hero-card-price').textContent = t.heroCardPrice;
-      document.querySelector('.hero-card-badge').textContent = t.heroCardBadge;
-      document.querySelector('.hero-card-float .float-text-main').textContent = t.heroFloatTitle;
-      document.querySelector('.hero-card-float .float-text-sub').textContent = t.heroFloatSub;
+      (document.querySelector('.hero-desc') || {}).textContent = t.heroDesc;
+      (document.querySelector('.hero-actions .btn-primary') || {}).textContent = t.heroBtn1;
+      (document.querySelector('.hero-actions .btn-secondary') || {}).textContent = t.heroBtn2;
+      if (document.querySelectorAll('.stat-label')[0]) document.querySelectorAll('.stat-label')[0].textContent = t.heroStatsProducts;;
+      if (document.querySelectorAll('.stat-label')[1]) document.querySelectorAll('.stat-label')[1].textContent = t.heroStatsClients;;
+      if (document.querySelectorAll('.stat-label')[2]) document.querySelectorAll('.stat-label')[2].textContent = t.heroStatsWorkers;;
+      if (document.querySelectorAll('.stat-label')[3]) document.querySelectorAll('.stat-label')[3].textContent = t.heroStatsCountries;;
+      (document.querySelector('.hero-card-info h3') || {}).textContent = t.heroCardTitle;
+      (document.querySelector('.hero-card-info p') || {}).textContent = t.heroCardMeta;
+      (document.querySelector('.hero-card-price') || {}).textContent = t.heroCardPrice;
+      (document.querySelector('.hero-card-badge') || {}).textContent = t.heroCardBadge;
+      (document.querySelector('.hero-card-float .float-text-main') || {}).textContent = t.heroFloatTitle;
+      (document.querySelector('.hero-card-float .float-text-sub') || {}).textContent = t.heroFloatSub;
       
       // Features
       document.querySelectorAll('.section-label')[0].textContent = t.featLabel;
       document.querySelectorAll('.section-title')[0].innerHTML = lang === 'en' 
         ? 'Crafted with <span>Purpose</span>' 
         : '精工<span>品质</span>';
-      document.querySelectorAll('.feature-card h3')[0].textContent = t.feat1Title;
-      document.querySelectorAll('.feature-card p')[0].textContent = t.feat1Desc;
-      document.querySelectorAll('.feature-card h3')[1].textContent = t.feat2Title;
-      document.querySelectorAll('.feature-card p')[1].textContent = t.feat2Desc;
-      document.querySelectorAll('.feature-card h3')[2].textContent = t.feat3Title;
-      document.querySelectorAll('.feature-card p')[2].textContent = t.feat3Desc;
-      document.querySelectorAll('.feature-card h3')[3].textContent = t.feat4Title;
-      document.querySelectorAll('.feature-card p')[3].textContent = t.feat4Desc;
+      if (document.querySelectorAll('.feature-card h3')[0]) document.querySelectorAll('.feature-card h3')[0].textContent = t.feat1Title;;
+      if (document.querySelectorAll('.feature-card p')[0]) document.querySelectorAll('.feature-card p')[0].textContent = t.feat1Desc;;
+      if (document.querySelectorAll('.feature-card h3')[1]) document.querySelectorAll('.feature-card h3')[1].textContent = t.feat2Title;;
+      if (document.querySelectorAll('.feature-card p')[1]) document.querySelectorAll('.feature-card p')[1].textContent = t.feat2Desc;;
+      if (document.querySelectorAll('.feature-card h3')[2]) document.querySelectorAll('.feature-card h3')[2].textContent = t.feat3Title;;
+      if (document.querySelectorAll('.feature-card p')[2]) document.querySelectorAll('.feature-card p')[2].textContent = t.feat3Desc;;
+      if (document.querySelectorAll('.feature-card h3')[3]) document.querySelectorAll('.feature-card h3')[3].textContent = t.feat4Title;;
+      if (document.querySelectorAll('.feature-card p')[3]) document.querySelectorAll('.feature-card p')[3].textContent = t.feat4Desc;;
       
       // Products
       document.querySelectorAll('.section-label')[1].textContent = t.prodLabel;
@@ -2503,7 +2503,7 @@
         ? 'Featured <span>Collection</span>' 
         : '精选<span>系列</span>';
       document.querySelectorAll('.section-desc')[0].textContent = t.prodDesc;
-      document.querySelector('.btn-secondary[style*="white-space"]').textContent = t.prodViewAll;
+      (document.querySelector('.btn-secondary[style*="white-space"]') || {}).textContent = t.prodViewAll;
       
       // Product tabs
       const tabs = document.querySelectorAll('.tab-btn');
@@ -2514,18 +2514,18 @@
       tabs[4].textContent = t.tabAcc;
       
       // Products - names
-      document.querySelectorAll('.product-body h3')[0].textContent = t.prod1Name;
-      document.querySelectorAll('.product-meta')[0].textContent = t.prod1Meta;
-      document.querySelectorAll('.product-body h3')[1].textContent = t.prod2Name;
-      document.querySelectorAll('.product-meta')[1].textContent = t.prod2Meta;
-      document.querySelectorAll('.product-body h3')[2].textContent = t.prod3Name;
-      document.querySelectorAll('.product-meta')[2].textContent = t.prod3Meta;
-      document.querySelectorAll('.product-body h3')[3].textContent = t.prod4Name;
-      document.querySelectorAll('.product-meta')[3].textContent = t.prod4Meta;
-      document.querySelectorAll('.product-body h3')[4].textContent = t.prod5Name;
-      document.querySelectorAll('.product-meta')[4].textContent = t.prod5Meta;
-      document.querySelectorAll('.product-body h3')[5].textContent = t.prod6Name;
-      document.querySelectorAll('.product-meta')[5].textContent = t.prod6Meta;
+      if (document.querySelectorAll('.product-body h3')[0]) document.querySelectorAll('.product-body h3')[0].textContent = t.prod1Name;;
+      if (document.querySelectorAll('.product-meta')[0]) document.querySelectorAll('.product-meta')[0].textContent = t.prod1Meta;;
+      if (document.querySelectorAll('.product-body h3')[1]) document.querySelectorAll('.product-body h3')[1].textContent = t.prod2Name;;
+      if (document.querySelectorAll('.product-meta')[1]) document.querySelectorAll('.product-meta')[1].textContent = t.prod2Meta;;
+      if (document.querySelectorAll('.product-body h3')[2]) document.querySelectorAll('.product-body h3')[2].textContent = t.prod3Name;;
+      if (document.querySelectorAll('.product-meta')[2]) document.querySelectorAll('.product-meta')[2].textContent = t.prod3Meta;;
+      if (document.querySelectorAll('.product-body h3')[3]) document.querySelectorAll('.product-body h3')[3].textContent = t.prod4Name;;
+      if (document.querySelectorAll('.product-meta')[3]) document.querySelectorAll('.product-meta')[3].textContent = t.prod4Meta;;
+      if (document.querySelectorAll('.product-body h3')[4]) document.querySelectorAll('.product-body h3')[4].textContent = t.prod5Name;;
+      if (document.querySelectorAll('.product-meta')[4]) document.querySelectorAll('.product-meta')[4].textContent = t.prod5Meta;;
+      if (document.querySelectorAll('.product-body h3')[5]) document.querySelectorAll('.product-body h3')[5].textContent = t.prod6Name;;
+      if (document.querySelectorAll('.product-meta')[5]) document.querySelectorAll('.product-meta')[5].textContent = t.prod6Meta;;
       
       // Tags
       const tags = ['Hot', 'New', 'Sale', 'New', 'New'];
@@ -2541,7 +2541,7 @@
       });
       
       // About / Company Overview
-      const aboutSection = document.getElementById('about');
+      const aboutSection = if (document.getElementById('about')) document.getElementById('about');
       if (aboutSection) {
         const aboutLabel = aboutSection.querySelector('.section-label');
         const aboutTitle = aboutSection.querySelector('.section-title');
@@ -2584,21 +2584,21 @@
         if (factoryTitle) factoryTitle.textContent = lang === 'en' ? '🏭 Our Manufacturing Footprint' : '🏭 我们的制造布局';
         
         // Summary Stats
-        const sf = document.getElementById('statFactories');
+        const sf = if (document.getElementById('statFactories')) document.getElementById('statFactories');
         if (sf) sf.textContent = lang === 'en' ? 'Factories Across 3 Countries' : '覆盖3个国家的8家工厂';
-        const ss = document.getElementById('statSpace');
+        const ss = if (document.getElementById('statSpace')) document.getElementById('statSpace');
         if (ss) ss.textContent = lang === 'en' ? 'm² Production Space' : 'm² 生产空间';
-        const sw = document.getElementById('statWorkers');
+        const sw = if (document.getElementById('statWorkers')) document.getElementById('statWorkers');
         if (sw) sw.textContent = lang === 'en' ? 'Experienced Workers' : '名经验丰富的工人';
       }
       
       // Collections
-      document.querySelectorAll('.coll-card h3')[0].textContent = t.coll1Title;
-      document.querySelectorAll('.coll-card p')[0].textContent = t.coll1Desc;
-      document.querySelectorAll('.coll-card h3')[1].textContent = t.coll2Title;
-      document.querySelectorAll('.coll-card p')[1].textContent = t.coll2Desc;
-      document.querySelectorAll('.coll-card a')[0].textContent = t.shopNow;
-      document.querySelectorAll('.coll-card a')[1].textContent = t.shopNow;
+      if (document.querySelectorAll('.coll-card h3')[0]) document.querySelectorAll('.coll-card h3')[0].textContent = t.coll1Title;;
+      if (document.querySelectorAll('.coll-card p')[0]) document.querySelectorAll('.coll-card p')[0].textContent = t.coll1Desc;;
+      if (document.querySelectorAll('.coll-card h3')[1]) document.querySelectorAll('.coll-card h3')[1].textContent = t.coll2Title;;
+      if (document.querySelectorAll('.coll-card p')[1]) document.querySelectorAll('.coll-card p')[1].textContent = t.coll2Desc;;
+      if (document.querySelectorAll('.coll-card a')[0]) document.querySelectorAll('.coll-card a')[0].textContent = t.shopNow;;
+      if (document.querySelectorAll('.coll-card a')[1]) document.querySelectorAll('.coll-card a')[1].textContent = t.shopNow;;
       
       // Retail Partners section (fixed position in HTML)
       const retailSection = document.querySelector('#clients');
@@ -2613,21 +2613,21 @@
       document.querySelectorAll('.section-title')[2].innerHTML = lang === 'en'
         ? 'What Our <span>Clients Say</span>'
         : '客户<span>心声</span>';
-      document.querySelectorAll('.testi-text')[0].textContent = t.testi1Text;
-      document.querySelectorAll('.testi-name')[0].textContent = t.testi1Name;
-      document.querySelectorAll('.testi-loc')[0].textContent = t.testi1Loc;
-      document.querySelectorAll('.testi-text')[1].textContent = t.testi2Text;
-      document.querySelectorAll('.testi-name')[1].textContent = t.testi2Name;
-      document.querySelectorAll('.testi-loc')[1].textContent = t.testi2Loc;
-      document.querySelectorAll('.testi-text')[2].textContent = t.testi3Text;
-      document.querySelectorAll('.testi-name')[2].textContent = t.testi3Name;
-      document.querySelectorAll('.testi-loc')[2].textContent = t.testi3Loc;
+      if (document.querySelectorAll('.testi-text')[0]) document.querySelectorAll('.testi-text')[0].textContent = t.testi1Text;;
+      if (document.querySelectorAll('.testi-name')[0]) document.querySelectorAll('.testi-name')[0].textContent = t.testi1Name;;
+      if (document.querySelectorAll('.testi-loc')[0]) document.querySelectorAll('.testi-loc')[0].textContent = t.testi1Loc;;
+      if (document.querySelectorAll('.testi-text')[1]) document.querySelectorAll('.testi-text')[1].textContent = t.testi2Text;;
+      if (document.querySelectorAll('.testi-name')[1]) document.querySelectorAll('.testi-name')[1].textContent = t.testi2Name;;
+      if (document.querySelectorAll('.testi-loc')[1]) document.querySelectorAll('.testi-loc')[1].textContent = t.testi2Loc;;
+      if (document.querySelectorAll('.testi-text')[2]) document.querySelectorAll('.testi-text')[2].textContent = t.testi3Text;;
+      if (document.querySelectorAll('.testi-name')[2]) document.querySelectorAll('.testi-name')[2].textContent = t.testi3Name;;
+      if (document.querySelectorAll('.testi-loc')[2]) document.querySelectorAll('.testi-loc')[2].textContent = t.testi3Loc;;
       
       // Newsletter
-      document.querySelector('.newsletter h2').textContent = t.newsTitle;
-      document.querySelector('.newsletter > .newsletter-inner > p').textContent = t.newsDesc;
-      document.querySelector('.newsletter-form input').placeholder = t.newsPlaceholder;
-      document.querySelector('.newsletter-form button').textContent = t.newsBtn;
+      (document.querySelector('.newsletter h2') || {}).textContent = t.newsTitle;
+      (document.querySelector('.newsletter > .newsletter-inner > p') || {}).textContent = t.newsDesc;
+      (document.querySelector('.newsletter-form input') || {}).placeholder = t.newsPlaceholder;
+      (document.querySelector('.newsletter-form button') || {}).textContent = t.newsBtn;
       
       // Footer
       document.querySelector('.footer-desc').textContent = t.footerDesc;
@@ -2690,116 +2690,116 @@
       }
 
       // ===== MEMBERSHIP SECTION =====
-      const memSec = document.getElementById('membership');
+      const memSec = if (document.getElementById('membership')) document.getElementById('membership');
       if (memSec) {
-        document.getElementById('memLabel').textContent = t.memLabel;
-        document.getElementById('memTitle').innerHTML = t.memTitle;
-        document.getElementById('memDesc').textContent = t.memDesc;
-        document.getElementById('step1Title').textContent = t.step1Title;
-        document.getElementById('step1Desc').textContent = t.step1Desc;
-        document.getElementById('step2Title').textContent = t.step2Title;
-        document.getElementById('step2Desc').textContent = t.step2Desc;
-        document.getElementById('step3Title').textContent = t.step3Title;
-        document.getElementById('step3Desc').textContent = t.step3Desc;
-        document.getElementById('step4Title').textContent = t.step4Title;
-        document.getElementById('step4Desc').textContent = t.step4Desc;
+        if (document.getElementById('memLabel')) document.getElementById('memLabel').textContent = t.memLabel;
+        if (document.getElementById('memTitle')) document.getElementById('memTitle').innerHTML = t.memTitle;
+        if (document.getElementById('memDesc')) document.getElementById('memDesc').textContent = t.memDesc;
+        if (document.getElementById('step1Title')) document.getElementById('step1Title').textContent = t.step1Title;
+        if (document.getElementById('step1Desc')) document.getElementById('step1Desc').textContent = t.step1Desc;
+        if (document.getElementById('step2Title')) document.getElementById('step2Title').textContent = t.step2Title;
+        if (document.getElementById('step2Desc')) document.getElementById('step2Desc').textContent = t.step2Desc;
+        if (document.getElementById('step3Title')) document.getElementById('step3Title').textContent = t.step3Title;
+        if (document.getElementById('step3Desc')) document.getElementById('step3Desc').textContent = t.step3Desc;
+        if (document.getElementById('step4Title')) document.getElementById('step4Title').textContent = t.step4Title;
+        if (document.getElementById('step4Desc')) document.getElementById('step4Desc').textContent = t.step4Desc;
         // Bronze
-        document.getElementById('tierBronzeName').textContent = t.tierBronzeName;
-        document.getElementById('tierBronzeSub').textContent = t.tierBronzeSub;
-        document.getElementById('tierBronzeThresh').textContent = t.tierBronzeThresh;
-        document.getElementById('tierBronzeHl').innerHTML = t.tierBronzeHl;
-        document.getElementById('bronzePerk1').textContent = t.bronzePerk1;
-        document.getElementById('bronzePerk2').textContent = t.bronzePerk2;
-        document.getElementById('bronzePerk3').textContent = t.bronzePerk3;
-        document.getElementById('bronzePerk4').textContent = t.bronzePerk4;
-        document.getElementById('bronzePerk5').textContent = t.bronzePerk5;
-        document.getElementById('bronzePerk6').textContent = t.bronzePerk6;
-        document.getElementById('btnBronze').textContent = t.btnBronze;
+        if (document.getElementById('tierBronzeName')) document.getElementById('tierBronzeName').textContent = t.tierBronzeName;
+        if (document.getElementById('tierBronzeSub')) document.getElementById('tierBronzeSub').textContent = t.tierBronzeSub;
+        if (document.getElementById('tierBronzeThresh')) document.getElementById('tierBronzeThresh').textContent = t.tierBronzeThresh;
+        if (document.getElementById('tierBronzeHl')) document.getElementById('tierBronzeHl').innerHTML = t.tierBronzeHl;
+        if (document.getElementById('bronzePerk1')) document.getElementById('bronzePerk1').textContent = t.bronzePerk1;
+        if (document.getElementById('bronzePerk2')) document.getElementById('bronzePerk2').textContent = t.bronzePerk2;
+        if (document.getElementById('bronzePerk3')) document.getElementById('bronzePerk3').textContent = t.bronzePerk3;
+        if (document.getElementById('bronzePerk4')) document.getElementById('bronzePerk4').textContent = t.bronzePerk4;
+        if (document.getElementById('bronzePerk5')) document.getElementById('bronzePerk5').textContent = t.bronzePerk5;
+        if (document.getElementById('bronzePerk6')) document.getElementById('bronzePerk6').textContent = t.bronzePerk6;
+        if (document.getElementById('btnBronze')) document.getElementById('btnBronze').textContent = t.btnBronze;
         // Silver
-        document.getElementById('tierSilverName').textContent = t.tierSilverName;
-        document.getElementById('tierSilverSub').textContent = t.tierSilverSub;
-        document.getElementById('tierSilverThresh').textContent = t.tierSilverThresh;
-        document.getElementById('tierSilverHl').innerHTML = t.tierSilverHl;
-        document.getElementById('silverPerk1').textContent = t.silverPerk1;
-        document.getElementById('silverPerk2').textContent = t.silverPerk2;
-        document.getElementById('silverPerk3').textContent = t.silverPerk3;
-        document.getElementById('silverPerk4').textContent = t.silverPerk4;
-        document.getElementById('silverPerk5').textContent = t.silverPerk5;
-        document.getElementById('silverPerk6').textContent = t.silverPerk6;
-        document.getElementById('btnSilver').textContent = t.btnSilver;
+        if (document.getElementById('tierSilverName')) document.getElementById('tierSilverName').textContent = t.tierSilverName;
+        if (document.getElementById('tierSilverSub')) document.getElementById('tierSilverSub').textContent = t.tierSilverSub;
+        if (document.getElementById('tierSilverThresh')) document.getElementById('tierSilverThresh').textContent = t.tierSilverThresh;
+        if (document.getElementById('tierSilverHl')) document.getElementById('tierSilverHl').innerHTML = t.tierSilverHl;
+        if (document.getElementById('silverPerk1')) document.getElementById('silverPerk1').textContent = t.silverPerk1;
+        if (document.getElementById('silverPerk2')) document.getElementById('silverPerk2').textContent = t.silverPerk2;
+        if (document.getElementById('silverPerk3')) document.getElementById('silverPerk3').textContent = t.silverPerk3;
+        if (document.getElementById('silverPerk4')) document.getElementById('silverPerk4').textContent = t.silverPerk4;
+        if (document.getElementById('silverPerk5')) document.getElementById('silverPerk5').textContent = t.silverPerk5;
+        if (document.getElementById('silverPerk6')) document.getElementById('silverPerk6').textContent = t.silverPerk6;
+        if (document.getElementById('btnSilver')) document.getElementById('btnSilver').textContent = t.btnSilver;
         // Gold
-        document.getElementById('tierGoldName').textContent = t.tierGoldName;
-        document.getElementById('tierGoldSub').textContent = t.tierGoldSub;
-        document.getElementById('tierGoldThresh').textContent = t.tierGoldThresh;
-        document.getElementById('tierGoldHl').innerHTML = t.tierGoldHl;
-        document.getElementById('tierGoldRibbon').textContent = t.tierGoldRibbon;
-        document.getElementById('goldPerk1').textContent = t.goldPerk1;
-        document.getElementById('goldPerk2').textContent = t.goldPerk2;
-        document.getElementById('goldPerk3').textContent = t.goldPerk3;
-        document.getElementById('goldPerk4').textContent = t.goldPerk4;
-        document.getElementById('goldPerk5').textContent = t.goldPerk5;
-        document.getElementById('goldPerk6').textContent = t.goldPerk6;
-        document.getElementById('btnGold').textContent = t.btnGold;
+        if (document.getElementById('tierGoldName')) document.getElementById('tierGoldName').textContent = t.tierGoldName;
+        if (document.getElementById('tierGoldSub')) document.getElementById('tierGoldSub').textContent = t.tierGoldSub;
+        if (document.getElementById('tierGoldThresh')) document.getElementById('tierGoldThresh').textContent = t.tierGoldThresh;
+        if (document.getElementById('tierGoldHl')) document.getElementById('tierGoldHl').innerHTML = t.tierGoldHl;
+        if (document.getElementById('tierGoldRibbon')) document.getElementById('tierGoldRibbon').textContent = t.tierGoldRibbon;
+        if (document.getElementById('goldPerk1')) document.getElementById('goldPerk1').textContent = t.goldPerk1;
+        if (document.getElementById('goldPerk2')) document.getElementById('goldPerk2').textContent = t.goldPerk2;
+        if (document.getElementById('goldPerk3')) document.getElementById('goldPerk3').textContent = t.goldPerk3;
+        if (document.getElementById('goldPerk4')) document.getElementById('goldPerk4').textContent = t.goldPerk4;
+        if (document.getElementById('goldPerk5')) document.getElementById('goldPerk5').textContent = t.goldPerk5;
+        if (document.getElementById('goldPerk6')) document.getElementById('goldPerk6').textContent = t.goldPerk6;
+        if (document.getElementById('btnGold')) document.getElementById('btnGold').textContent = t.btnGold;
         // Compare table
-        document.getElementById('compareFeature').textContent = t.compareFeature;
-        document.getElementById('cmp1').textContent = t.cmp1;
-        document.getElementById('cmp2').textContent = t.cmp2;
-        document.getElementById('cmp3').textContent = t.cmp3;
-        document.getElementById('cmp4').textContent = t.cmp4;
-        document.getElementById('cmp5').textContent = t.cmp5;
-        document.getElementById('cmp6').textContent = t.cmp6;
-        document.getElementById('cmp7').textContent = t.cmp7;
-        document.getElementById('cmp8').textContent = t.cmp8;
-        document.getElementById('cmp9').textContent = t.cmp9;
+        if (document.getElementById('compareFeature')) document.getElementById('compareFeature').textContent = t.compareFeature;
+        if (document.getElementById('cmp1')) document.getElementById('cmp1').textContent = t.cmp1;
+        if (document.getElementById('cmp2')) document.getElementById('cmp2').textContent = t.cmp2;
+        if (document.getElementById('cmp3')) document.getElementById('cmp3').textContent = t.cmp3;
+        if (document.getElementById('cmp4')) document.getElementById('cmp4').textContent = t.cmp4;
+        if (document.getElementById('cmp5')) document.getElementById('cmp5').textContent = t.cmp5;
+        if (document.getElementById('cmp6')) document.getElementById('cmp6').textContent = t.cmp6;
+        if (document.getElementById('cmp7')) document.getElementById('cmp7').textContent = t.cmp7;
+        if (document.getElementById('cmp8')) document.getElementById('cmp8').textContent = t.cmp8;
+        if (document.getElementById('cmp9')) document.getElementById('cmp9').textContent = t.cmp9;
       }
 
       // ===== PRODUCTS SECTION =====
       if (document.getElementById('prod1Title')) {
-        document.getElementById('prod1Title').textContent = t.prod1Title;
-        document.getElementById('prod1Meta').textContent = t.prod1Meta;
-        document.getElementById('prod1Price').textContent = t.prod1Price;
-        document.getElementById('prod2Title').textContent = t.prod2Title;
-        document.getElementById('prod2Meta').textContent = t.prod2Meta;
-        document.getElementById('prod2Price').textContent = t.prod2Price;
-        document.getElementById('prod3Title').textContent = t.prod3Title;
-        document.getElementById('prod3Meta').textContent = t.prod3Meta;
-        document.getElementById('prod3Price').textContent = t.prod3Price;
-        document.getElementById('prod4Title').textContent = t.prod4Title;
-        document.getElementById('prod4Meta').textContent = t.prod4Meta;
-        document.getElementById('prod4Price').textContent = t.prod4Price;
-        document.getElementById('prod5Title').textContent = t.prod5Title;
-        document.getElementById('prod5Meta').textContent = t.prod5Meta;
-        document.getElementById('prod5Price').textContent = t.prod5Price;
-        document.getElementById('prod6Title').textContent = t.prod6Title;
-        document.getElementById('prod6Meta').textContent = t.prod6Meta;
-        document.getElementById('prod6Price').textContent = t.prod6Price;
+        if (document.getElementById('prod1Title')) document.getElementById('prod1Title').textContent = t.prod1Title;
+        if (document.getElementById('prod1Meta')) document.getElementById('prod1Meta').textContent = t.prod1Meta;
+        if (document.getElementById('prod1Price')) document.getElementById('prod1Price').textContent = t.prod1Price;
+        if (document.getElementById('prod2Title')) document.getElementById('prod2Title').textContent = t.prod2Title;
+        if (document.getElementById('prod2Meta')) document.getElementById('prod2Meta').textContent = t.prod2Meta;
+        if (document.getElementById('prod2Price')) document.getElementById('prod2Price').textContent = t.prod2Price;
+        if (document.getElementById('prod3Title')) document.getElementById('prod3Title').textContent = t.prod3Title;
+        if (document.getElementById('prod3Meta')) document.getElementById('prod3Meta').textContent = t.prod3Meta;
+        if (document.getElementById('prod3Price')) document.getElementById('prod3Price').textContent = t.prod3Price;
+        if (document.getElementById('prod4Title')) document.getElementById('prod4Title').textContent = t.prod4Title;
+        if (document.getElementById('prod4Meta')) document.getElementById('prod4Meta').textContent = t.prod4Meta;
+        if (document.getElementById('prod4Price')) document.getElementById('prod4Price').textContent = t.prod4Price;
+        if (document.getElementById('prod5Title')) document.getElementById('prod5Title').textContent = t.prod5Title;
+        if (document.getElementById('prod5Meta')) document.getElementById('prod5Meta').textContent = t.prod5Meta;
+        if (document.getElementById('prod5Price')) document.getElementById('prod5Price').textContent = t.prod5Price;
+        if (document.getElementById('prod6Title')) document.getElementById('prod6Title').textContent = t.prod6Title;
+        if (document.getElementById('prod6Meta')) document.getElementById('prod6Meta').textContent = t.prod6Meta;
+        if (document.getElementById('prod6Price')) document.getElementById('prod6Price').textContent = t.prod6Price;
       }
 
       // ===== GALLERY SECTION =====
-      const gallerySec = document.getElementById('gallery');
+      const gallerySec = if (document.getElementById('gallery')) document.getElementById('gallery');
       if (gallerySec) {
-        document.getElementById('galleryLabel').textContent = t.galleryLabel;
-        document.getElementById('galleryTitle').innerHTML = t.galleryTitle;
-        document.getElementById('galleryDesc').textContent = t.galleryDesc;
-        document.getElementById('videoBadge').textContent = t.videoBadge;
-        document.getElementById('videoTitle').textContent = t.videoTitle;
-        document.getElementById('videoDesc').textContent = t.videoDesc;
-        document.getElementById('galleryImg1Title').textContent = t.galleryImg1Title;
-        document.getElementById('galleryImg2Title').textContent = t.galleryImg2Title;
-        document.getElementById('galleryImg3Title').textContent = t.galleryImg3Title;
-        document.getElementById('galleryImg4Title').textContent = t.galleryImg4Title;
-        document.getElementById('galleryImg5Title').textContent = t.galleryImg5Title;
-        document.getElementById('galleryImg6Title').textContent = t.galleryImg6Title;
-        document.getElementById('galleryImg7Title').textContent = t.galleryImg7Title;
-        document.getElementById('galleryImg8Title').textContent = t.galleryImg8Title;
-        document.getElementById('galleryImg9Title').textContent = t.galleryImg9Title;
-        document.getElementById('galleryImg10Title').textContent = t.galleryImg10Title;
-        document.getElementById('galleryImg11Title').textContent = t.galleryImg11Title;
-        document.getElementById('galleryImg12Title').textContent = t.galleryImg12Title;
-        document.getElementById('gstat1').textContent = t.gstat1;
-        document.getElementById('gstat2').textContent = t.gstat2;
-        document.getElementById('gstat3').textContent = t.gstat3;
-        document.getElementById('gstat4').textContent = t.gstat4;
+        if (document.getElementById('galleryLabel')) document.getElementById('galleryLabel').textContent = t.galleryLabel;
+        if (document.getElementById('galleryTitle')) document.getElementById('galleryTitle').innerHTML = t.galleryTitle;
+        if (document.getElementById('galleryDesc')) document.getElementById('galleryDesc').textContent = t.galleryDesc;
+        if (document.getElementById('videoBadge')) document.getElementById('videoBadge').textContent = t.videoBadge;
+        if (document.getElementById('videoTitle')) document.getElementById('videoTitle').textContent = t.videoTitle;
+        if (document.getElementById('videoDesc')) document.getElementById('videoDesc').textContent = t.videoDesc;
+        if (document.getElementById('galleryImg1Title')) document.getElementById('galleryImg1Title').textContent = t.galleryImg1Title;
+        if (document.getElementById('galleryImg2Title')) document.getElementById('galleryImg2Title').textContent = t.galleryImg2Title;
+        if (document.getElementById('galleryImg3Title')) document.getElementById('galleryImg3Title').textContent = t.galleryImg3Title;
+        if (document.getElementById('galleryImg4Title')) document.getElementById('galleryImg4Title').textContent = t.galleryImg4Title;
+        if (document.getElementById('galleryImg5Title')) document.getElementById('galleryImg5Title').textContent = t.galleryImg5Title;
+        if (document.getElementById('galleryImg6Title')) document.getElementById('galleryImg6Title').textContent = t.galleryImg6Title;
+        if (document.getElementById('galleryImg7Title')) document.getElementById('galleryImg7Title').textContent = t.galleryImg7Title;
+        if (document.getElementById('galleryImg8Title')) document.getElementById('galleryImg8Title').textContent = t.galleryImg8Title;
+        if (document.getElementById('galleryImg9Title')) document.getElementById('galleryImg9Title').textContent = t.galleryImg9Title;
+        if (document.getElementById('galleryImg10Title')) document.getElementById('galleryImg10Title').textContent = t.galleryImg10Title;
+        if (document.getElementById('galleryImg11Title')) document.getElementById('galleryImg11Title').textContent = t.galleryImg11Title;
+        if (document.getElementById('galleryImg12Title')) document.getElementById('galleryImg12Title').textContent = t.galleryImg12Title;
+        if (document.getElementById('gstat1')) document.getElementById('gstat1').textContent = t.gstat1;
+        if (document.getElementById('gstat2')) document.getElementById('gstat2').textContent = t.gstat2;
+        if (document.getElementById('gstat3')) document.getElementById('gstat3').textContent = t.gstat3;
+        if (document.getElementById('gstat4')) document.getElementById('gstat4').textContent = t.gstat4;
       }
       
       // Save preference
