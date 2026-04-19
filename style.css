@@ -227,7 +227,7 @@ img { max-width: 100%; }
 .product-gallery-full { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-bottom: 2rem; }
 .pg-item { position: relative; border-radius: 12px; overflow: hidden; cursor: pointer; height: 180px; }
 .pg-item.tall { grid-row: span 2; height: 100%; }
-.pg-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+.pg-item img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.3s; }
 .pg-item:hover img { transform: scale(1.08); }
 .pg-overlay {
   position: absolute; inset: 0; background: rgba(27,94,32,0.7);
@@ -236,6 +236,9 @@ img { max-width: 100%; }
 }
 .pg-item:hover .pg-overlay { opacity: 1; }
 .pg-overlay span { color: #fff; font-weight: 600; font-size: 0.9rem; }
+
+/* ===== Material/Detail Images ===== */
+.material-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform 0.3s; }
 
 /* ===== Why Section ===== */
 .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
