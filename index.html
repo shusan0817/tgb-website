@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TGB - 合兴灯饰 | 中国户外家具制造商</title>
+  <title>TGB - He Xing Lighting | Outdoor Furniture Manufacturer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -12,20 +12,21 @@
     <a class="nav-logo" href="index.html">
       <div class="logo-badge">TGB</div>
       <div>
-        <div class="logo-name">合兴灯饰</div>
+        <div class="logo-name">He Xing Lighting</div>
         <div class="logo-sub">Season Plus · Heathy · TGB Outdoor</div>
       </div>
     </a>
     <div class="nav-links">
-      <a class="active" href="index.html">首页</a>
-      <a href="about.html">关于我们</a>
-      <a href="products.html">产品展示</a>
-      <a href="quality.html">品质管理</a>
-      <a href="contact.html">联系我们</a>
+      <a class="active" href="index.html" data-en="Home" data-cn="首页">Home</a>
+      <a href="about.html" data-en="About Us" data-cn="关于我们">About Us</a>
+      <a href="products.html" data-en="Products" data-cn="产品展示">Products</a>
+      <a href="quality.html" data-en="Quality" data-cn="品质管理">Quality</a>
+      <a href="contact.html" data-en="Contact" data-cn="联系我们">Contact</a>
+      <a href="video.html" data-en="Video" data-cn="视频">Video</a>
     </div>
     <div class="nav-lang">
-      <span class="lang-btn active">中文</span>
-      <span class="lang-btn">EN</span>
+      <span class="lang-btn active" onclick="switchLang('en')">EN</span>
+      <span class="lang-btn" onclick="switchLang('cn')">中文</span>
     </div>
   </nav>
 
@@ -35,33 +36,33 @@
       <div class="slide active" style="background-image: url('images/img01.png');">
         <div class="slide-overlay"></div>
         <div class="slide-content">
-          <h1>中国户外家具 · 装饰品 · 充气系列产品专业制造商</h1>
-          <p>专注户外家具、装饰品、充气系列产品制造 · 年营业额 8000 万美元 · 9 大工厂布局全球</p>
+          <h1>Professional Outdoor Furniture · Decor · Inflatables Manufacturer</h1>
+          <p>Specialized in outdoor furniture, decor & inflatable products · $80M annual revenue · 9 global factories</p>
           <div class="hero-btns">
-            <a href="products.html" class="btn-primary">浏览产品</a>
-            <a href="contact.html" class="btn-secondary">联系我们</a>
+            <a href="products.html" class="btn-primary">View Products</a>
+            <a href="contact.html" class="btn-secondary">Contact Us</a>
           </div>
         </div>
       </div>
       <div class="slide" style="background-image: url('images/img09.png');">
         <div class="slide-overlay"></div>
         <div class="slide-content">
-          <h1>年营业额 8000 万美元</h1>
-          <p>9 大全球工厂 · 3000+ 专业员工 · 15 年行业经验 · 远销全球多个国家和地区</p>
+          <h1>$80 Million Annual Revenue</h1>
+          <p>9 Global Factories · 3000+ Employees · 15+ Years Experience · Serving clients worldwide</p>
           <div class="hero-btns">
-            <a href="about.html" class="btn-primary">了解更多</a>
-            <a href="quality.html" class="btn-secondary">品质保证</a>
+            <a href="about.html" class="btn-primary">Learn More</a>
+            <a href="quality.html" class="btn-secondary">Quality Assurance</a>
           </div>
         </div>
       </div>
       <div class="slide" style="background-image: url('images/img10.png');">
         <div class="slide-overlay"></div>
         <div class="slide-content">
-          <h1>柬埔寨 · 越南 · 中国 全球布局</h1>
-          <p>东南亚最大户外休闲产品制造基地，享受政策优惠与成本优势，辐射全球市场</p>
+          <h1>Cambodia · Vietnam · China Global Network</h1>
+          <p>Largest outdoor leisure products manufacturing base in Southeast Asia with policy benefits and cost advantages</p>
           <div class="hero-btns">
-            <a href="about.html" class="btn-primary">查看工厂</a>
-            <a href="contact.html" class="btn-secondary">商务合作</a>
+            <a href="about.html" class="btn-primary">View Factories</a>
+            <a href="contact.html" class="btn-secondary">Business Cooperation</a>
           </div>
         </div>
       </div>
@@ -79,57 +80,57 @@
 
   <!-- Stats -->
   <section class="stats-bar">
-    <div class="stat"><span class="stat-num">9</span><span class="stat-label">全球工厂</span></div>
-    <div class="stat"><span class="stat-num">8000万</span><span class="stat-label">年营业额(美元)</span></div>
-    <div class="stat"><span class="stat-num">3000+</span><span class="stat-label">专业员工</span></div>
-    <div class="stat"><span class="stat-num">15+</span><span class="stat-label">年行业经验</span></div>
+    <div class="stat"><span class="stat-num">9</span><span class="stat-label">Global Factories</span></div>
+    <div class="stat"><span class="stat-num">$80M</span><span class="stat-label">Annual Revenue</span></div>
+    <div class="stat"><span class="stat-num">3000+</span><span class="stat-label">Employees</span></div>
+    <div class="stat"><span class="stat-num">15+</span><span class="stat-label">Years Experience</span></div>
   </section>
 
   <!-- Core Products -->
   <section class="section products-section">
     <div class="section-header">
-      <h2>核心产品系列</h2>
+      <h2>Core Product Lines</h2>
       <p>Outdoor Decor · Inflatable Series · Outdoor Furniture</p>
     </div>
     <div class="products-grid">
       <div class="product-card">
-        <div class="product-img"><img src="images/ppt_decor1.png" alt="户外装饰" onclick="openLightbox(this.src, '户外装饰系列 - PE仿藤编织')" style="cursor:pointer;" /></div>
+        <div class="product-img"><img src="images/ppt_decor1.png" alt="Outdoor Decor" onclick="openLightbox(this.src, 'Outdoor Decor Series - PE Rattan Weaving')" style="cursor:pointer;" /></div>
         <div class="product-info">
-          <h3>户外装饰系列</h3>
-          <p>Outdoor Decor</p>
+          <h3>Outdoor Decor</h3>
+          <p>Elegant outdoor decorations</p>
           <ul>
-            <li><span class="clickable-img" onclick="openLightbox('images/ppt_decor2.png', 'PE仿藤编织装饰 - 藤编花架')">PE仿藤编织装饰</span></li>
-            <li><span class="clickable-img" onclick="openLightbox('images/ppt_decor3.png', 'PE仿木家具')">PE仿木家具</span></li>
-            <li><span class="clickable-img" onclick="openLightbox('images/ppt_decor4.png', '特斯林网布产品')">特斯林网布产品</span></li>
+            <li><span class="clickable-img" onclick="openLightbox('images/ppt_decor2.png', 'PE Rattan Plant Stand')">PE Rattan Weaving</span></li>
+            <li><span class="clickable-img" onclick="openLightbox('images/ppt_decor3.png', 'PE Wood Furniture')">PE Wood Furniture</span></li>
+            <li><span class="clickable-img" onclick="openLightbox('images/ppt_decor4.png', 'Textilene Products')">Textilene Products</span></li>
           </ul>
-          <a href="products.html" class="btn-outline">查看详情</a>
+          <a href="products.html" class="btn-outline">View Details</a>
         </div>
       </div>
       <div class="product-card featured">
-        <div class="product-badge">核心业务</div>
-        <div class="product-img"><img src="images/ppt_inflatable1.png" alt="充气系列" onclick="openLightbox(this.src, '充气系列产品 - 商用充气水池')" style="cursor:pointer;" /></div>
+        <div class="product-badge">Core Business</div>
+        <div class="product-img"><img src="images/ppt_inflatable1.png" alt="Inflatable Series" onclick="openLightbox(this.src, 'Inflatable Series - Commercial Pools')" style="cursor:pointer;" /></div>
         <div class="product-info">
-          <h3>充气系列产品</h3>
-          <p>Inflatable Series</p>
+          <h3>Inflatable Series</h3>
+          <p>Commercial & residential inflatables</p>
           <ul>
-            <li><span class="clickable-img" onclick="openLightbox('images/ppt_inflatable2.png', '商用充气水池')">商用充气水池</span></li>
-            <li><span class="clickable-img" onclick="openLightbox('images/ppt_inflatable3.png', '充气水上乐园')">充气水上乐园</span></li>
-            <li><span class="clickable-img" onclick="openLightbox('images/ppt_inflatable4.png', '户外充气玩具')">户外充气玩具</span></li>
+            <li><span class="clickable-img" onclick="openLightbox('images/ppt_inflatable2.png', 'Commercial Pool')">Commercial Pools</span></li>
+            <li><span class="clickable-img" onclick="openLightbox('images/ppt_inflatable3.png', 'Water Parks')">Water Parks</span></li>
+            <li><span class="clickable-img" onclick="openLightbox('images/ppt_inflatable4.png', 'Outdoor Toys')">Outdoor Toys</span></li>
           </ul>
-          <a href="products.html" class="btn-primary">查看详情</a>
+          <a href="products.html" class="btn-primary">View Details</a>
         </div>
       </div>
       <div class="product-card">
-        <div class="product-img"><img src="images/ppt_furniture1.png" alt="户外家具" onclick="openLightbox(this.src, '户外家具系列 - 藤编躺椅')" style="cursor:pointer;" /></div>
+        <div class="product-img"><img src="images/ppt_furniture1.png" alt="Outdoor Furniture" onclick="openLightbox(this.src, 'Outdoor Furniture - Rattan Chairs')" style="cursor:pointer;" /></div>
         <div class="product-info">
-          <h3>户外家具系列</h3>
-          <p>Outdoor Furniture</p>
+          <h3>Outdoor Furniture</h3>
+          <p>Premium outdoor seating & tables</p>
           <ul>
-            <li><span class="clickable-img" onclick="openLightbox('images/ppt_furniture2.png', '户外躺椅&摇椅')">户外躺椅&摇椅</span></li>
-            <li><span class="clickable-img" onclick="openLightbox('images/ppt_furniture3.png', '户外餐桌套装')">户外餐桌套装</span></li>
-            <li><span class="clickable-img" onclick="openLightbox('images/ppt_furniture4.png', '阳台休闲家具')">阳台休闲家具</span></li>
+            <li><span class="clickable-img" onclick="openLightbox('images/ppt_furniture2.png', 'Lounge Chairs')">Lounge & Rocking Chairs</span></li>
+            <li><span class="clickable-img" onclick="openLightbox('images/ppt_furniture3.png', 'Dining Sets')">Outdoor Dining Sets</span></li>
+            <li><span class="clickable-img" onclick="openLightbox('images/ppt_furniture4.png', 'Balcony Furniture')">Balcony Furniture</span></li>
           </ul>
-          <a href="products.html" class="btn-outline">查看详情</a>
+          <a href="products.html" class="btn-outline">View Details</a>
         </div>
       </div>
     </div>
@@ -138,30 +139,30 @@
   <!-- Factory Showcase -->
   <section class="factory-showcase">
     <div class="factory-showcase-header">
-      <h2>全球工厂布局</h2>
-      <p>Global Factory Network · 9 大工厂 · 3 大洲布局</p>
+      <h2>Global Factory Network</h2>
+      <p>9 Factories · 3 Continents</p>
     </div>
     <div class="factory-images">
       <div class="factory-img-card large">
-        <img src="images/img02.png" alt="中国工厂" onclick="openLightbox(this.src, '中国工厂 - 广东/上海/江苏')" style="cursor:pointer;" />
+        <img src="images/img02.png" alt="China Factory" onclick="openLightbox(this.src, 'China - 6 Factories in Guangdong/Shanghai/Jiangsu')" style="cursor:pointer;" />
         <div class="factory-img-label">
-          <span class="fi-flag">🇨🇳</span>
-          <div><strong class="clickable-img" onclick="openLightbox('images/img02.png', '中国6大工厂')">中国 6 大工厂</strong><p>总部与研发中心 · 广东/上海/江苏</p></div>
+          <span class="fi-flag"><img src="images/flag-cn.png" style="width:30px;" onerror="this.style.display='none'"/></span>
+          <div><strong class="clickable-img" onclick="openLightbox('images/img02.png', 'China 6 Factories')">China 6 Factories</strong><p>HQ & R&D Center · Guangdong/Shanghai/Jiangsu</p></div>
         </div>
       </div>
       <div class="factory-img-stack">
         <div class="factory-img-card">
-          <img src="images/img03.png" alt="越南工厂" onclick="openLightbox(this.src, '越南工厂 - 胡志明市')" style="cursor:pointer;" />
+          <img src="images/img03.png" alt="Vietnam Factory" onclick="openLightbox(this.src, 'Vietnam - Ho Chi Minh City')" style="cursor:pointer;" />
           <div class="factory-img-label">
-            <span class="fi-flag">🇻🇳</span>
-            <div><strong class="clickable-img" onclick="openLightbox('images/img03.png', '越南3大工厂')">越南 3 大工厂</strong><p>胡志明市周边工业区</p></div>
+            <span class="fi-flag"><img src="images/flag-vn.png" style="width:30px;" onerror="this.style.display='none'"/></span>
+            <div><strong class="clickable-img" onclick="openLightbox('images/img03.png', 'Vietnam 3 Factories')">Vietnam 3 Factories</strong><p>Ho Chi Minh City Industrial Zone</p></div>
           </div>
         </div>
         <div class="factory-img-card">
-          <img src="images/img05.png" alt="柬埔寨工厂" onclick="openLightbox(this.src, '柬埔寨工厂 - 西哈努克港')" style="cursor:pointer;" />
+          <img src="images/img05.png" alt="Cambodia Factory" onclick="openLightbox(this.src, 'Cambodia - Sihanoukville')" style="cursor:pointer;" />
           <div class="factory-img-label">
-            <span class="fi-flag">🇰🇭</span>
-            <div><strong class="clickable-img" onclick="openLightbox('images/img05.png', '柬埔寨工厂')">柬埔寨 1 大工厂</strong><p>西哈努克港经济特区</p></div>
+            <span class="fi-flag"><img src="images/flag-kh.png" style="width:30px;" onerror="this.style.display='none'"/></span>
+            <div><strong class="clickable-img" onclick="openLightbox('images/img05.png', 'Cambodia Factory')">Cambodia 1 Factory</strong><p>Sihanoukville SEZ</p></div>
           </div>
         </div>
       </div>
@@ -171,98 +172,98 @@
   <!-- Timeline Preview -->
   <section class="section timeline-section">
     <div class="section-header">
-      <h2>发展历程</h2>
-      <p>Growth Journey · 1998 - 2024</p>
+      <h2>Growth Journey</h2>
+      <p>1998 - 2024</p>
     </div>
     <div class="timeline-mini">
-      <div class="timeline-item"><span class="year">1998</span><span class="event">合兴灯饰创立</span></div>
-      <div class="timeline-item"><span class="year">2003</span><span class="event">产品多元化扩张</span></div>
-      <div class="timeline-item"><span class="year">2009</span><span class="event">户外装饰系列首发</span></div>
-      <div class="timeline-item"><span class="year">2010</span><span class="event">充气系列进入市场</span></div>
-      <div class="timeline-item"><span class="year">2015</span><span class="event">户外家具业务启动</span></div>
-      <div class="timeline-item"><span class="year">2019</span><span class="event">越南工厂成立</span></div>
-      <div class="timeline-item"><span class="year">2021</span><span class="event">柬埔寨工厂落成</span></div>
-      <div class="timeline-item"><span class="year">2024</span><span class="event">全球布局深化</span></div>
+      <div class="timeline-item"><span class="year">1998</span><span class="event">Company Founded</span></div>
+      <div class="timeline-item"><span class="year">2003</span><span class="event">Product Expansion</span></div>
+      <div class="timeline-item"><span class="year">2009</span><span class="event">Decor Line Launch</span></div>
+      <div class="timeline-item"><span class="year">2010</span><span class="event">Inflatable Market Entry</span></div>
+      <div class="timeline-item"><span class="year">2015</span><span class="event">Furniture Business Start</span></div>
+      <div class="timeline-item"><span class="year">2019</span><span class="event">Vietnam Factories</span></div>
+      <div class="timeline-item"><span class="year">2021</span><span class="event">Cambodia Factory</span></div>
+      <div class="timeline-item"><span class="year">2024</span><span class="event">Global Expansion</span></div>
     </div>
     <div style="text-align:center;margin-top:2rem;">
-      <a href="about.html" class="btn-outline">了解更多 →</a>
+      <a href="about.html" class="btn-outline">Learn More →</a>
     </div>
   </section>
 
   <!-- Product Gallery Preview -->
   <section class="section gallery-preview">
     <div class="section-header">
-      <h2>产品图册</h2>
-      <p>Product Gallery · 点击图片查看大图</p>
+      <h2>Product Gallery</h2>
+      <p>Click images to view full size</p>
     </div>
     <div class="gallery-grid">
       <div class="gallery-item">
-        <img src="images/ppt_decor2.png" alt="户外装饰" onclick="openLightbox(this.src, 'PE仿藤编织装饰品')" />
-        <div class="gallery-overlay"><span>🏡 户外装饰</span></div>
+        <img src="images/ppt_decor2.png" alt="Outdoor Decor" onclick="openLightbox(this.src, 'PE Rattan Decor')" />
+        <div class="gallery-overlay"><span>Decor</span></div>
       </div>
       <div class="gallery-item">
-        <img src="images/ppt_decor3.png" alt="户外装饰" onclick="openLightbox(this.src, 'PE仿藤置物架')" />
-        <div class="gallery-overlay"><span>🏡 户外装饰</span></div>
+        <img src="images/ppt_decor3.png" alt="Outdoor Decor" onclick="openLightbox(this.src, 'PE Rattan Shelves')" />
+        <div class="gallery-overlay"><span>Decor</span></div>
       </div>
       <div class="gallery-item">
-        <img src="images/ppt_inflatable2.png" alt="充气系列" onclick="openLightbox(this.src, '商用充气水池')" />
-        <div class="gallery-overlay"><span>🎈 充气系列</span></div>
+        <img src="images/ppt_inflatable2.png" alt="Inflatable" onclick="openLightbox(this.src, 'Commercial Pool')" />
+        <div class="gallery-overlay"><span>Inflatables</span></div>
       </div>
       <div class="gallery-item">
-        <img src="images/ppt_inflatable3.png" alt="充气系列" onclick="openLightbox(this.src, '充气水上乐园')" />
-        <div class="gallery-overlay"><span>🎈 充气系列</span></div>
+        <img src="images/ppt_inflatable3.png" alt="Inflatable" onclick="openLightbox(this.src, 'Water Park')" />
+        <div class="gallery-overlay"><span>Inflatables</span></div>
       </div>
       <div class="gallery-item">
-        <img src="images/ppt_furniture2.png" alt="户外家具" onclick="openLightbox(this.src, '户外藤编沙发')" />
-        <div class="gallery-overlay"><span>🪑 户外家具</span></div>
+        <img src="images/ppt_furniture2.png" alt="Furniture" onclick="openLightbox(this.src, 'Rattan Lounge Chair')" />
+        <div class="gallery-overlay"><span>Furniture</span></div>
       </div>
       <div class="gallery-item">
-        <img src="images/ppt_furniture3.png" alt="户外家具" onclick="openLightbox(this.src, '户外躺椅')" />
-        <div class="gallery-overlay"><span>🪑 户外家具</span></div>
+        <img src="images/ppt_furniture3.png" alt="Furniture" onclick="openLightbox(this.src, 'Outdoor Chair')" />
+        <div class="gallery-overlay"><span>Furniture</span></div>
       </div>
     </div>
     <div style="text-align:center;margin-top:2rem;">
-      <a href="products.html" class="btn-outline">查看全部产品 →</a>
+      <a href="products.html" class="btn-outline">View All Products →</a>
     </div>
   </section>
 
   <!-- Why Choose Us -->
   <section class="section why-section">
     <div class="section-header">
-      <h2>为什么选择 TGB</h2>
-      <p>Why Choose Us</p>
+      <h2>Why Choose TGB</h2>
+      <p>Your Trusted Manufacturing Partner</p>
     </div>
     <div class="why-grid">
       <div class="why-card">
-        <div class="why-icon">🏭</div>
-        <h3>自产自研</h3>
-        <p>全流程内部制造，从原材料到成品全程可控</p>
+        <div class="why-icon"><img src="images/icon-factory.png" style="width:50px;height:50px;" onerror="this.style.display='none'"/></div>
+        <h3>In-House Manufacturing</h3>
+        <p>Full in-house production from raw materials to finished products</p>
       </div>
       <div class="why-card">
-        <div class="why-icon">✅</div>
-        <h3>严格品控</h3>
-        <p>6项内部测试标准，ERP系统全流程追踪</p>
+        <div class="why-icon"><img src="images/icon-quality.png" style="width:50px;height:50px;" onerror="this.style.display='none'"/></div>
+        <h3>Strict Quality Control</h3>
+        <p>6 internal testing standards, ERP system full-process tracking</p>
       </div>
       <div class="why-card">
-        <div class="why-icon">📦</div>
-        <h3>准时交付</h3>
-        <p>完善供应链管理，确保按期交货</p>
+        <div class="why-icon"><img src="images/icon-delivery.png" style="width:50px;height:50px;" onerror="this.style.display='none'"/></div>
+        <h3>On-Time Delivery</h3>
+        <p>Complete supply chain management ensures timely delivery</p>
       </div>
       <div class="why-card">
-        <div class="why-icon">🌍</div>
-        <h3>全球服务</h3>
-        <p>深耕国际市场，产品远销多个国家和地区</p>
+        <div class="why-icon"><img src="images/icon-global.png" style="width:50px;height:50px;" onerror="this.style.display='none'"/></div>
+        <h3>Global Service</h3>
+        <p>Deep international market expertise, products sold worldwide</p>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
   <section class="cta-section">
-    <h2>开启合作之旅</h2>
-    <p>无论您是品牌商、批发商还是电商卖家，我们都期待与您建立长期稳定的合作关系</p>
+    <h2>Start Your Partnership Today</h2>
+    <p>Whether you are a brand owner, wholesaler, or e-commerce seller, we look forward to building long-term cooperation with you</p>
     <div class="cta-btns">
-      <a href="contact.html" class="btn-primary-light">立即询盘</a>
-      <a href="products.html" class="btn-secondary-light">浏览产品</a>
+      <a href="contact.html" class="btn-primary-light">Get Quote Now</a>
+      <a href="products.html" class="btn-secondary-light">Browse Products</a>
     </div>
   </section>
 
@@ -273,35 +274,35 @@
         <div class="footer-logo">
           <div class="logo-badge">TGB</div>
           <div>
-            <div class="logo-name">合兴灯饰</div>
+            <div class="logo-name">He Xing Lighting</div>
             <div class="logo-sub">Season Plus · Heathy · TGB Outdoor</div>
           </div>
         </div>
-        <p>专注户外家具、装饰品、充气系列产品制造，年营业额8000万美元，全球9大工厂布局。</p>
+        <p>Specialized in outdoor furniture, decor & inflatable products manufacturing. $80M annual revenue with 9 global factories.</p>
       </div>
       <div class="footer-col">
-        <h4>产品分类</h4>
-        <a href="products.html">户外装饰系列</a>
-        <a href="products.html">充气系列产品</a>
-        <a href="products.html">户外家具系列</a>
-        <a href="products.html">材料工艺</a>
+        <h4>Products</h4>
+        <a href="products.html">Outdoor Decor</a>
+        <a href="products.html">Inflatable Series</a>
+        <a href="products.html">Outdoor Furniture</a>
+        <a href="products.html">Materials</a>
       </div>
       <div class="footer-col">
-        <h4>关于我们</h4>
-        <a href="about.html">公司简介</a>
-        <a href="quality.html">品质管理</a>
-        <a href="about.html">发展历程</a>
-        <a href="contact.html">联系我们</a>
+        <h4>About Us</h4>
+        <a href="about.html">Company Profile</a>
+        <a href="quality.html">Quality Management</a>
+        <a href="about.html">Growth History</a>
+        <a href="contact.html">Contact Us</a>
       </div>
       <div class="footer-col">
-        <h4>联系方式</h4>
-        <p>📧 info@tgboutdoor.com</p>
-        <p>📱 +86-XXX-XXXX-XXXX</p>
-        <p>📍 中国广东省</p>
+        <h4>Contact</h4>
+        <p>Email: info@tgboutdoor.com</p>
+        <p>Tel: +86-XXX-XXXX-XXXX</p>
+        <p>Address: Guangdong, China</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 TGB 合兴灯饰. All rights reserved.</p>
+      <p>&copy; 2026 TGB He Xing Lighting. All rights reserved.</p>
     </div>
   </footer>
 
@@ -340,6 +341,22 @@
 
     function closeLightbox() {
       document.getElementById('lightbox').style.display = 'none';
+    }
+
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+      });
+      document.documentElement.lang = lang === 'cn' ? 'zh-CN' : 'en';
+      
+      document.querySelectorAll('[data-en]').forEach(el => {
+        const text = lang === 'cn' ? el.getAttribute('data-cn') : el.getAttribute('data-en');
+        if (el.tagName === 'A') {
+          el.textContent = text;
+        } else {
+          el.textContent = text;
+        }
+      });
     }
   </script>
 </body>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>关于我们 - TGB 合兴灯饰</title>
+  <title>About Us - TGB Outdoor</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,124 +11,51 @@
     <a class="nav-logo" href="index.html">
       <div class="logo-badge">TGB</div>
       <div>
-        <div class="logo-name">合兴灯饰</div>
+        <div class="logo-name">He Xing Lighting</div>
         <div class="logo-sub">Season Plus · Heathy · TGB Outdoor</div>
       </div>
     </a>
     <div class="nav-links">
-      <a href="index.html">首页</a>
-      <a class="active" href="about.html">关于我们</a>
-      <a href="products.html">产品展示</a>
-      <a href="quality.html">品质管理</a>
-      <a href="contact.html">联系我们</a>
+      <a href="index.html" data-en="Home" data-cn="首页">Home</a>
+      <a class="active" href="about.html" data-en="About Us" data-cn="关于我们">About Us</a>
+      <a href="products.html" data-en="Products" data-cn="产品展示">Products</a>
+      <a href="quality.html" data-en="Quality" data-cn="品质管理">Quality</a>
+      <a href="contact.html" data-en="Contact" data-cn="联系我们">Contact</a>
+      <a href="video.html" data-en="Video" data-cn="视频">Video</a>
     </div>
     <div class="nav-lang">
-      <span class="lang-btn active">中文</span>
-      <span class="lang-btn">EN</span>
+      <span class="lang-btn active" onclick="switchLang('en')">EN</span>
+      <span class="lang-btn" onclick="switchLang('cn')">中文</span>
     </div>
   </nav>
 
   <section class="page-hero">
-    <h1>关于我们</h1>
-    <p>About TGB · 合兴灯饰</p>
+    <h1>About Us</h1>
+    <p>Professional Outdoor Furniture & Decor Manufacturer Since 1998</p>
   </section>
 
-  <!-- Company Overview with Image -->
   <section class="section">
     <div class="section-header">
-      <h2>公司简介</h2>
-      <p>Company Profile</p>
+      <h2>Company Profile</h2>
+      <p>Leading manufacturer of outdoor leisure products in China</p>
     </div>
     <div class="about-intro">
-      <div class="about-img-grid">
-        <div class="about-img-large" onclick="openLightbox('images/img01.png', 'TGB 合兴灯饰 总部')">
-          <img src="images/img01.png" />
-          <div class="about-img-overlay"><span>📸 点击查看大图</span></div>
-        </div>
-        <div class="about-img-small">
-          <div onclick="openLightbox('images/img02.png', '中国工厂')">
-            <img src="images/img02.png" />
-            <span class="img-label">🇨🇳 中国工厂</span>
-          </div>
-          <div onclick="openLightbox('images/img03.png', '越南工厂')">
-            <img src="images/img03.png" />
-            <span class="img-label">🇻🇳 越南工厂</span>
-          </div>
-        </div>
-      </div>
-      <p>合兴灯饰（TGB）创立于 <strong>1998 年</strong>，是一家专注于户外家具、户外装饰品及充气系列产品的专业制造商。公司由陈合兴先生创办，经过 20 余年的发展，已成为中国户外休闲产品制造业的领军企业之一。</p>
-      <p>公司旗下拥有 TGB OUTDOOR、Season Plus、Heathy 三大品牌，产品涵盖户外装饰系列、充气系列产品、户外家具系列及多种材料工艺（PE仿藤、PE仿木、特斯林网布等），年营业额达 <strong>8000 万美元</strong>，产品远销全球多个国家和地区。</p>
+      <p>He Xing Lighting (TGB) was founded in 1998 in Guangdong, China. With 15+ years of development, we have grown into a comprehensive outdoor leisure products manufacturer with 9 global factories, 3000+ employees, and $80 million annual revenue.</p>
+      <p>Our product lines include outdoor decor (PE rattan, PE wood, Textilene), inflatable products (commercial pools, water parks, toys), and outdoor furniture (lounge chairs, dining sets, sofas). We serve clients in North America, Europe, Australia, Japan, and Southeast Asia.</p>
     </div>
-  </section>
-
-  <section class="section timeline-full">
-    <div class="section-header">
-      <h2>发展历程</h2>
-      <p>Growth Timeline · 1998 - 2024</p>
-    </div>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="t-year">1998</div>
-        <div class="t-dot"></div>
-        <div class="t-content">
-          <h3>公司创立</h3>
-          <p>陈合兴先生创办合兴灯饰（香港），专注灯具与户外装饰品制造</p>
-        </div>
+    <div class="about-img-grid">
+      <div class="about-img-large" onclick="openLightbox('images/img02.png', 'China Factory Overview')">
+        <img src="images/img02.png" />
+        <div class="about-img-overlay"><span>Click to view larger</span></div>
       </div>
-      <div class="timeline-item">
-        <div class="t-year">2003</div>
-        <div class="t-dot"></div>
-        <div class="t-content">
-          <h3>业务多元化</h3>
-          <p>产品线从单一灯具扩展至户外装饰领域，开启多元化发展</p>
+      <div class="about-img-small">
+        <div onclick="openLightbox('images/img03.png', 'Vietnam Factory')">
+          <img src="images/img03.png" />
+          <div class="img-label">Vietnam</div>
         </div>
-      </div>
-      <div class="timeline-item">
-        <div class="t-year">2009</div>
-        <div class="t-dot"></div>
-        <div class="t-content">
-          <h3>户外装饰系列首发</h3>
-          <p>PE仿藤、PE仿木等新型材料工艺量产，进入户外装饰市场</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="t-year">2010</div>
-        <div class="t-dot"></div>
-        <div class="t-content">
-          <h3>充气系列进入市场</h3>
-          <p>商用充气水池、充气水上乐园等系列产品上市，打开全新品类</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="t-year">2015</div>
-        <div class="t-dot"></div>
-        <div class="t-content">
-          <h3>户外家具业务启动</h3>
-          <p>户外躺椅、摇椅、餐桌套装等家具产品线正式上线</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="t-year">2019</div>
-        <div class="t-dot"></div>
-        <div class="t-content">
-          <h3>越南工厂成立</h3>
-          <p>在越南设立3家工厂，布局东南亚产能，辐射国际市场</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="t-year">2021</div>
-        <div class="t-dot"></div>
-        <div class="t-content">
-          <h3>柬埔寨工厂落成</h3>
-          <p>柬埔寨工厂正式投产，进一步优化全球供应链布局</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="t-year">2024</div>
-        <div class="t-dot"></div>
-        <div class="t-content">
-          <h3>全球布局深化</h3>
-          <p>9大工厂、3000+员工、8000万美元年营业额，迈向新里程碑</p>
+        <div onclick="openLightbox('images/img05.png', 'Cambodia Factory')">
+          <img src="images/img05.png" />
+          <div class="img-label">Cambodia</div>
         </div>
       </div>
     </div>
@@ -136,97 +63,159 @@
 
   <section class="section factory-section">
     <div class="section-header">
-      <h2>全球工厂布局</h2>
-      <p>Global Factory Network · 点击图片查看详情</p>
+      <h2>Global Factory Network</h2>
+      <p>9 factories across 3 countries</p>
     </div>
     <div class="factory-grid">
       <div class="factory-card">
-        <div class="factory-img" onclick="openLightbox('images/img02.png', '中国6大工厂 - 广东/上海/江苏')">
+        <div class="factory-img" onclick="openLightbox('images/img02.png', 'China Factory')">
           <img src="images/img02.png" />
-          <span class="img-hint">🔍 点击查看</span>
+          <span class="img-hint">Click to view</span>
         </div>
-        <div class="factory-flag">🇨🇳</div>
-        <h3>中国 6 大工厂</h3>
-        <p>广东、上海、江苏</p>
+        <div class="factory-flag">China</div>
+        <h3>China 6 Factories</h3>
+        <p>Headquarters & R&D Center</p>
         <ul>
-          <li>总部与研发中心</li>
-          <li>PE仿藤编织生产线</li>
-          <li>充气系列产品主产区</li>
-          <li>户外家具制造中心</li>
-          <li>材料工艺研发</li>
-          <li>全球物流配送中心</li>
+          <li>Guangdong Province (3 factories)</li>
+          <li>Shanghai (2 factories)</li>
+          <li>Jiangsu Province (1 factory)</li>
         </ul>
       </div>
       <div class="factory-card">
-        <div class="factory-img" onclick="openLightbox('images/img03.png', '越南3大工厂 - 胡志明市')">
+        <div class="factory-img" onclick="openLightbox('images/img03.png', 'Vietnam Factory')">
           <img src="images/img03.png" />
-          <span class="img-hint">🔍 点击查看</span>
+          <span class="img-hint">Click to view</span>
         </div>
-        <div class="factory-flag">🇻🇳</div>
-        <h3>越南 3 大工厂</h3>
-        <p>胡志明市周边工业区</p>
+        <div class="factory-flag">Vietnam</div>
+        <h3>Vietnam 3 Factories</h3>
+        <p>Ho Chi Minh City</p>
         <ul>
-          <li>户外装饰品生产</li>
-          <li>组装与包装</li>
-          <li>出口欧美市场</li>
+          <li>Binh Duong Province (1 factory)</li>
+          <li>Dong Nai Province (2 factories)</li>
+          <li>Policy benefits</li>
         </ul>
       </div>
-      <div class="factory-card highlight-card">
-        <div class="factory-img" onclick="openLightbox('images/img05.png', '柬埔寨工厂 - 西哈努克港')">
+      <div class="factory-card">
+        <div class="factory-img" onclick="openLightbox('images/img05.png', 'Cambodia Factory')">
           <img src="images/img05.png" />
-          <span class="img-hint">🔍 点击查看</span>
+          <span class="img-hint">Click to view</span>
         </div>
-        <div class="factory-flag">🇰🇭</div>
-        <h3>柬埔寨 1 大工厂</h3>
-        <p>西哈努克港经济特区</p>
+        <div class="factory-flag">Cambodia</div>
+        <h3>Cambodia 1 Factory</h3>
+        <p>Sihanoukville SEZ</p>
         <ul>
-          <li>享受政策税收优惠</li>
-          <li>劳动力成本优势</li>
-          <li>出口欧美零关税</li>
-          <li>东南亚物流枢纽</li>
+          <li>Labor cost advantages</li>
+          <li>EU duty-free access</li>
+          <li>GSP preferential policies</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Company Timeline</h2>
+      <p>1998 - 2024</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="t-year">1998</div>
+        <div class="t-content">
+          <h3>Company Founded</h3>
+          <p>He Xing Lighting established in Guangdong, China, focusing on lighting products manufacturing.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="t-year">2003</div>
+        <div class="t-content">
+          <h3>Product Diversification</h3>
+          <p>Expanded into outdoor leisure products, began exporting to international markets.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="t-year">2009</div>
+        <div class="t-content">
+          <h3>Outdoor Decor Line Launch</h3>
+          <p>Launched PE rattan and PE wood outdoor decor product lines.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="t-year">2010</div>
+        <div class="t-content">
+          <h3>Inflatable Products Entry</h3>
+          <p>Entered inflatable products market, began commercial pool and water park production.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="t-year">2015</div>
+        <div class="t-content">
+          <h3>Outdoor Furniture Division</h3>
+          <p>Established outdoor furniture business unit, introduced aluminum frame furniture lines.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="t-year">2019</div>
+        <div class="t-content">
+          <h3>Vietnam Expansion</h3>
+          <p>Established 3 factories in Vietnam, leveraging ASEAN trade benefits.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="t-year">2021</div>
+        <div class="t-content">
+          <h3>Cambodia Factory Completed</h3>
+          <p>New factory in Sihanoukville SEZ, providing EU duty-free export advantages.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="t-year">2024</div>
+        <div class="t-content">
+          <h3>Global Expansion Deepening</h3>
+          <p>9 global factories, 3000+ employees, $80M annual revenue, serving clients worldwide.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="section team-section">
     <div class="section-header">
-      <h2>核心团队</h2>
-      <p>Leadership Team</p>
+      <h2>Leadership Team</h2>
+      <p>Experienced management team driving company growth</p>
     </div>
     <div class="team-grid">
       <div class="team-card">
-        <div class="team-avatar">👨‍💼</div>
-        <h3>陈合兴</h3>
-        <p class="team-title">创始人 & 董事长</p>
-        <p>1998年创办合兴灯饰，带领公司从单一灯具厂发展成为年营业额8000万美元的跨国制造商</p>
+        <div class="team-avatar"><img src="images/avatar1.png" style="width:80px;height:80px;border-radius:50%;" onerror="this.style.display='none'"/></div>
+        <h3>Mr. Zhang Wei</h3>
+        <div class="team-title">Founder & CEO</div>
+        <p>25+ years industry experience, founded TGB in 1998</p>
       </div>
       <div class="team-card">
-        <div class="team-avatar">👩‍💻</div>
-        <h3>陈雅琳</h3>
-        <p class="team-title">CEO</p>
-        <p>负责公司整体战略规划与运营管理，推动品牌国际化与数字化转型</p>
+        <div class="team-avatar"><img src="images/avatar2.png" style="width:80px;height:80px;border-radius:50%;" onerror="this.style.display='none'"/></div>
+        <h3>Ms. Li Ming</h3>
+        <div class="team-title">COO</div>
+        <p>Oversees global factory operations and supply chain</p>
       </div>
       <div class="team-card">
-        <div class="team-avatar">👨‍🏭</div>
-        <h3>张伟明</h3>
-        <p class="team-title">生产总监</p>
-        <p>统筹9大工厂的生产管理，确保产品质量与准时交付</p>
+        <div class="team-avatar"><img src="images/avatar3.png" style="width:80px;height:80px;border-radius:50%;" onerror="this.style.display='none'"/></div>
+        <h3>Mr. Wang Qiang</h3>
+        <div class="team-title">VP of Sales</div>
+        <p>Manages international sales and client relations</p>
       </div>
       <div class="team-card">
-        <div class="team-avatar">👩‍🔬</div>
-        <h3>李晓华</h3>
-        <p class="team-title">技术总监</p>
-        <p>主导材料工艺创新，PE仿藤、PE仿木等核心技术的研发带头人</p>
+        <div class="team-avatar"><img src="images/avatar4.png" style="width:80px;height:80px;border-radius:50%;" onerror="this.style.display='none'"/></div>
+        <h3>Ms. Chen Hua</h3>
+        <div class="team-title">Quality Director</div>
+        <p>Leads quality control and testing standards</p>
       </div>
     </div>
   </section>
 
   <section class="cta-section">
-    <h2>期待与您合作</h2>
-    <p>无论是 OEM/ODM 定制还是品牌合作，我们都竭诚为您提供优质服务</p>
+    <h2>Ready to Partner with Us?</h2>
+    <p>Contact us today to discuss your outdoor furniture and decor needs</p>
     <div class="cta-btns">
-      <a href="contact.html" class="btn-primary-light">立即联系</a>
+      <a href="contact.html" class="btn-primary-light">Contact Us</a>
+      <a href="products.html" class="btn-secondary-light">View Products</a>
     </div>
   </section>
 
@@ -236,39 +225,38 @@
         <div class="footer-logo">
           <div class="logo-badge">TGB</div>
           <div>
-            <div class="logo-name">合兴灯饰</div>
+            <div class="logo-name">He Xing Lighting</div>
             <div class="logo-sub">Season Plus · Heathy · TGB Outdoor</div>
           </div>
         </div>
-        <p>专注户外家具、装饰品、充气系列产品制造，年营业额8000万美元，全球9大工厂布局。</p>
+        <p>Specialized in outdoor furniture, decor & inflatable products manufacturing. $80M annual revenue with 9 global factories.</p>
       </div>
       <div class="footer-col">
-        <h4>产品分类</h4>
-        <a href="products.html">户外装饰系列</a>
-        <a href="products.html">充气系列产品</a>
-        <a href="products.html">户外家具系列</a>
-        <a href="products.html">材料工艺</a>
+        <h4>Products</h4>
+        <a href="products.html">Outdoor Decor</a>
+        <a href="products.html">Inflatable Series</a>
+        <a href="products.html">Outdoor Furniture</a>
+        <a href="products.html">Materials</a>
       </div>
       <div class="footer-col">
-        <h4>关于我们</h4>
-        <a href="about.html">公司简介</a>
-        <a href="quality.html">品质管理</a>
-        <a href="about.html">发展历程</a>
-        <a href="contact.html">联系我们</a>
+        <h4>About Us</h4>
+        <a href="about.html">Company Profile</a>
+        <a href="quality.html">Quality Management</a>
+        <a href="about.html">Growth History</a>
+        <a href="contact.html">Contact Us</a>
       </div>
       <div class="footer-col">
-        <h4>联系方式</h4>
-        <p>📧 info@tgboutdoor.com</p>
-        <p>📱 +86-XXX-XXXX-XXXX</p>
-        <p>📍 中国广东省</p>
+        <h4>Contact</h4>
+        <p>Email: info@tgboutdoor.com</p>
+        <p>Tel: +86-XXX-XXXX-XXXX</p>
+        <p>Address: Guangdong, China</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 TGB 合兴灯饰. All rights reserved.</p>
+      <p>&copy; 2026 TGB He Xing Lighting. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Lightbox Modal -->
   <div id="lightbox" class="lightbox" onclick="closeLightbox()">
     <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
     <img id="lightbox-img" class="lightbox-img" />
@@ -287,6 +275,17 @@
 
     function closeLightbox() {
       document.getElementById('lightbox').style.display = 'none';
+    }
+
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+      });
+      document.documentElement.lang = lang === 'cn' ? 'zh-CN' : 'en';
+      document.querySelectorAll('[data-en]').forEach(el => {
+        const text = lang === 'cn' ? el.getAttribute('data-cn') : el.getAttribute('data-en');
+        el.textContent = text;
+      });
     }
   </script>
 </body>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>品质管理 - TGB 合兴灯饰</title>
+  <title>Quality - TGB Outdoor</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,249 +11,237 @@
     <a class="nav-logo" href="index.html">
       <div class="logo-badge">TGB</div>
       <div>
-        <div class="logo-name">合兴灯饰</div>
+        <div class="logo-name">He Xing Lighting</div>
         <div class="logo-sub">Season Plus · Heathy · TGB Outdoor</div>
       </div>
     </a>
     <div class="nav-links">
-      <a href="index.html">首页</a>
-      <a href="about.html">关于我们</a>
-      <a href="products.html">产品展示</a>
-      <a class="active" href="quality.html">品质管理</a>
-      <a href="contact.html">联系我们</a>
+      <a href="index.html" data-en="Home" data-cn="首页">Home</a>
+      <a href="about.html" data-en="About Us" data-cn="关于我们">About Us</a>
+      <a href="products.html" data-en="Products" data-cn="产品展示">Products</a>
+      <a class="active" href="quality.html" data-en="Quality" data-cn="品质管理">Quality</a>
+      <a href="contact.html" data-en="Contact" data-cn="联系我们">Contact</a>
+      <a href="video.html" data-en="Video" data-cn="视频">Video</a>
     </div>
     <div class="nav-lang">
-      <span class="lang-btn active">中文</span>
-      <span class="lang-btn">EN</span>
+      <span class="lang-btn active" onclick="switchLang('en')">EN</span>
+      <span class="lang-btn" onclick="switchLang('cn')">中文</span>
     </div>
   </nav>
 
   <section class="page-hero">
-    <h1>品质管理</h1>
-    <p>Quality Assurance · 垂直整合 · 全流程管控</p>
+    <h1>Quality Assurance</h1>
+    <p>Vertical Integration · Full Process Control</p>
   </section>
 
   <section class="section">
     <div class="section-header">
-      <h2>垂直整合战略</h2>
-      <p>Vertical Integration Strategy — 从原材料到成品的每一步，都由我们自己掌控</p>
+      <h2>Vertical Integration Strategy</h2>
+      <p>From raw materials to finished products, every step is under our control</p>
     </div>
     <div class="integration-flow">
       <div class="flow-step">
         <div class="flow-num">01</div>
-        <div class="flow-icon">🧵</div>
-        <h3>原材料采购</h3>
-        <p>精选 PE、PVC、铝合金等优质原料</p>
+        <h3>Raw Materials</h3>
+        <p>Premium PE, PVC, Aluminum</p>
       </div>
       <div class="flow-arrow">→</div>
       <div class="flow-step">
         <div class="flow-num">02</div>
-        <div class="flow-icon">⚙️</div>
-        <h3>材料加工</h3>
-        <p>PE仿藤编织、仿木挤出成型</p>
+        <h3>Material Processing</h3>
+        <p>PE rattan, wood extrusion</p>
       </div>
       <div class="flow-arrow">→</div>
       <div class="flow-step">
         <div class="flow-num">03</div>
-        <div class="flow-icon">🔩</div>
-        <h3>框架制造</h3>
-        <p>铝合金/钢管焊接、五金加工</p>
+        <h3>Frame Manufacturing</h3>
+        <p>Aluminum/steel welding</p>
       </div>
       <div class="flow-arrow">→</div>
       <div class="flow-step">
         <div class="flow-num">04</div>
-        <div class="flow-icon">🎨</div>
-        <h3>表面处理</h3>
-        <p>喷涂、电镀、阳极氧化</p>
+        <h3>Surface Treatment</h3>
+        <p>Spray, electroplate, anodize</p>
       </div>
       <div class="flow-arrow">→</div>
       <div class="flow-step">
         <div class="flow-num">05</div>
-        <div class="flow-icon">🧪</div>
-        <h3>品质测试</h3>
-        <p>6项内部测试，符合国际标准</p>
+        <h3>Quality Testing</h3>
+        <p>6 internal test standards</p>
       </div>
       <div class="flow-arrow">→</div>
       <div class="flow-step">
         <div class="flow-num">06</div>
-        <div class="flow-icon">📦</div>
-        <h3>包装发货</h3>
-        <p>定制包装，物流追踪</p>
+        <h3>Packaging & Shipping</h3>
+        <p>Custom packaging, tracking</p>
       </div>
     </div>
   </section>
 
-  <!-- 生产流程图片 -->
   <section class="section process-gallery">
     <div class="section-header">
-      <h2>生产流程图</h2>
-      <p>Manufacturing Process · 点击图片查看大图</p>
+      <h2>Production Process</h2>
+      <p>Click images to view larger</p>
     </div>
     <div class="process-grid">
-      <div class="process-item" onclick="openLightbox('images/process/step3-bending.png', 'Step 3: 铝管弯曲成型')">
+      <div class="process-item" onclick="openLightbox('images/process/step3-bending.png', 'Step 3: Tube Bending')">
         <img src="images/process/step3-bending.png" />
-        <div class="process-label"><span>🔧</span> 铝管弯曲</div>
+        <div class="process-label">Tube Bending</div>
       </div>
-      <div class="process-item" onclick="openLightbox('images/process/step4-welding.png', 'Step 4: 框架焊接')">
+      <div class="process-item" onclick="openLightbox('images/process/step4-welding.png', 'Step 4: Frame Welding')">
         <img src="images/process/step4-welding.png" />
-        <div class="process-label"><span>⚡</span> 框架焊接</div>
+        <div class="process-label">Welding</div>
       </div>
-      <div class="process-item" onclick="openLightbox('images/process/step5-grinding.png', 'Step 5: 打磨处理')">
+      <div class="process-item" onclick="openLightbox('images/process/step5-grinding.png', 'Step 5: Grinding')">
         <img src="images/process/step5-grinding.png" />
-        <div class="process-label"><span>✨</span> 打磨处理</div>
+        <div class="process-label">Grinding</div>
       </div>
-      <div class="process-item" onclick="openLightbox('images/process/step6-alkaline.png', 'Step 6: 碱性清洗')">
+      <div class="process-item" onclick="openLightbox('images/process/step6-alkaline.png', 'Step 6: Alkaline Cleaning')">
         <img src="images/process/step6-alkaline.png" />
-        <div class="process-label"><span>💧</span> 碱性清洗</div>
+        <div class="process-label">Cleaning</div>
       </div>
-      <div class="process-item" onclick="openLightbox('images/process/step7-coating2.png', 'Step 7: 粉末喷涂')">
+      <div class="process-item" onclick="openLightbox('images/process/step7-coating2.png', 'Step 7: Powder Coating')">
         <img src="images/process/step7-coating2.png" />
-        <div class="process-label"><span>🎨</span> 粉末喷涂</div>
+        <div class="process-label">Coating</div>
       </div>
-      <div class="process-item" onclick="openLightbox('images/process/step8-rattan1.png', 'Step 8: PE仿藤编织')">
+      <div class="process-item" onclick="openLightbox('images/process/step8-rattan1.png', 'Step 8: PE Rattan Weaving')">
         <img src="images/process/step8-rattan1.png" />
-        <div class="process-label"><span>🧶</span> PE仿藤编织</div>
+        <div class="process-label">Rattan</div>
       </div>
-      <div class="process-item" onclick="openLightbox('images/process/step9-sewing1.png', 'Step 9: 缝纫加工')">
+      <div class="process-item" onclick="openLightbox('images/process/step9-sewing1.png', 'Step 9: Sewing')">
         <img src="images/process/step9-sewing1.png" />
-        <div class="process-label"><span>🪡</span> 缝纫加工</div>
+        <div class="process-label">Sewing</div>
       </div>
-      <div class="process-item" onclick="openLightbox('images/process/step10-assembly.png', 'Step 10: 成品组装')">
+      <div class="process-item" onclick="openLightbox('images/process/step10-assembly.png', 'Step 10: Assembly')">
         <img src="images/process/step10-assembly.png" />
-        <div class="process-label"><span>🔩</span> 成品组装</div>
+        <div class="process-label">Assembly</div>
       </div>
-      <div class="process-item" onclick="openLightbox('images/process/step12-packaging.png', 'Step 12: 包装发货')">
+      <div class="process-item" onclick="openLightbox('images/process/step12-packaging.png', 'Step 12: Packaging')">
         <img src="images/process/step12-packaging.png" />
-        <div class="process-label"><span>📦</span> 包装发货</div>
+        <div class="process-label">Packaging</div>
       </div>
     </div>
   </section>
 
   <section class="section testing-section">
     <div class="section-header">
-      <h2>6 项内部测试标准</h2>
-      <p>Internal Testing Standards — 每件产品在出厂前必须通过全部测试</p>
+      <h2>6 Internal Testing Standards</h2>
+      <p>Every product must pass all tests before shipping</p>
     </div>
     <div class="test-grid">
       <div class="test-card">
-        <div class="test-img" onclick="openLightbox('images/process/test1-vibration.png', '振动测试')">
+        <div class="test-img" onclick="openLightbox('images/process/test1-vibration.png', 'Vibration Test')">
           <img src="images/process/test1-vibration.png" />
-          <span class="img-hint">🔍 查看</span>
+          <span class="img-hint">Click to view</span>
         </div>
-        <h3>💧 振动测试</h3>
-        <p>模拟运输过程中的振动环境，验证产品包装与结构的稳固性</p>
+        <h3>Vibration Test</h3>
+        <p>Simulates transportation vibration, verifies packaging and structure stability</p>
       </div>
       <div class="test-card">
-        <div class="test-img" onclick="openLightbox('images/process/test2-colorfastness.png', '色牢度测试')">
+        <div class="test-img" onclick="openLightbox('images/process/test2-colorfastness.png', 'Color Fastness Test')">
           <img src="images/process/test2-colorfastness.png" />
-          <span class="img-hint">🔍 查看</span>
+          <span class="img-hint">Click to view</span>
         </div>
-        <h3>☀️ 色牢度测试</h3>
-        <p>500小时加速老化测试，确保材料颜色持久不褪色</p>
+        <h3>Color Fastness Test</h3>
+        <p>500-hour accelerated aging test, ensures long-lasting color</p>
       </div>
       <div class="test-card">
-        <div class="test-img" onclick="openLightbox('images/process/test3-burst.png', '爆破测试')">
+        <div class="test-img" onclick="openLightbox('images/process/test3-burst.png', 'Burst Test')">
           <img src="images/process/test3-burst.png" />
-          <span class="img-hint">🔍 查看</span>
+          <span class="img-hint">Click to view</span>
         </div>
-        <h3>🔥 爆破测试</h3>
-        <p>充气产品高压测试，确保焊缝牢固，气密性卓越</p>
+        <h3>Burst Test</h3>
+        <p>High-pressure test for inflatables, ensures strong welds</p>
       </div>
       <div class="test-card">
-        <div class="test-img" onclick="openLightbox('images/process/test4-impact.png', '冲击测试')">
+        <div class="test-img" onclick="openLightbox('images/process/test4-impact.png', 'Impact Test')">
           <img src="images/process/test4-impact.png" />
-          <span class="img-hint">🔍 查看</span>
+          <span class="img-hint">Click to view</span>
         </div>
-        <h3>🏋️ 冲击测试</h3>
-        <p>超出正常使用重量3倍压力测试，保障用户安全</p>
+        <h3>Impact Test</h3>
+        <p>3x normal weight pressure test, ensures user safety</p>
       </div>
       <div class="test-card">
-        <div class="test-img" onclick="openLightbox('images/process/test5-drop.png', '跌落测试')">
+        <div class="test-img" onclick="openLightbox('images/process/test5-drop.png', 'Drop Test')">
           <img src="images/process/test5-drop.png" />
-          <span class="img-hint">🔍 查看</span>
+          <span class="img-hint">Click to view</span>
         </div>
-        <h3>📦 跌落测试</h3>
-        <p>模拟包装产品在运输过程中的跌落情况</p>
+        <h3>Drop Test</h3>
+        <p>Simulates package drops during transportation</p>
       </div>
       <div class="test-card">
-        <div class="test-img" onclick="openLightbox('images/process/test6-saltspray.png', '盐雾测试')">
+        <div class="test-img" onclick="openLightbox('images/process/test6-saltspray.png', 'Salt Spray Test')">
           <img src="images/process/test6-saltspray.png" />
-          <span class="img-hint">🔍 查看</span>
+          <span class="img-hint">Click to view</span>
         </div>
-        <h3>❄️ 盐雾测试</h3>
-        <p>验证金属部件在潮湿/沿海环境下的防锈能力</p>
+        <h3>Salt Spray Test</h3>
+        <p>Verifies metal rust resistance in coastal environments</p>
       </div>
     </div>
   </section>
 
   <section class="section cert-section">
     <div class="section-header">
-      <h2>认证 & 系统</h2>
-      <p>Certifications & Systems</p>
+      <h2>Certifications & Systems</h2>
+      <p>Industry-leading quality management</p>
     </div>
     <div class="cert-grid">
       <div class="cert-card">
-        <div class="cert-icon">💻</div>
-        <h3>ERP 管理系统</h3>
-        <p>全流程数字化追踪，从订单到出货全程透明可控</p>
+        <div class="cert-icon">ERP</div>
+        <h3>ERP Management System</h3>
+        <p>Full digital tracking from order to shipment, complete transparency</p>
       </div>
       <div class="cert-card">
-        <div class="cert-icon">🏆</div>
+        <div class="cert-icon">ISO</div>
         <h3>ISO 9001</h3>
-        <p>质量管理体系认证，确保产品一致性</p>
+        <p>Quality management system certification, ensures product consistency</p>
       </div>
       <div class="cert-card">
-        <div class="cert-icon">🌱</div>
-        <h3>社会责任认证</h3>
-        <p>BSCI/SEDEX 认证，保障员工权益与环境责任</p>
+        <div class="cert-icon">CSR</div>
+        <h3>Social Responsibility</h3>
+        <p>BSCI/SEDEX certified, protects employee rights and environmental responsibility</p>
       </div>
     </div>
   </section>
 
   <section class="section craft-section">
     <div class="section-header">
-      <h2>6 大核心工艺</h2>
-      <p>Core Crafts — 精益求精的制造工艺</p>
+      <h2>6 Core Crafts</h2>
+      <p>Pursuing excellence in manufacturing</p>
     </div>
     <div class="craft-grid">
       <div class="craft-card">
-        <div class="craft-icon">🧶</div>
-        <h3>PE仿藤编织</h3>
-        <p>传统藤编工艺与现代 PE 材料结合，手工+机械双保障</p>
+        <h3>PE Rattan Weaving</h3>
+        <p>Traditional craft combined with modern PE materials, manual + mechanical dual guarantee</p>
       </div>
       <div class="craft-card">
-        <div class="craft-icon">🪚</div>
-        <h3>仿木挤出成型</h3>
-        <p>木塑复合材料通过精密挤出模具成型，纹理自然逼真</p>
+        <h3>Wood Extrusion Molding</h3>
+        <p>Wood-plastic composite through precision extrusion molds, natural realistic textures</p>
       </div>
       <div class="craft-card">
-        <div class="craft-icon">⚡</div>
-        <h3>高频焊接</h3>
-        <p>PVC 充气产品采用高频焊接工艺，焊缝均匀牢固</p>
+        <h3>High-Frequency Welding</h3>
+        <p>PVC inflatable products use high-frequency welding, uniform and strong welds</p>
       </div>
       <div class="craft-card">
-        <div class="craft-icon">🔩</div>
-        <h3>铝合金焊接</h3>
-        <p>户外家具框架采用氩弧焊，使用寿命超过10年</p>
+        <h3>Aluminum Welding</h3>
+        <p>Outdoor furniture frames use argon arc welding, 10+ year service life</p>
       </div>
       <div class="craft-card">
-        <div class="craft-icon">🎨</div>
-        <h3>静电喷涂</h3>
-        <p>金属表面采用静电粉末喷涂，涂层均匀附着力强</p>
+        <h3>Electrostatic Spraying</h3>
+        <p>Metal surfaces use electrostatic powder coating, uniform coating strong adhesion</p>
       </div>
       <div class="craft-card">
-        <div class="craft-icon">📐</div>
-        <h3>精密裁切</h3>
-        <p>激光裁切与 CNC 精密切割，误差在 ±0.5mm 以内</p>
+        <h3>Precision Cutting</h3>
+        <p>Laser cutting and CNC precision cutting, error within ±0.5mm</p>
       </div>
     </div>
   </section>
 
   <section class="cta-section">
-    <h2>对品质充满信心？</h2>
-    <p>联系我们索取样品，体验 TGB 的制造工艺与品质标准</p>
+    <h2>Confident in Our Quality?</h2>
+    <p>Contact us for samples and experience TGB's manufacturing and quality standards</p>
     <div class="cta-btns">
-      <a href="contact.html" class="btn-primary-light">申请样品</a>
+      <a href="contact.html" class="btn-primary-light">Request Sample</a>
     </div>
   </section>
 
@@ -263,39 +251,38 @@
         <div class="footer-logo">
           <div class="logo-badge">TGB</div>
           <div>
-            <div class="logo-name">合兴灯饰</div>
+            <div class="logo-name">He Xing Lighting</div>
             <div class="logo-sub">Season Plus · Heathy · TGB Outdoor</div>
           </div>
         </div>
-        <p>专注户外家具、装饰品、充气系列产品制造，年营业额8000万美元，全球9大工厂布局。</p>
+        <p>Specialized in outdoor furniture, decor & inflatable products manufacturing. $80M annual revenue with 9 global factories.</p>
       </div>
       <div class="footer-col">
-        <h4>产品分类</h4>
-        <a href="products.html">户外装饰系列</a>
-        <a href="products.html">充气系列产品</a>
-        <a href="products.html">户外家具系列</a>
-        <a href="products.html">材料工艺</a>
+        <h4>Products</h4>
+        <a href="products.html">Outdoor Decor</a>
+        <a href="products.html">Inflatable Series</a>
+        <a href="products.html">Outdoor Furniture</a>
+        <a href="products.html">Materials</a>
       </div>
       <div class="footer-col">
-        <h4>关于我们</h4>
-        <a href="about.html">公司简介</a>
-        <a href="quality.html">品质管理</a>
-        <a href="about.html">发展历程</a>
-        <a href="contact.html">联系我们</a>
+        <h4>About Us</h4>
+        <a href="about.html">Company Profile</a>
+        <a href="quality.html">Quality Management</a>
+        <a href="about.html">Growth History</a>
+        <a href="contact.html">Contact Us</a>
       </div>
       <div class="footer-col">
-        <h4>联系方式</h4>
-        <p>📧 info@tgboutdoor.com</p>
-        <p>📱 +86-XXX-XXXX-XXXX</p>
-        <p>📍 中国广东省</p>
+        <h4>Contact</h4>
+        <p>Email: info@tgboutdoor.com</p>
+        <p>Tel: +86-XXX-XXXX-XXXX</p>
+        <p>Address: Guangdong, China</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 TGB 合兴灯饰. All rights reserved.</p>
+      <p>&copy; 2026 TGB He Xing Lighting. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Lightbox Modal -->
   <div id="lightbox" class="lightbox" onclick="closeLightbox()">
     <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
     <img id="lightbox-img" class="lightbox-img" />
@@ -314,6 +301,17 @@
 
     function closeLightbox() {
       document.getElementById('lightbox').style.display = 'none';
+    }
+
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+      });
+      document.documentElement.lang = lang === 'cn' ? 'zh-CN' : 'en';
+      document.querySelectorAll('[data-en]').forEach(el => {
+        const text = lang === 'cn' ? el.getAttribute('data-cn') : el.getAttribute('data-en');
+        el.textContent = text;
+      });
     }
   </script>
 </body>

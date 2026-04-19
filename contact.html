@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>联系我们 - TGB 合兴灯饰</title>
+  <title>Contact - TGB Outdoor</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,154 +11,108 @@
     <a class="nav-logo" href="index.html">
       <div class="logo-badge">TGB</div>
       <div>
-        <div class="logo-name">合兴灯饰</div>
+        <div class="logo-name">He Xing Lighting</div>
         <div class="logo-sub">Season Plus · Heathy · TGB Outdoor</div>
       </div>
     </a>
     <div class="nav-links">
-      <a href="index.html">首页</a>
-      <a href="about.html">关于我们</a>
-      <a href="products.html">产品展示</a>
-      <a href="quality.html">品质管理</a>
-      <a class="active" href="contact.html">联系我们</a>
+      <a href="index.html" data-en="Home" data-cn="首页">Home</a>
+      <a href="about.html" data-en="About Us" data-cn="关于我们">About Us</a>
+      <a href="products.html" data-en="Products" data-cn="产品展示">Products</a>
+      <a href="quality.html" data-en="Quality" data-cn="品质管理">Quality</a>
+      <a class="active" href="contact.html" data-en="Contact" data-cn="联系我们">Contact</a>
+      <a href="video.html" data-en="Video" data-cn="视频">Video</a>
     </div>
     <div class="nav-lang">
-      <span class="lang-btn active">中文</span>
-      <span class="lang-btn">EN</span>
+      <span class="lang-btn active" onclick="switchLang('en')">EN</span>
+      <span class="lang-btn" onclick="switchLang('cn')">中文</span>
     </div>
   </nav>
 
   <section class="page-hero">
-    <h1>联系我们</h1>
-    <p>Contact Us · 合兴灯饰 · 全球合作</p>
+    <h1>Contact Us</h1>
+    <p>Get in touch for business cooperation</p>
   </section>
 
-  <section class="section">
-    <div class="section-header">
-      <h2>开启合作之旅</h2>
-      <p>Start Your Partnership Journey</p>
-    </div>
-    <div class="why-grid">
-      <div class="why-card">
-        <div class="why-icon">🏭</div>
-        <h3>自有工厂</h3>
-        <p>9大工厂全流程内部制造，产能充足，交期稳定</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">💰</div>
-        <h3>价格优势</h3>
-        <p>自产自销，无中间环节，具竞争力的价格体系</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">🎨</div>
-        <h3>灵活定制</h3>
-        <p>OEM/ODM 全方位支持，Logo印刷、颜色、包装均可定制</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">🚀</div>
-        <h3>快速响应</h3>
-        <p>专业团队 24 小时内回复，样品周期短</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section contact-section">
-    <div class="contact-form-wrapper">
-      <h2>询盘表单</h2>
-      <p>请填写以下信息，我们将在 24 小时内与您联系</p>
-      <form class="contact-form" onsubmit="submitForm(event)">
-        <div class="form-row">
-          <div class="form-group">
-            <label>您的姓名 *</label>
-            <input type="text" placeholder="请输入姓名" required />
-          </div>
-          <div class="form-group">
-            <label>公司名称</label>
-            <input type="text" placeholder="请输入公司名称" />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>电子邮箱 *</label>
-            <input type="email" placeholder="example@company.com" required />
-          </div>
-          <div class="form-group">
-            <label>联系电话 *</label>
-            <input type="tel" placeholder="+86 XXX XXXX XXXX" required />
-          </div>
-        </div>
-        <div class="form-group">
-          <label>感兴趣的产品</label>
-          <select>
-            <option value="">请选择产品类别</option>
-            <option>户外装饰系列</option>
-            <option>充气系列产品</option>
-            <option>户外家具系列</option>
-            <option>全部产品</option>
-            <option>OEM/ODM 定制</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>预计订单量</label>
-          <select>
-            <option value="">请选择</option>
-            <option>&lt; 100件</option>
-            <option>100-500件</option>
-            <option>500-2000件</option>
-            <option>2000件以上</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>您的需求 / 留言 *</label>
-          <textarea rows="5" placeholder="请描述您的需求：产品类型、数量、目标市场、期望交期等" required></textarea>
-        </div>
-        <button type="submit" class="btn-primary btn-full">提交询盘</button>
-      </form>
-      <div id="formSuccess" class="form-success" style="display:none;">
-        <div class="success-icon">✅</div>
-        <h3>提交成功！</h3>
-        <p>感谢您的询盘，我们的团队将在 24 小时内与您联系。</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-header">
-      <h2>全球联系方式</h2>
-      <p>Global Contact</p>
-    </div>
+  <section class="contact-section">
     <div class="contact-cards">
       <div class="contact-card">
-        <div class="contact-flag">🇨🇳</div>
-        <h3>中国（总部）</h3>
-        <p><strong>合兴灯饰（香港）有限公司</strong></p>
-        <p>📍 广东省，中国</p>
-        <p>📧 info@tgboutdoor.com</p>
-        <p>📱 +86 XXX XXXX XXXX</p>
+        <div class="contact-flag">China</div>
+        <h3>China HQ</h3>
+        <p>Guangdong, China</p>
+        <p>info@tgboutdoor.com</p>
+        <p>+86-XXX-XXXX-XXXX</p>
       </div>
       <div class="contact-card">
-        <div class="contact-flag">🇻🇳</div>
-        <h3>越南代表处</h3>
-        <p><strong>TGB Vietnam Office</strong></p>
-        <p>📍 胡志明市，越南</p>
-        <p>📧 vietnam@tgboutdoor.com</p>
-        <p>📱 +84 XXX XXX XXXX</p>
+        <div class="contact-flag">Vietnam</div>
+        <h3>Vietnam Office</h3>
+        <p>Ho Chi Minh City</p>
+        <p>vietnam@tgboutdoor.com</p>
+        <p>+84-XXX-XXXX-XXXX</p>
       </div>
       <div class="contact-card">
-        <div class="contact-flag">🇰🇭</div>
-        <h3>柬埔寨工厂</h3>
-        <p><strong>TGB Cambodia Factory</strong></p>
-        <p>📍 西哈努克港经济特区，柬埔寨</p>
-        <p>📧 cambodia@tgboutdoor.com</p>
-        <p>📱 +855 XXX XXX XXX</p>
+        <div class="contact-flag">USA</div>
+        <h3>USA Office</h3>
+        <p>Los Angeles, CA</p>
+        <p>usa@tgboutdoor.com</p>
+        <p>+1-XXX-XXX-XXXX</p>
       </div>
       <div class="contact-card">
-        <div class="contact-flag">🌍</div>
-        <h3>国际业务</h3>
-        <p><strong>International Business</strong></p>
-        <p>📧 export@tgboutdoor.com</p>
-        <p>📱 WhatsApp: +86 XXX XXXX XXXX</p>
-        <p>💬 WeChat: TGBOutdoor</p>
+        <div class="contact-flag">EU</div>
+        <h3>EU Office</h3>
+        <p>Rotterdam, Netherlands</p>
+        <p>eu@tgboutdoor.com</p>
+        <p>+31-XXX-XXX-XXXX</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="contact-form-wrapper">
+      <h2>Send Inquiry</h2>
+      <p>Fill out the form below and we will get back to you within 24 hours</p>
+      <form id="inquiryForm" onsubmit="submitForm(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Name *</label>
+            <input type="text" name="name" required />
+          </div>
+          <div class="form-group">
+            <label>Company</label>
+            <input type="text" name="company" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Email *</label>
+            <input type="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" name="phone" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Product Interest</label>
+          <select name="product">
+            <option value="">Please select...</option>
+            <option value="outdoor-decor">Outdoor Decor</option>
+            <option value="inflatable">Inflatable Series</option>
+            <option value="outdoor-furniture">Outdoor Furniture</option>
+            <option value="oem">OEM/ODM Customization</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea name="message" rows="5" placeholder="Please describe your requirements..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary btn-full">Submit Inquiry</button>
+      </form>
+      <div id="formSuccess" class="form-success" style="display:none;">
+        <div class="success-icon">Thank You!</div>
+        <h3>Your inquiry has been submitted</h3>
+        <p>We will contact you within 24 hours. Thank you for your interest in TGB products.</p>
       </div>
     </div>
   </section>
@@ -169,43 +123,54 @@
         <div class="footer-logo">
           <div class="logo-badge">TGB</div>
           <div>
-            <div class="logo-name">合兴灯饰</div>
+            <div class="logo-name">He Xing Lighting</div>
             <div class="logo-sub">Season Plus · Heathy · TGB Outdoor</div>
           </div>
         </div>
-        <p>专注户外家具、装饰品、充气系列产品制造，年营业额8000万美元，全球9大工厂布局。</p>
+        <p>Specialized in outdoor furniture, decor & inflatable products manufacturing. $80M annual revenue with 9 global factories.</p>
       </div>
       <div class="footer-col">
-        <h4>产品分类</h4>
-        <a href="products.html">户外装饰系列</a>
-        <a href="products.html">充气系列产品</a>
-        <a href="products.html">户外家具系列</a>
-        <a href="products.html">材料工艺</a>
+        <h4>Products</h4>
+        <a href="products.html">Outdoor Decor</a>
+        <a href="products.html">Inflatable Series</a>
+        <a href="products.html">Outdoor Furniture</a>
+        <a href="products.html">Materials</a>
       </div>
       <div class="footer-col">
-        <h4>关于我们</h4>
-        <a href="about.html">公司简介</a>
-        <a href="quality.html">品质管理</a>
-        <a href="about.html">发展历程</a>
-        <a href="contact.html">联系我们</a>
+        <h4>About Us</h4>
+        <a href="about.html">Company Profile</a>
+        <a href="quality.html">Quality Management</a>
+        <a href="about.html">Growth History</a>
+        <a href="contact.html">Contact Us</a>
       </div>
       <div class="footer-col">
-        <h4>联系方式</h4>
-        <p>📧 info@tgboutdoor.com</p>
-        <p>📱 +86-XXX-XXXX-XXXX</p>
-        <p>📍 中国广东省</p>
+        <h4>Contact</h4>
+        <p>Email: info@tgboutdoor.com</p>
+        <p>Tel: +86-XXX-XXXX-XXXX</p>
+        <p>Address: Guangdong, China</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 TGB 合兴灯饰. All rights reserved.</p>
+      <p>&copy; 2026 TGB He Xing Lighting. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
     function submitForm(e) {
       e.preventDefault();
-      document.querySelector('.contact-form').style.display = 'none';
+      document.getElementById('inquiryForm').style.display = 'none';
       document.getElementById('formSuccess').style.display = 'block';
+    }
+
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+      });
+      document.documentElement.lang = lang === 'cn' ? 'zh-CN' : 'en';
+      document.querySelectorAll('[data-en]').forEach(el => {
+        const text = lang === 'cn' ? el.getAttribute('data-cn') : el.getAttribute('data-en');
+        el.textContent = text;
+      });
     }
   </script>
 </body>

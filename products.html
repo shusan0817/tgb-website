@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>产品展示 - TGB 合兴灯饰</title>
+  <title>Products - TGB Outdoor Furniture</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,288 +11,289 @@
     <a class="nav-logo" href="index.html">
       <div class="logo-badge">TGB</div>
       <div>
-        <div class="logo-name">合兴灯饰</div>
+        <div class="logo-name">He Xing Lighting</div>
         <div class="logo-sub">Season Plus · Heathy · TGB Outdoor</div>
       </div>
     </a>
     <div class="nav-links">
-      <a href="index.html">首页</a>
-      <a href="about.html">关于我们</a>
-      <a class="active" href="products.html">产品展示</a>
-      <a href="quality.html">品质管理</a>
-      <a href="contact.html">联系我们</a>
+      <a href="index.html" data-en="Home" data-cn="首页">Home</a>
+      <a href="about.html" data-en="About Us" data-cn="关于我们">About Us</a>
+      <a class="active" href="products.html" data-en="Products" data-cn="产品展示">Products</a>
+      <a href="quality.html" data-en="Quality" data-cn="品质管理">Quality</a>
+      <a href="contact.html" data-en="Contact" data-cn="联系我们">Contact</a>
+      <a href="video.html" data-en="Video" data-cn="视频">Video</a>
     </div>
     <div class="nav-lang">
-      <span class="lang-btn active">中文</span>
-      <span class="lang-btn">EN</span>
+      <span class="lang-btn active" onclick="switchLang('en')">EN</span>
+      <span class="lang-btn" onclick="switchLang('cn')">中文</span>
     </div>
   </nav>
 
   <section class="page-hero">
-    <h1>产品展示</h1>
-    <p>Product Catalog · Outdoor Decor · Inflatable Series · Outdoor Furniture</p>
+    <h1>Product Catalog</h1>
+    <p>Outdoor Decor · Inflatable Series · Outdoor Furniture</p>
   </section>
 
   <section class="section">
     <div class="tabs">
-      <button class="tab-btn active" onclick="showTab('decor')">🏡 户外装饰系列</button>
-      <button class="tab-btn" onclick="showTab('inflatable')">🎈 充气系列产品</button>
-      <button class="tab-btn" onclick="showTab('furniture')">🪑 户外家具系列</button>
-      <button class="tab-btn" onclick="showTab('materials')">🔧 材料工艺</button>
+      <button class="tab-btn active" onclick="showTab('decor')">Outdoor Decor</button>
+      <button class="tab-btn" onclick="showTab('inflatable')">Inflatable Series</button>
+      <button class="tab-btn" onclick="showTab('furniture')">Outdoor Furniture</button>
+      <button class="tab-btn" onclick="showTab('materials')">Materials</button>
     </div>
 
-    <!-- 户外装饰系列 -->
+    <!-- Outdoor Decor -->
     <div id="decor" class="tab-content active">
       <div class="section-header">
-        <h2>户外装饰系列 Outdoor Decor</h2>
-        <p>采用 PE仿藤、PE仿木、特斯林网布等优质材料，精工编织，适用于阳台、庭院、花园等户外空间</p>
+        <h2>Outdoor Decor Series</h2>
+        <p>PE Rattan, PE Wood, Textilene - Premium materials for outdoor spaces</p>
       </div>
       <div class="product-gallery-full">
-        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, 'PE仿藤编织装饰品')">
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, 'PE Rattan Weaving Decor')">
           <img src="images/ppt_decor1.png" />
-          <div class="pg-overlay"><span>📸 PE仿藤编织</span></div>
+          <div class="pg-overlay"><span>PE Rattan</span></div>
         </div>
-        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, 'PE仿藤置物架')">
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, 'PE Rattan Shelves')">
           <img src="images/ppt_decor2.png" />
-          <div class="pg-overlay"><span>📸 PE仿藤置物</span></div>
+          <div class="pg-overlay"><span>Shelves</span></div>
         </div>
-        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, 'PE仿藤储物柜')">
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, 'PE Rattan Storage')">
           <img src="images/ppt_decor3.png" />
-          <div class="pg-overlay"><span>📸 PE仿藤储物</span></div>
+          <div class="pg-overlay"><span>Storage</span></div>
         </div>
-        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, '特斯林网布产品')">
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, 'Textilene Products')">
           <img src="images/ppt_decor4.png" />
-          <div class="pg-overlay"><span>📸 特斯林网布</span></div>
+          <div class="pg-overlay"><span>Textilene</span></div>
         </div>
-        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, 'PE仿藤花架')">
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, 'PE Rattan Plant Stand')">
           <img src="images/ppt_decor6.png" />
-          <div class="pg-overlay"><span>📸 仿藤花架</span></div>
+          <div class="pg-overlay"><span>Plant Stand</span></div>
         </div>
       </div>
       <div class="product-detail-cards">
         <div class="pdcard">
-          <h3>🏡 PE仿藤编织装饰</h3>
-          <p>采用高密度 PE仿藤材料，通过传统工艺与现代技术相结合，精工编织而成。防水防腐，耐紫外线，适用于各类户外空间。</p>
+          <h3>PE Rattan Weaving Decor</h3>
+          <p>High-density PE rattan material, combining traditional craftsmanship with modern technology. Waterproof, corrosion-resistant, UV-protected.</p>
           <ul>
-            <li>藤编花架 & 置物架</li>
-            <li>藤编屏风 & 隔断</li>
-            <li>藤编装饰摆件</li>
+            <li>Rattan Plant Stands & Shelves</li>
+            <li>Rattan Screens & Dividers</li>
+            <li>Rattan Decor Ornaments</li>
           </ul>
-          <span class="clickable-img" onclick="openLightbox('images/ppt_decor2.png', 'PE仿藤编织细节')">🔍 点击查看大图</span>
+          <span class="clickable-img" onclick="openLightbox('images/ppt_decor2.png', 'PE Rattan Details')">Click to view larger</span>
         </div>
         <div class="pdcard">
-          <h3>🪵 PE仿木家具</h3>
-          <p>木塑复合材料，仿木纹理逼真，防潮防虫防开裂，无需刷漆维护，户外长期使用无忧。</p>
+          <h3>PE Wood Furniture</h3>
+          <p>Wood-plastic composite material, realistic wood texture, moisture-proof, insect-proof, crack-resistant, no painting required.</p>
           <ul>
-            <li>仿木花箱</li>
-            <li>仿木围栏</li>
-            <li>仿木休闲椅</li>
+            <li>Wood-plastic Flower Boxes</li>
+            <li>Wood-plastic Fences</li>
+            <li>Wood-plastic Leisure Chairs</li>
           </ul>
         </div>
         <div class="pdcard">
-          <h3>🕸️ 特斯林网布产品</h3>
-          <p>PVC包覆聚酯纤维，高强度抗撕裂，透气快干，耐高温耐低温，适合遮阳户外家具。</p>
+          <h3>Textilene Products</h3>
+          <p>PVC-coated polyester fiber, high-strength tear-resistant, breathable quick-dry, heat and cold resistant.</p>
           <ul>
-            <li>遮阳帘</li>
-            <li>户外屏风</li>
-            <li>吊椅座椅</li>
+            <li>Sun Shades</li>
+            <li>Outdoor Screens</li>
+            <li>Hanging Chair Seats</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <!-- 充气系列产品 -->
+    <!-- Inflatable Series -->
     <div id="inflatable" class="tab-content">
       <div class="section-header">
-        <h2>充气系列产品 Inflatable Series</h2>
-        <p>商用充气水池、充气水上乐园、户外充气玩具 — 安全耐用，广泛应用于泳池、海滩、主题乐园</p>
+        <h2>Inflatable Series</h2>
+        <p>Commercial pools, water parks, outdoor toys - Safe and durable</p>
       </div>
       <div class="product-gallery-full">
-        <div class="pg-item tall" onclick="openLightbox(this.querySelector('img').src, '充气水池系列')">
+        <div class="pg-item tall" onclick="openLightbox(this.querySelector('img').src, 'Inflatable Pool Series')">
           <img src="images/ppt_inflatable1.png" />
-          <div class="pg-overlay"><span>📸 充气水池</span></div>
+          <div class="pg-overlay"><span>Pool</span></div>
         </div>
-        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, '商用充气水池')">
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, 'Commercial Pool')">
           <img src="images/ppt_inflatable2.png" />
-          <div class="pg-overlay"><span>📸 商用充气水池</span></div>
+          <div class="pg-overlay"><span>Commercial</span></div>
         </div>
-        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, '充气水上乐园')">
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, 'Water Park')">
           <img src="images/ppt_inflatable3.png" />
-          <div class="pg-overlay"><span>📸 充气水上乐园</span></div>
+          <div class="pg-overlay"><span>Water Park</span></div>
         </div>
-        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, '户外充气玩具')">
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, 'Outdoor Toys')">
           <img src="images/ppt_inflatable4.png" />
-          <div class="pg-overlay"><span>📸 充气玩具</span></div>
+          <div class="pg-overlay"><span>Toys</span></div>
         </div>
-        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, '儿童充气城堡')">
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, 'Bounce Castle')">
           <img src="images/ppt_inflatable5.png" />
-          <div class="pg-overlay"><span>📸 充气城堡</span></div>
+          <div class="pg-overlay"><span>Castle</span></div>
         </div>
-        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, '充气滑梯')">
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, 'Inflatable Slide')">
           <img src="images/ppt_inflatable6.png" />
-          <div class="pg-overlay"><span>📸 充气滑梯</span></div>
+          <div class="pg-overlay"><span>Slide</span></div>
         </div>
       </div>
       <div class="product-detail-cards">
         <div class="pdcard">
-          <h3>🏊 商用充气水池</h3>
-          <p>采用优质 PVC 材料，多层加厚工艺，超强气密性，高温不变形。适用于酒店泳池、水上乐园、海滩度假区。</p>
+          <h3>Commercial Inflatable Pools</h3>
+          <p>Premium PVC material, multi-layer thick construction, ultra air-tightness, heat-resistant. For hotels, water parks, beach resorts.</p>
           <ul>
-            <li>家用充气泳池</li>
-            <li>商用大型水池</li>
-            <li>儿童戏水池</li>
+            <li>Home Inflatable Pools</li>
+            <li>Large Commercial Pools</li>
+            <li>Kids Splash Pools</li>
           </ul>
-          <span class="clickable-img" onclick="openLightbox('images/ppt_inflatable1.png', '充气水池详情')">🔍 点击查看大图</span>
+          <span class="clickable-img" onclick="openLightbox('images/ppt_inflatable1.png', 'Pool Details')">Click to view larger</span>
         </div>
         <div class="pdcard">
-          <h3>🛝 充气水上乐园</h3>
-          <p>组合式设计，多种滑梯、蹦床、障碍赛道组合，适合主题乐园、水上嘉年华活动。</p>
+          <h3>Inflatable Water Parks</h3>
+          <p>Modular design, various slides, trampolines, obstacle courses. For theme parks, water carnivals.</p>
           <ul>
-            <li>儿童充气滑梯</li>
-            <li>充气蹦床城堡</li>
-            <li>组合式水上乐园</li>
+            <li>Kids Inflatable Slides</li>
+            <li>Inflatable Bounce Castles</li>
+            <li>Combined Water Parks</li>
           </ul>
-          <span class="clickable-img" onclick="openLightbox('images/ppt_inflatable3.png', '水上乐园详情')">🔍 点击查看大图</span>
+          <span class="clickable-img" onclick="openLightbox('images/ppt_inflatable3.png', 'Water Park Details')">Click to view larger</span>
         </div>
         <div class="pdcard">
-          <h3>🦆 户外充气玩具</h3>
-          <p>造型多样，独角兽、火烈鸟、天鹅等网红爆款，适用于泳池、海滩派对。</p>
+          <h3>Outdoor Inflatable Toys</h3>
+          <p>Various shapes: unicorns, flamingos, swans and more. For pools, beach parties.</p>
           <ul>
-            <li>充气浮具</li>
-            <li>充气泳圈</li>
-            <li>充气躺椅</li>
+            <li>Inflatable Floats</li>
+            <li>Inflatable Rings</li>
+            <li>Inflatable Loungers</li>
           </ul>
-          <span class="clickable-img" onclick="openLightbox('images/ppt_inflatable4.png', '充气玩具详情')">🔍 点击查看大图</span>
+          <span class="clickable-img" onclick="openLightbox('images/ppt_inflatable4.png', 'Toy Details')">Click to view larger</span>
         </div>
       </div>
     </div>
 
-    <!-- 户外家具系列 -->
+    <!-- Outdoor Furniture -->
     <div id="furniture" class="tab-content">
       <div class="section-header">
-        <h2>户外家具系列 Outdoor Furniture</h2>
-        <p>躺椅、摇椅、餐桌套装 — 舒适设计，耐用材质，为户外生活而生</p>
+        <h2>Outdoor Furniture</h2>
+        <p>Lounge chairs, rocking chairs, dining sets - Comfortable design, durable materials</p>
       </div>
       <div class="product-gallery-full">
-        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, '户外藤编沙发')">
-          <img src="images/furniture/微信图片_20260406181801_228_48.png" />
-          <div class="pg-overlay"><span>📸 藤编沙发</span></div>
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, 'Outdoor Rattan Sofa')">
+          <img src="images/ppt_furniture1.png" />
+          <div class="pg-overlay"><span>Sofa</span></div>
         </div>
-        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, '户外藤编躺椅')">
-          <img src="images/furniture/微信图片_20260406181805_229_48.png" />
-          <div class="pg-overlay"><span>📸 藤编躺椅</span></div>
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, 'Outdoor Lounge Chair')">
+          <img src="images/ppt_furniture2.png" />
+          <div class="pg-overlay"><span>Lounge</span></div>
         </div>
-        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, '户外藤编休闲椅')">
-          <img src="images/furniture/微信图片_20260406181806_230_48.png" />
-          <div class="pg-overlay"><span>📸 藤编休闲椅</span></div>
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, 'Outdoor Leisure Chair')">
+          <img src="images/ppt_furniture3.png" />
+          <div class="pg-overlay"><span>Leisure</span></div>
         </div>
-        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, '户外躺椅套装')">
-          <img src="images/furniture/微信图片_20260406181808_232_48.png" />
-          <div class="pg-overlay"><span>📸 躺椅套装</span></div>
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, 'Lounge Chair Set')">
+          <img src="images/ppt_furniture4.png" />
+          <div class="pg-overlay"><span>Set</span></div>
         </div>
-        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, '户外家具组合')">
-          <img src="images/furniture/微信图片_20260406181809_233_48.png" />
-          <div class="pg-overlay"><span>📸 家具组合</span></div>
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, 'Outdoor Furniture Combo')">
+          <img src="images/ppt_furniture5.png" />
+          <div class="pg-overlay"><span>Combo</span></div>
         </div>
-        <div class="pg-item tall" onclick="openLightbox(this.querySelector('img').src, '户外庭院家具')">
-          <img src="images/furniture/微信图片_20260406181831_237_48.png" />
-          <div class="pg-overlay"><span>📸 庭院家具</span></div>
+        <div class="pg-item tall" onclick="openLightbox(this.querySelector('img').src, 'Garden Furniture')">
+          <img src="images/ppt_furniture6.png" />
+          <div class="pg-overlay"><span>Garden</span></div>
         </div>
       </div>
       <div class="product-detail-cards">
         <div class="pdcard">
-          <h3>🪑 户外躺椅 & 摇椅</h3>
-          <p>人体工学设计，优质 PE仿藤/铝合金框架，可折叠便于收纳。适用于阳台、花园、泳池边、海滩。</p>
+          <h3>Lounge & Rocking Chairs</h3>
+          <p>Ergonomic design, premium PE rattan/aluminum frame, foldable for easy storage. For balconies, gardens, poolside, beaches.</p>
           <ul>
-            <li>藤编躺椅</li>
-            <li>铝合金摇椅</li>
-            <li>吊椅 & 秋千</li>
-            <li>折叠躺椅</li>
+            <li>Rattan Lounge Chairs</li>
+            <li>Aluminum Rocking Chairs</li>
+            <li>Hanging Chairs & Swings</li>
+            <li>Folding Lounge Chairs</li>
           </ul>
-          <span class="clickable-img" onclick="openLightbox('images/furniture/微信图片_20260406181805_229_48.png', '躺椅详情')">🔍 点击查看大图</span>
+          <span class="clickable-img" onclick="openLightbox('images/ppt_furniture2.png', 'Lounge Chair Details')">Click to view larger</span>
         </div>
         <div class="pdcard">
-          <h3>🍽️ 户外餐桌套装</h3>
-          <p>4人/6人套餐桌，适合庭院聚餐。防水耐晒材质，轻松应对各种天气。</p>
+          <h3>Outdoor Dining Sets</h3>
+          <p>4-person/6-person dining sets for garden gatherings. Waterproof, sun-resistant materials.</p>
           <ul>
-            <li>4人餐桌套装</li>
-            <li>6人餐桌套装</li>
-            <li>阳台小桌椅</li>
+            <li>4-Person Dining Set</li>
+            <li>6-Person Dining Set</li>
+            <li>Balcony Small Tables</li>
           </ul>
         </div>
         <div class="pdcard">
-          <h3>🛋️ 户外沙发套装</h3>
-          <p>藤编/铝合金框架，防水坐垫。营造舒适户外休闲空间。</p>
+          <h3>Outdoor Sofa Sets</h3>
+          <p>Rattan/aluminum frame, waterproof cushions. Create comfortable outdoor leisure space.</p>
           <ul>
-            <li>藤编户外沙发</li>
-            <li>铝合金框架沙发</li>
-            <li>配套茶几</li>
+            <li>Rattan Outdoor Sofa</li>
+            <li>Aluminum Frame Sofa</li>
+            <li>Matching Coffee Tables</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <!-- 材料工艺 -->
+    <!-- Materials -->
     <div id="materials" class="tab-content">
       <div class="section-header">
-        <h2>材料工艺 Materials & Craftsmanship</h2>
-        <p>优质选材是产品耐用的基础 — 我们只使用经过严格测试的环保材料</p>
+        <h2>Materials & Craftsmanship</h2>
+        <p>Quality materials are the foundation of durability</p>
       </div>
       <div class="material-grid">
         <div class="material-card">
-          <div class="material-img" onclick="openLightbox('images/ppt_material5.png', 'PE仿藤材料细节')">
+          <div class="material-img" onclick="openLightbox('images/ppt_material5.png', 'PE Rattan Material')">
             <img src="images/ppt_material5.png" />
-            <span class="img-hint">🔍 点击查看</span>
+            <span class="img-hint">Click to view</span>
           </div>
-          <h3>🌿 PE仿藤</h3>
+          <h3>PE Rattan</h3>
           <p class="material-eng">PE Rattan</p>
           <ul>
-            <li>高密度聚乙烯材质</li>
-            <li>防水防腐耐紫外线</li>
-            <li>不易褪色，寿命长</li>
-            <li>可 100% 回收环保</li>
+            <li>High-density polyethylene</li>
+            <li>Waterproof, UV-resistant</li>
+            <li>Color-fast, long-lasting</li>
+            <li>100% recyclable</li>
           </ul>
         </div>
         <div class="material-card">
-          <div class="material-img" onclick="openLightbox('images/ppt_material6.png', 'PE仿木材料')">
+          <div class="material-img" onclick="openLightbox('images/ppt_material6.png', 'PE Wood Material')">
             <img src="images/ppt_material6.png" />
-            <span class="img-hint">🔍 点击查看</span>
+            <span class="img-hint">Click to view</span>
           </div>
-          <h3>🪵 PE仿木</h3>
-          <p class="material-eng">PE Wood / Composite Wood</p>
+          <h3>PE Wood</h3>
+          <p class="material-eng">Composite Wood</p>
           <ul>
-            <li>木塑复合材料</li>
-            <li>外观逼真如实木</li>
-            <li>防潮防虫防开裂</li>
-            <li>无需刷漆维护</li>
+            <li>Wood-plastic composite</li>
+            <li>Realistic wood appearance</li>
+            <li>Moisture & insect resistant</li>
+            <li>No painting required</li>
           </ul>
         </div>
         <div class="material-card">
-          <div class="material-img" onclick="openLightbox('images/ppt_material7.png', '特斯林网布')">
+          <div class="material-img" onclick="openLightbox('images/ppt_material7.png', 'Textilene')">
             <img src="images/ppt_material7.png" />
-            <span class="img-hint">🔍 点击查看</span>
+            <span class="img-hint">Click to view</span>
           </div>
-          <h3>🕸️ 特斯林网布</h3>
-          <p class="material-eng">Textilene Mesh</p>
+          <h3>Textilene</h3>
+          <p class="material-eng">Mesh Fabric</p>
           <ul>
-            <li>PVC包覆聚酯纤维</li>
-            <li>高强度抗撕裂</li>
-            <li>透气快干</li>
-            <li>耐高温耐低温</li>
+            <li>PVC-coated polyester</li>
+            <li>High-strength, tear-resistant</li>
+            <li>Breathable, quick-dry</li>
+            <li>Heat & cold resistant</li>
           </ul>
         </div>
         <div class="material-card">
-          <div class="material-img" onclick="openLightbox('images/ppt_inflatable1.png', 'PVC充气材料')">
+          <div class="material-img" onclick="openLightbox('images/ppt_inflatable1.png', 'PVC Material')">
             <img src="images/ppt_inflatable1.png" />
-            <span class="img-hint">🔍 点击查看</span>
+            <span class="img-hint">Click to view</span>
           </div>
-          <h3>🎈 PVC 充气材料</h3>
-          <p class="material-eng">PVC for Inflatables</p>
+          <h3>PVC for Inflatables</h3>
+          <p class="material-eng">PVC Material</p>
           <ul>
-            <li>加厚 PVC 多层结构</li>
-            <li>超强气密性</li>
-            <li>耐高温不变形</li>
-            <li>通过欧盟 EN71 标准</li>
+            <li>Thick PVC multi-layer</li>
+            <li>Ultra air-tightness</li>
+            <li>Heat-resistant</li>
+            <li>EU EN71 certified</li>
           </ul>
         </div>
       </div>
@@ -300,10 +301,10 @@
   </section>
 
   <section class="cta-section">
-    <h2>需要定制产品？</h2>
-    <p>我们提供 OEM/ODM 定制服务，支持Logo印刷、颜色定制、包装定制</p>
+    <h2>Need Custom Products?</h2>
+    <p>We provide OEM/ODM customization, logo printing, color customization, packaging customization</p>
     <div class="cta-btns">
-      <a href="contact.html" class="btn-primary-light">获取报价</a>
+      <a href="contact.html" class="btn-primary-light">Get Quote</a>
     </div>
   </section>
 
@@ -313,39 +314,38 @@
         <div class="footer-logo">
           <div class="logo-badge">TGB</div>
           <div>
-            <div class="logo-name">合兴灯饰</div>
+            <div class="logo-name">He Xing Lighting</div>
             <div class="logo-sub">Season Plus · Heathy · TGB Outdoor</div>
           </div>
         </div>
-        <p>专注户外家具、装饰品、充气系列产品制造，年营业额8000万美元，全球9大工厂布局。</p>
+        <p>Specialized in outdoor furniture, decor & inflatable products manufacturing. $80M annual revenue with 9 global factories.</p>
       </div>
       <div class="footer-col">
-        <h4>产品分类</h4>
-        <a href="products.html">户外装饰系列</a>
-        <a href="products.html">充气系列产品</a>
-        <a href="products.html">户外家具系列</a>
-        <a href="products.html">材料工艺</a>
+        <h4>Products</h4>
+        <a href="products.html">Outdoor Decor</a>
+        <a href="products.html">Inflatable Series</a>
+        <a href="products.html">Outdoor Furniture</a>
+        <a href="products.html">Materials</a>
       </div>
       <div class="footer-col">
-        <h4>关于我们</h4>
-        <a href="about.html">公司简介</a>
-        <a href="quality.html">品质管理</a>
-        <a href="about.html">发展历程</a>
-        <a href="contact.html">联系我们</a>
+        <h4>About Us</h4>
+        <a href="about.html">Company Profile</a>
+        <a href="quality.html">Quality Management</a>
+        <a href="about.html">Growth History</a>
+        <a href="contact.html">Contact Us</a>
       </div>
       <div class="footer-col">
-        <h4>联系方式</h4>
-        <p>📧 info@tgboutdoor.com</p>
-        <p>📱 +86-XXX-XXXX-XXXX</p>
-        <p>📍 中国广东省</p>
+        <h4>Contact</h4>
+        <p>Email: info@tgboutdoor.com</p>
+        <p>Tel: +86-XXX-XXXX-XXXX</p>
+        <p>Address: Guangdong, China</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 TGB 合兴灯饰. All rights reserved.</p>
+      <p>&copy; 2026 TGB He Xing Lighting. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Lightbox Modal -->
   <div id="lightbox" class="lightbox" onclick="closeLightbox()">
     <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
     <img id="lightbox-img" class="lightbox-img" />
@@ -371,6 +371,18 @@
 
     function closeLightbox() {
       document.getElementById('lightbox').style.display = 'none';
+    }
+
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+      });
+      document.documentElement.lang = lang === 'cn' ? 'zh-CN' : 'en';
+      
+      document.querySelectorAll('[data-en]').forEach(el => {
+        const text = lang === 'cn' ? el.getAttribute('data-cn') : el.getAttribute('data-en');
+        el.textContent = text;
+      });
     }
   </script>
 </body>
