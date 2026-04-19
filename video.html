@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>品牌视频 - TGB 合兴灯饰</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', 'PingFang SC', sans-serif; background: #111; color: #fff; min-height: 100vh; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+    .header { text-align: center; margin-bottom: 40px; }
+    .logo { display: inline-flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+    .logo-badge { background: #1B5E20; color: #fff; font-weight: 900; font-size: 1.5rem; padding: 10px 15px; border-radius: 8px; }
+    .logo-text { font-size: 1.8rem; font-weight: 700; color: #fff; }
+    h1 { font-size: 2.5rem; margin-bottom: 10px; color: #fff; }
+    .subtitle { color: rgba(255,255,255,0.7); font-size: 1.1rem; }
+    .video-container { background: #000; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.5); margin-bottom: 30px; }
+    video { width: 100%; display: block; }
+    .info { background: rgba(255,255,255,0.1); border-radius: 12px; padding: 25px; text-align: center; }
+    .info h3 { color: #FDD835; margin-bottom: 15px; font-size: 1.3rem; }
+    .info p { color: rgba(255,255,255,0.8); line-height: 1.6; }
+    .back-btn { display: inline-block; margin-top: 30px; padding: 12px 30px; background: #1B5E20; color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.3s; }
+    .back-btn:hover { background: #2E7D32; }
+    .controls { display: flex; gap: 10px; margin-top: 15px; justify-content: center; }
+    .ctrl-btn { padding: 8px 20px; background: #333; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; }
+    .ctrl-btn:hover { background: #555; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <div class="logo-badge">TGB</div>
+        <div class="logo-text">合兴灯饰</div>
+      </div>
+      <h1>品牌宣传视频</h1>
+      <p class="subtitle">Outdoor Furniture & Decor · Premium Quality Since 1995</p>
+    </div>
+    
+    <div class="video-container">
+      <video id="mainVideo" controls poster="">
+        <source src="images/furniture/微信视频2026-04-06_183129_197.mp4" type="video/mp4">
+        您的浏览器不支持视频播放
+      </video>
+    </div>
+    
+    <div class="info">
+      <h3>🌟 TGB 品牌视频</h3>
+      <p>展示我们的户外家具、装饰品和充气系列产品。<br>
+      了解更多产品，请浏览我们的 <a href="products.html" style="color: #FDD835;">产品展示</a> 页面。</p>
+    </div>
+    
+    <div class="controls">
+      <button class="ctrl-btn" onclick="downloadVideo()">📥 下载视频</button>
+      <a href="index.html" class="ctrl-btn">🏠 返回首页</a>
+    </div>
+    
+    <div style="text-align: center;">
+      <a href="products.html" class="back-btn">查看更多产品 →</a>
+    </div>
+  </div>
+  
+  <script>
+    function downloadVideo() {
+      const a = document.createElement('a');
+      a.href = 'images/furniture/微信视频2026-04-06_183129_197.mp4';
+      a.download = 'TGB产品展示视频.mp4';
+      a.click();
+    }
+  </script>
+</body>
+</html>
