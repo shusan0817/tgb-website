@@ -33,21 +33,38 @@
     <p>About TGB · 合兴灯饰</p>
   </section>
 
+  <!-- Company Overview with Image -->
   <section class="section">
     <div class="section-header">
       <h2>公司简介</h2>
       <p>Company Profile</p>
     </div>
     <div class="about-intro">
-      <p>合兴灯饰（TGB）创立于 1998 年，是一家专注于户外家具、户外装饰品及充气系列产品的专业制造商。公司由陈合兴先生创办，经过 20 余年的发展，已成为中国户外休闲产品制造业的领军企业之一。</p>
-      <p>公司旗下拥有 TGB OUTDOOR、Season Plus、Heathy 三大品牌，产品涵盖户外装饰系列、充气系列产品、户外家具系列及多种材料工艺（PE仿藤、PE仿木、特斯林网布等），年营业额达 8000 万美元，产品远销全球多个国家和地区。</p>
+      <div class="about-img-grid">
+        <div class="about-img-large" onclick="openLightbox('images/img01.png', 'TGB 合兴灯饰 总部')">
+          <img src="images/img01.png" />
+          <div class="about-img-overlay"><span>📸 点击查看大图</span></div>
+        </div>
+        <div class="about-img-small">
+          <div onclick="openLightbox('images/img02.png', '中国工厂')">
+            <img src="images/img02.png" />
+            <span class="img-label">🇨🇳 中国工厂</span>
+          </div>
+          <div onclick="openLightbox('images/img03.png', '越南工厂')">
+            <img src="images/img03.png" />
+            <span class="img-label">🇻🇳 越南工厂</span>
+          </div>
+        </div>
+      </div>
+      <p>合兴灯饰（TGB）创立于 <strong>1998 年</strong>，是一家专注于户外家具、户外装饰品及充气系列产品的专业制造商。公司由陈合兴先生创办，经过 20 余年的发展，已成为中国户外休闲产品制造业的领军企业之一。</p>
+      <p>公司旗下拥有 TGB OUTDOOR、Season Plus、Heathy 三大品牌，产品涵盖户外装饰系列、充气系列产品、户外家具系列及多种材料工艺（PE仿藤、PE仿木、特斯林网布等），年营业额达 <strong>8000 万美元</strong>，产品远销全球多个国家和地区。</p>
     </div>
   </section>
 
   <section class="section timeline-full">
     <div class="section-header">
       <h2>发展历程</h2>
-      <p>Growth Timeline</p>
+      <p>Growth Timeline · 1998 - 2024</p>
     </div>
     <div class="timeline">
       <div class="timeline-item">
@@ -120,10 +137,14 @@
   <section class="section factory-section">
     <div class="section-header">
       <h2>全球工厂布局</h2>
-      <p>Global Factory Network</p>
+      <p>Global Factory Network · 点击图片查看详情</p>
     </div>
     <div class="factory-grid">
       <div class="factory-card">
+        <div class="factory-img" onclick="openLightbox('images/img02.png', '中国6大工厂 - 广东/上海/江苏')">
+          <img src="images/img02.png" />
+          <span class="img-hint">🔍 点击查看</span>
+        </div>
         <div class="factory-flag">🇨🇳</div>
         <h3>中国 6 大工厂</h3>
         <p>广东、上海、江苏</p>
@@ -137,6 +158,10 @@
         </ul>
       </div>
       <div class="factory-card">
+        <div class="factory-img" onclick="openLightbox('images/img03.png', '越南3大工厂 - 胡志明市')">
+          <img src="images/img03.png" />
+          <span class="img-hint">🔍 点击查看</span>
+        </div>
         <div class="factory-flag">🇻🇳</div>
         <h3>越南 3 大工厂</h3>
         <p>胡志明市周边工业区</p>
@@ -147,6 +172,10 @@
         </ul>
       </div>
       <div class="factory-card highlight-card">
+        <div class="factory-img" onclick="openLightbox('images/img05.png', '柬埔寨工厂 - 西哈努克港')">
+          <img src="images/img05.png" />
+          <span class="img-hint">🔍 点击查看</span>
+        </div>
         <div class="factory-flag">🇰🇭</div>
         <h3>柬埔寨 1 大工厂</h3>
         <p>西哈努克港经济特区</p>
@@ -238,5 +267,27 @@
       <p>&copy; 2026 TGB 合兴灯饰. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" class="lightbox-img" />
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+  </div>
+
+  <script>
+    function openLightbox(src, caption) {
+      const lb = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      const cap = document.getElementById('lightbox-caption');
+      img.src = src;
+      cap.textContent = caption;
+      lb.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
 </body>
 </html>

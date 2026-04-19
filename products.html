@@ -35,7 +35,7 @@
 
   <section class="section">
     <div class="tabs">
-      <button class="tab-btn active" onclick="showTab('decor')">🪴 户外装饰系列</button>
+      <button class="tab-btn active" onclick="showTab('decor')">🏡 户外装饰系列</button>
       <button class="tab-btn" onclick="showTab('inflatable')">🎈 充气系列产品</button>
       <button class="tab-btn" onclick="showTab('furniture')">🪑 户外家具系列</button>
       <button class="tab-btn" onclick="showTab('materials')">🔧 材料工艺</button>
@@ -47,49 +47,56 @@
         <h2>户外装饰系列 Outdoor Decor</h2>
         <p>采用 PE仿藤、PE仿木、特斯林网布等优质材料，精工编织，适用于阳台、庭院、花园等户外空间</p>
       </div>
-      <div class="product-showcase">
-        <div class="product-large">
-          <div class="product-large-icon">🏡</div>
-          <div class="product-large-info">
-            <h3>PE仿藤编织装饰品</h3>
-            <p>采用高密度 PE仿藤材料，通过传统工艺与现代技术相结合，精工编织而成。防水防腐，耐紫外线，适用于各类户外空间。</p>
-            <ul>
-              <li>藤编花架 & 置物架</li>
-              <li>藤编屏风 & 隔断</li>
-              <li>藤编装饰摆件</li>
-              <li>藤编灯罩 & 吊灯</li>
-            </ul>
-          </div>
+      <div class="product-gallery-full">
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, 'PE仿藤编织装饰品')">
+          <img src="images/ppt_decor1.png" />
+          <div class="pg-overlay"><span>📸 PE仿藤编织</span></div>
         </div>
-        <div class="product-list">
-          <div class="product-mini">
-            <div class="pm-icon">🪴</div>
-            <div class="pm-info">
-              <h4>藤编花架系列</h4>
-              <p>多尺寸可选，适合室内外盆栽摆放</p>
-            </div>
-          </div>
-          <div class="product-mini">
-            <div class="pm-icon">🏺</div>
-            <div class="pm-info">
-              <h4>藤编储物柜</h4>
-              <p>防水耐磨，庭院收纳解决方案</p>
-            </div>
-          </div>
-          <div class="product-mini">
-            <div class="pm-icon">🪵</div>
-            <div class="pm-info">
-              <h4>PE仿木家具</h4>
-              <p>仿木纹理，兼具美观与耐用性</p>
-            </div>
-          </div>
-          <div class="product-mini">
-            <div class="pm-icon">🪟</div>
-            <div class="pm-info">
-              <h4>特斯林网布产品</h4>
-              <p>高强度网布，用于遮阳、隔断</p>
-            </div>
-          </div>
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, 'PE仿藤置物架')">
+          <img src="images/ppt_decor2.png" />
+          <div class="pg-overlay"><span>📸 PE仿藤置物</span></div>
+        </div>
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, 'PE仿藤储物柜')">
+          <img src="images/ppt_decor3.png" />
+          <div class="pg-overlay"><span>📸 PE仿藤储物</span></div>
+        </div>
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, '特斯林网布产品')">
+          <img src="images/ppt_decor4.png" />
+          <div class="pg-overlay"><span>📸 特斯林网布</span></div>
+        </div>
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, 'PE仿藤花架')">
+          <img src="images/ppt_decor6.png" />
+          <div class="pg-overlay"><span>📸 仿藤花架</span></div>
+        </div>
+      </div>
+      <div class="product-detail-cards">
+        <div class="pdcard">
+          <h3>🏡 PE仿藤编织装饰</h3>
+          <p>采用高密度 PE仿藤材料，通过传统工艺与现代技术相结合，精工编织而成。防水防腐，耐紫外线，适用于各类户外空间。</p>
+          <ul>
+            <li>藤编花架 & 置物架</li>
+            <li>藤编屏风 & 隔断</li>
+            <li>藤编装饰摆件</li>
+          </ul>
+          <span class="clickable-img" onclick="openLightbox('images/ppt_decor2.png', 'PE仿藤编织细节')">🔍 点击查看大图</span>
+        </div>
+        <div class="pdcard">
+          <h3>🪵 PE仿木家具</h3>
+          <p>木塑复合材料，仿木纹理逼真，防潮防虫防开裂，无需刷漆维护，户外长期使用无忧。</p>
+          <ul>
+            <li>仿木花箱</li>
+            <li>仿木围栏</li>
+            <li>仿木休闲椅</li>
+          </ul>
+        </div>
+        <div class="pdcard">
+          <h3>🕸️ 特斯林网布产品</h3>
+          <p>PVC包覆聚酯纤维，高强度抗撕裂，透气快干，耐高温耐低温，适合遮阳户外家具。</p>
+          <ul>
+            <li>遮阳帘</li>
+            <li>户外屏风</li>
+            <li>吊椅座椅</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -100,50 +107,62 @@
         <h2>充气系列产品 Inflatable Series</h2>
         <p>商用充气水池、充气水上乐园、户外充气玩具 — 安全耐用，广泛应用于泳池、海滩、主题乐园</p>
       </div>
-      <div class="product-showcase">
-        <div class="product-large featured">
-          <div class="product-large-icon">🎈</div>
-          <div class="product-large-info">
-            <h3>商用充气水池 & 水上乐园</h3>
-            <p>采用优质 PVC 材料，多层加厚工艺，超强气密性，高温不变形。适用于酒店泳池、水上乐园、海滩度假区。</p>
-            <ul>
-              <li>充气水池（家用/商用）</li>
-              <li>儿童充气滑梯</li>
-              <li>充气蹦床城堡</li>
-              <li>组合式水上乐园</li>
-              <li>充气水上浮具</li>
-            </ul>
-          </div>
+      <div class="product-gallery-full">
+        <div class="pg-item tall" onclick="openLightbox(this.querySelector('img').src, '充气水池系列')">
+          <img src="images/ppt_inflatable1.png" />
+          <div class="pg-overlay"><span>📸 充气水池</span></div>
         </div>
-        <div class="product-list">
-          <div class="product-mini">
-            <div class="pm-icon">🏊</div>
-            <div class="pm-info">
-              <h4>充气泳池</h4>
-              <p>夏季户外必备，多规格可选</p>
-            </div>
-          </div>
-          <div class="product-mini">
-            <div class="pm-icon">🛝</div>
-            <div class="pm-info">
-              <h4>充气滑梯</h4>
-              <p>儿童戏水乐园核心产品</p>
-            </div>
-          </div>
-          <div class="product-mini">
-            <div class="pm-icon">🏰</div>
-            <div class="pm-info">
-              <h4>充气城堡</h4>
-              <p>派对/活动人气之选</p>
-            </div>
-          </div>
-          <div class="product-mini">
-            <div class="pm-icon">🦆</div>
-            <div class="pm-info">
-              <h4>充气水上玩具</h4>
-              <p>独角兽/火烈鸟等造型</p>
-            </div>
-          </div>
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, '商用充气水池')">
+          <img src="images/ppt_inflatable2.png" />
+          <div class="pg-overlay"><span>📸 商用充气水池</span></div>
+        </div>
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, '充气水上乐园')">
+          <img src="images/ppt_inflatable3.png" />
+          <div class="pg-overlay"><span>📸 充气水上乐园</span></div>
+        </div>
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, '户外充气玩具')">
+          <img src="images/ppt_inflatable4.png" />
+          <div class="pg-overlay"><span>📸 充气玩具</span></div>
+        </div>
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, '儿童充气城堡')">
+          <img src="images/ppt_inflatable5.png" />
+          <div class="pg-overlay"><span>📸 充气城堡</span></div>
+        </div>
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, '充气滑梯')">
+          <img src="images/ppt_inflatable6.png" />
+          <div class="pg-overlay"><span>📸 充气滑梯</span></div>
+        </div>
+      </div>
+      <div class="product-detail-cards">
+        <div class="pdcard">
+          <h3>🏊 商用充气水池</h3>
+          <p>采用优质 PVC 材料，多层加厚工艺，超强气密性，高温不变形。适用于酒店泳池、水上乐园、海滩度假区。</p>
+          <ul>
+            <li>家用充气泳池</li>
+            <li>商用大型水池</li>
+            <li>儿童戏水池</li>
+          </ul>
+          <span class="clickable-img" onclick="openLightbox('images/ppt_inflatable1.png', '充气水池详情')">🔍 点击查看大图</span>
+        </div>
+        <div class="pdcard">
+          <h3>🛝 充气水上乐园</h3>
+          <p>组合式设计，多种滑梯、蹦床、障碍赛道组合，适合主题乐园、水上嘉年华活动。</p>
+          <ul>
+            <li>儿童充气滑梯</li>
+            <li>充气蹦床城堡</li>
+            <li>组合式水上乐园</li>
+          </ul>
+          <span class="clickable-img" onclick="openLightbox('images/ppt_inflatable3.png', '水上乐园详情')">🔍 点击查看大图</span>
+        </div>
+        <div class="pdcard">
+          <h3>🦆 户外充气玩具</h3>
+          <p>造型多样，独角兽、火烈鸟、天鹅等网红爆款，适用于泳池、海滩派对。</p>
+          <ul>
+            <li>充气浮具</li>
+            <li>充气泳圈</li>
+            <li>充气躺椅</li>
+          </ul>
+          <span class="clickable-img" onclick="openLightbox('images/ppt_inflatable4.png', '充气玩具详情')">🔍 点击查看大图</span>
         </div>
       </div>
     </div>
@@ -154,49 +173,61 @@
         <h2>户外家具系列 Outdoor Furniture</h2>
         <p>躺椅、摇椅、餐桌套装 — 舒适设计，耐用材质，为户外生活而生</p>
       </div>
-      <div class="product-showcase">
-        <div class="product-large">
-          <div class="product-large-icon">🪑</div>
-          <div class="product-large-info">
-            <h3>户外躺椅 & 摇椅系列</h3>
-            <p>人体工学设计，优质 PE仿藤/铝合金框架，可折叠便于收纳。适用于阳台、花园、泳池边、海滩。</p>
-            <ul>
-              <li>藤编躺椅</li>
-              <li>铝合金摇椅</li>
-              <li>吊椅 & 秋千</li>
-              <li>折叠躺椅</li>
-            </ul>
-          </div>
+      <div class="product-gallery-full">
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, '户外藤编沙发')">
+          <img src="images/ppt_furniture1.png" />
+          <div class="pg-overlay"><span>📸 藤编沙发</span></div>
         </div>
-        <div class="product-list">
-          <div class="product-mini">
-            <div class="pm-icon">🍽️</div>
-            <div class="pm-info">
-              <h4>户外餐桌套装</h4>
-              <p>4人/6人套餐桌，适合庭院聚餐</p>
-            </div>
-          </div>
-          <div class="product-mini">
-            <div class="pm-icon">🛋️</div>
-            <div class="pm-info">
-              <h4>户外沙发套装</h4>
-              <p>藤编/铝合金框架，防水坐垫</p>
-            </div>
-          </div>
-          <div class="product-mini">
-            <div class="pm-icon">🧺</div>
-            <div class="pm-info">
-              <h4>阳台休闲套装</h4>
-              <p>小户型阳台专用解决方案</p>
-            </div>
-          </div>
-          <div class="product-mini">
-            <div class="pm-icon">⛺</div>
-            <div class="pm-info">
-              <h4>露营家具</h4>
-              <p>轻便可折叠，适合户外露营</p>
-            </div>
-          </div>
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, '户外藤编躺椅')">
+          <img src="images/ppt_furniture2.png" />
+          <div class="pg-overlay"><span>📸 藤编躺椅</span></div>
+        </div>
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, '户外藤编休闲椅')">
+          <img src="images/ppt_furniture3.png" />
+          <div class="pg-overlay"><span>📸 藤编休闲椅</span></div>
+        </div>
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, '户外躺椅套装')">
+          <img src="images/ppt_furniture4.png" />
+          <div class="pg-overlay"><span>📸 躺椅套装</span></div>
+        </div>
+        <div class="pg-item" onclick="openLightbox(this.querySelector('img').src, '户外家具组合')">
+          <img src="images/ppt_furniture5.png" />
+          <div class="pg-overlay"><span>📸 家具组合</span></div>
+        </div>
+        <div class="pg-item tall" onclick="openLightbox(this.querySelector('img').src, '户外庭院家具')">
+          <img src="images/ppt_furniture6.png" />
+          <div class="pg-overlay"><span>📸 庭院家具</span></div>
+        </div>
+      </div>
+      <div class="product-detail-cards">
+        <div class="pdcard">
+          <h3>🪑 户外躺椅 & 摇椅</h3>
+          <p>人体工学设计，优质 PE仿藤/铝合金框架，可折叠便于收纳。适用于阳台、花园、泳池边、海滩。</p>
+          <ul>
+            <li>藤编躺椅</li>
+            <li>铝合金摇椅</li>
+            <li>吊椅 & 秋千</li>
+            <li>折叠躺椅</li>
+          </ul>
+          <span class="clickable-img" onclick="openLightbox('images/ppt_furniture2.png', '躺椅详情')">🔍 点击查看大图</span>
+        </div>
+        <div class="pdcard">
+          <h3>🍽️ 户外餐桌套装</h3>
+          <p>4人/6人套餐桌，适合庭院聚餐。防水耐晒材质，轻松应对各种天气。</p>
+          <ul>
+            <li>4人餐桌套装</li>
+            <li>6人餐桌套装</li>
+            <li>阳台小桌椅</li>
+          </ul>
+        </div>
+        <div class="pdcard">
+          <h3>🛋️ 户外沙发套装</h3>
+          <p>藤编/铝合金框架，防水坐垫。营造舒适户外休闲空间。</p>
+          <ul>
+            <li>藤编户外沙发</li>
+            <li>铝合金框架沙发</li>
+            <li>配套茶几</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -209,51 +240,59 @@
       </div>
       <div class="material-grid">
         <div class="material-card">
-          <div class="material-icon">🌿</div>
-          <h3>PE仿藤</h3>
+          <div class="material-img" onclick="openLightbox('images/ppt_material5.png', 'PE仿藤材料细节')">
+            <img src="images/ppt_material5.png" />
+            <span class="img-hint">🔍 点击查看</span>
+          </div>
+          <h3>🌿 PE仿藤</h3>
           <p class="material-eng">PE Rattan</p>
           <ul>
             <li>高密度聚乙烯材质</li>
             <li>防水防腐耐紫外线</li>
             <li>不易褪色，寿命长</li>
             <li>可 100% 回收环保</li>
-            <li>无需特殊维护保养</li>
           </ul>
         </div>
         <div class="material-card">
-          <div class="material-icon">🪵</div>
-          <h3>PE仿木</h3>
+          <div class="material-img" onclick="openLightbox('images/ppt_material6.png', 'PE仿木材料')">
+            <img src="images/ppt_material6.png" />
+            <span class="img-hint">🔍 点击查看</span>
+          </div>
+          <h3>🪵 PE仿木</h3>
           <p class="material-eng">PE Wood / Composite Wood</p>
           <ul>
             <li>木塑复合材料</li>
             <li>外观逼真如实木</li>
             <li>防潮防虫防开裂</li>
             <li>无需刷漆维护</li>
-            <li>户外长期使用无忧</li>
           </ul>
         </div>
         <div class="material-card">
-          <div class="material-icon">🕸️</div>
-          <h3>特斯林网布</h3>
+          <div class="material-img" onclick="openLightbox('images/ppt_material7.png', '特斯林网布')">
+            <img src="images/ppt_material7.png" />
+            <span class="img-hint">🔍 点击查看</span>
+          </div>
+          <h3>🕸️ 特斯林网布</h3>
           <p class="material-eng">Textilene Mesh</p>
           <ul>
             <li>PVC包覆聚酯纤维</li>
             <li>高强度抗撕裂</li>
             <li>透气快干</li>
             <li>耐高温耐低温</li>
-            <li>适合遮阳户外家具</li>
           </ul>
         </div>
         <div class="material-card">
-          <div class="material-icon">🎈</div>
-          <h3>PVC 充气材料</h3>
+          <div class="material-img" onclick="openLightbox('images/ppt_inflatable1.png', 'PVC充气材料')">
+            <img src="images/ppt_inflatable1.png" />
+            <span class="img-hint">🔍 点击查看</span>
+          </div>
+          <h3>🎈 PVC 充气材料</h3>
           <p class="material-eng">PVC for Inflatables</p>
           <ul>
             <li>加厚 PVC 多层结构</li>
             <li>超强气密性</li>
             <li>耐高温不变形</li>
             <li>通过欧盟 EN71 标准</li>
-            <li>环保无毒材料</li>
           </ul>
         </div>
       </div>
@@ -306,12 +345,32 @@
     </div>
   </footer>
 
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" class="lightbox-img" />
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+  </div>
+
   <script>
     function showTab(tabId) {
       document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
       document.getElementById(tabId).classList.add('active');
       event.target.classList.add('active');
+    }
+
+    function openLightbox(src, caption) {
+      const lb = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      const cap = document.getElementById('lightbox-caption');
+      img.src = src;
+      cap.textContent = caption;
+      lb.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
     }
   </script>
 </body>

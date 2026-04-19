@@ -43,42 +43,88 @@
         <div class="flow-num">01</div>
         <div class="flow-icon">🧵</div>
         <h3>原材料采购</h3>
-        <p>精选 PE、PVC、铝合金等优质原料，与国际供应商建立长期合作</p>
+        <p>精选 PE、PVC、铝合金等优质原料</p>
       </div>
       <div class="flow-arrow">→</div>
       <div class="flow-step">
         <div class="flow-num">02</div>
         <div class="flow-icon">⚙️</div>
         <h3>材料加工</h3>
-        <p>PE仿藤编织、仿木挤出成型、网布织造，全部内部完成</p>
+        <p>PE仿藤编织、仿木挤出成型</p>
       </div>
       <div class="flow-arrow">→</div>
       <div class="flow-step">
         <div class="flow-num">03</div>
         <div class="flow-icon">🔩</div>
         <h3>框架制造</h3>
-        <p>铝合金/钢管焊接、五金件加工，精确尺寸管控</p>
+        <p>铝合金/钢管焊接、五金加工</p>
       </div>
       <div class="flow-arrow">→</div>
       <div class="flow-step">
         <div class="flow-num">04</div>
         <div class="flow-icon">🎨</div>
         <h3>表面处理</h3>
-        <p>喷涂、电镀、阳极氧化等表面工艺，确保外观耐久</p>
+        <p>喷涂、电镀、阳极氧化</p>
       </div>
       <div class="flow-arrow">→</div>
       <div class="flow-step">
         <div class="flow-num">05</div>
         <div class="flow-icon">🧪</div>
         <h3>品质测试</h3>
-        <p>6项内部测试，符合国际标准，确保每件产品可靠</p>
+        <p>6项内部测试，符合国际标准</p>
       </div>
       <div class="flow-arrow">→</div>
       <div class="flow-step">
         <div class="flow-num">06</div>
         <div class="flow-icon">📦</div>
         <h3>包装发货</h3>
-        <p>定制包装，物流追踪，准时送达全球客户</p>
+        <p>定制包装，物流追踪</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 生产流程图片 -->
+  <section class="section process-gallery">
+    <div class="section-header">
+      <h2>生产流程图</h2>
+      <p>Manufacturing Process · 点击图片查看大图</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-item" onclick="openLightbox('images/process/step3-bending.png', 'Step 3: 铝管弯曲成型')">
+        <img src="images/process/step3-bending.png" />
+        <div class="process-label"><span>🔧</span> 铝管弯曲</div>
+      </div>
+      <div class="process-item" onclick="openLightbox('images/process/step4-welding.png', 'Step 4: 框架焊接')">
+        <img src="images/process/step4-welding.png" />
+        <div class="process-label"><span>⚡</span> 框架焊接</div>
+      </div>
+      <div class="process-item" onclick="openLightbox('images/process/step5-grinding.png', 'Step 5: 打磨处理')">
+        <img src="images/process/step5-grinding.png" />
+        <div class="process-label"><span>✨</span> 打磨处理</div>
+      </div>
+      <div class="process-item" onclick="openLightbox('images/process/step6-alkaline.png', 'Step 6: 碱性清洗')">
+        <img src="images/process/step6-alkaline.png" />
+        <div class="process-label"><span>💧</span> 碱性清洗</div>
+      </div>
+      <div class="process-item" onclick="openLightbox('images/process/step7-coating2.png', 'Step 7: 粉末喷涂')">
+        <img src="images/process/step7-coating2.png" />
+        <div class="process-label"><span>🎨</span> 粉末喷涂</div>
+      </div>
+      <div class="process-item" onclick="openLightbox('images/process/step8-rattan1.png', 'Step 8: PE仿藤编织')">
+        <img src="images/process/step8-rattan1.png" />
+        <div class="process-label"><span>🧶</span> PE仿藤编织</div>
+      </div>
+      <div class="process-item" onclick="openLightbox('images/process/step9-sewing1.png', 'Step 9: 缝纫加工')">
+        <img src="images/process/step9-sewing1.png" />
+        <div class="process-label"><span>🪡</span> 缝纫加工</div>
+      </div>
+      <div class="process-item" onclick="openLightbox('images/process/step10-assembly.png', 'Step 10: 成品组装')">
+        <img src="images/process/step10-assembly.png" />
+        <div class="process-label"><span>🔩</span> 成品组装</div>
+      </div>
+      <div class="process-item" onclick="openLightbox('images/process/step12-packaging.png', 'Step 12: 包装发货')">
+        <img src="images/process/step12-packaging.png" />
+        <div class="process-label"><span>📦</span> 包装发货</div>
       </div>
     </div>
   </section>
@@ -90,34 +136,52 @@
     </div>
     <div class="test-grid">
       <div class="test-card">
-        <div class="test-icon">💧</div>
-        <h3>防水测试</h3>
-        <p>模拟持续暴雨环境，验证产品防水密封性能</p>
+        <div class="test-img" onclick="openLightbox('images/process/test1-vibration.png', '振动测试')">
+          <img src="images/process/test1-vibration.png" />
+          <span class="img-hint">🔍 查看</span>
+        </div>
+        <h3>💧 振动测试</h3>
+        <p>模拟运输过程中的振动环境，验证产品包装与结构的稳固性</p>
       </div>
       <div class="test-card">
-        <div class="test-icon">☀️</div>
-        <h3>紫外线测试</h3>
+        <div class="test-img" onclick="openLightbox('images/process/test2-colorfastness.png', '色牢度测试')">
+          <img src="images/process/test2-colorfastness.png" />
+          <span class="img-hint">🔍 查看</span>
+        </div>
+        <h3>☀️ 色牢度测试</h3>
         <p>500小时加速老化测试，确保材料颜色持久不褪色</p>
       </div>
       <div class="test-card">
-        <div class="test-icon">🏋️</div>
-        <h3>承重测试</h3>
-        <p>超出正常使用重量3倍压力测试，保障安全</p>
+        <div class="test-img" onclick="openLightbox('images/process/test3-burst.png', '爆破测试')">
+          <img src="images/process/test3-burst.png" />
+          <span class="img-hint">🔍 查看</span>
+        </div>
+        <h3>🔥 爆破测试</h3>
+        <p>充气产品高压测试，确保焊缝牢固，气密性卓越</p>
       </div>
       <div class="test-card">
-        <div class="test-icon">🧪</div>
-        <h3>材料强度测试</h3>
-        <p>拉伸、撕裂、剥离等物理性能全面检测</p>
+        <div class="test-img" onclick="openLightbox('images/process/test4-impact.png', '冲击测试')">
+          <img src="images/process/test4-impact.png" />
+          <span class="img-hint">🔍 查看</span>
+        </div>
+        <h3>🏋️ 冲击测试</h3>
+        <p>超出正常使用重量3倍压力测试，保障用户安全</p>
       </div>
       <div class="test-card">
-        <div class="test-icon">🔥</div>
-        <h3>耐高温测试</h3>
-        <p>充气产品高温环境测试，确保夏季使用安全</p>
+        <div class="test-img" onclick="openLightbox('images/process/test5-drop.png', '跌落测试')">
+          <img src="images/process/test5-drop.png" />
+          <span class="img-hint">🔍 查看</span>
+        </div>
+        <h3>📦 跌落测试</h3>
+        <p>模拟包装产品在运输过程中的跌落情况</p>
       </div>
       <div class="test-card">
-        <div class="test-icon">❄️</div>
-        <h3>耐低温测试</h3>
-        <p>验证材料在寒冷环境下的柔韧性与强度</p>
+        <div class="test-img" onclick="openLightbox('images/process/test6-saltspray.png', '盐雾测试')">
+          <img src="images/process/test6-saltspray.png" />
+          <span class="img-hint">🔍 查看</span>
+        </div>
+        <h3>❄️ 盐雾测试</h3>
+        <p>验证金属部件在潮湿/沿海环境下的防锈能力</p>
       </div>
     </div>
   </section>
@@ -155,32 +219,32 @@
       <div class="craft-card">
         <div class="craft-icon">🧶</div>
         <h3>PE仿藤编织</h3>
-        <p>传统藤编工艺与现代 PE 材料结合，手工+机械双保障，每件产品均经过资深编织师傅把关</p>
+        <p>传统藤编工艺与现代 PE 材料结合，手工+机械双保障</p>
       </div>
       <div class="craft-card">
         <div class="craft-icon">🪚</div>
         <h3>仿木挤出成型</h3>
-        <p>木塑复合材料通过精密挤出模具成型，尺寸精准，纹理自然逼真</p>
+        <p>木塑复合材料通过精密挤出模具成型，纹理自然逼真</p>
       </div>
       <div class="craft-card">
         <div class="craft-icon">⚡</div>
         <h3>高频焊接</h3>
-        <p>PVC 充气产品采用高频焊接工艺，焊缝均匀牢固，气密性卓越</p>
+        <p>PVC 充气产品采用高频焊接工艺，焊缝均匀牢固</p>
       </div>
       <div class="craft-card">
         <div class="craft-icon">🔩</div>
         <h3>铝合金焊接</h3>
-        <p>户外家具框架采用氩弧焊，焊缝美观坚固，防锈处理后使用寿命超过10年</p>
+        <p>户外家具框架采用氩弧焊，使用寿命超过10年</p>
       </div>
       <div class="craft-card">
         <div class="craft-icon">🎨</div>
         <h3>静电喷涂</h3>
-        <p>金属表面采用静电粉末喷涂，涂层均匀附着力强，耐候性极佳</p>
+        <p>金属表面采用静电粉末喷涂，涂层均匀附着力强</p>
       </div>
       <div class="craft-card">
         <div class="craft-icon">📐</div>
         <h3>精密裁切</h3>
-        <p>激光裁切与 CNC 精密切割，确保每个部件尺寸误差在 ±0.5mm 以内</p>
+        <p>激光裁切与 CNC 精密切割，误差在 ±0.5mm 以内</p>
       </div>
     </div>
   </section>
@@ -230,5 +294,27 @@
       <p>&copy; 2026 TGB 合兴灯饰. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" class="lightbox-img" />
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+  </div>
+
+  <script>
+    function openLightbox(src, caption) {
+      const lb = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      const cap = document.getElementById('lightbox-caption');
+      img.src = src;
+      cap.textContent = caption;
+      lb.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
 </body>
 </html>

@@ -29,14 +29,50 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>中国户外家具 · 装饰品 · 充气系列产品专业制造商</h1>
-      <p>专注户外家具、装饰品、充气系列产品制造 · 年营业额 8000 万美元 · 9 大工厂布局全球</p>
-      <div class="hero-btns">
-        <a href="products.html" class="btn-primary">浏览产品</a>
-        <a href="contact.html" class="btn-secondary">联系我们</a>
+  <!-- Hero Slider -->
+  <section class="hero-slider">
+    <div class="slider-container">
+      <div class="slide active" style="background-image: url('images/img01.png');">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <h1>中国户外家具 · 装饰品 · 充气系列产品专业制造商</h1>
+          <p>专注户外家具、装饰品、充气系列产品制造 · 年营业额 8000 万美元 · 9 大工厂布局全球</p>
+          <div class="hero-btns">
+            <a href="products.html" class="btn-primary">浏览产品</a>
+            <a href="contact.html" class="btn-secondary">联系我们</a>
+          </div>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('images/img09.png');">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <h1>年营业额 8000 万美元</h1>
+          <p>9 大全球工厂 · 3000+ 专业员工 · 15 年行业经验 · 远销全球多个国家和地区</p>
+          <div class="hero-btns">
+            <a href="about.html" class="btn-primary">了解更多</a>
+            <a href="quality.html" class="btn-secondary">品质保证</a>
+          </div>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('images/img10.png');">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <h1>柬埔寨 · 越南 · 中国 全球布局</h1>
+          <p>东南亚最大户外休闲产品制造基地，享受政策优惠与成本优势，辐射全球市场</p>
+          <div class="hero-btns">
+            <a href="about.html" class="btn-primary">查看工厂</a>
+            <a href="contact.html" class="btn-secondary">商务合作</a>
+          </div>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+        <div class="slider-dots">
+          <span class="dot active" onclick="goToSlide(0)"></span>
+          <span class="dot" onclick="goToSlide(1)"></span>
+          <span class="dot" onclick="goToSlide(2)"></span>
+        </div>
+        <button class="slider-btn next" onclick="changeSlide(1)">&#10095;</button>
       </div>
     </div>
   </section>
@@ -57,38 +93,77 @@
     </div>
     <div class="products-grid">
       <div class="product-card">
-        <div class="product-icon">🏡</div>
-        <h3>户外装饰系列</h3>
-        <p>Outdoor Decor</p>
-        <ul>
-          <li>PE仿藤编织装饰</li>
-          <li>PE仿木家具</li>
-          <li>特斯林网布产品</li>
-        </ul>
-        <a href="products.html" class="btn-outline">查看详情</a>
+        <div class="product-img"><img src="images/ppt_decor1.png" alt="户外装饰" onclick="openLightbox(this.src, '户外装饰系列 - PE仿藤编织')" style="cursor:pointer;" /></div>
+        <div class="product-info">
+          <h3>户外装饰系列</h3>
+          <p>Outdoor Decor</p>
+          <ul>
+            <li><span class="clickable-img" onclick="openLightbox('images/ppt_decor2.png', 'PE仿藤编织装饰 - 藤编花架')">PE仿藤编织装饰</span></li>
+            <li><span class="clickable-img" onclick="openLightbox('images/ppt_decor3.png', 'PE仿木家具')">PE仿木家具</span></li>
+            <li><span class="clickable-img" onclick="openLightbox('images/ppt_decor4.png', '特斯林网布产品')">特斯林网布产品</span></li>
+          </ul>
+          <a href="products.html" class="btn-outline">查看详情</a>
+        </div>
       </div>
       <div class="product-card featured">
         <div class="product-badge">核心业务</div>
-        <div class="product-icon">🎈</div>
-        <h3>充气系列产品</h3>
-        <p>Inflatable Series</p>
-        <ul>
-          <li>商用充气水池</li>
-          <li>充气水上乐园</li>
-          <li>户外充气玩具</li>
-        </ul>
-        <a href="products.html" class="btn-primary">查看详情</a>
+        <div class="product-img"><img src="images/ppt_inflatable1.png" alt="充气系列" onclick="openLightbox(this.src, '充气系列产品 - 商用充气水池')" style="cursor:pointer;" /></div>
+        <div class="product-info">
+          <h3>充气系列产品</h3>
+          <p>Inflatable Series</p>
+          <ul>
+            <li><span class="clickable-img" onclick="openLightbox('images/ppt_inflatable2.png', '商用充气水池')">商用充气水池</span></li>
+            <li><span class="clickable-img" onclick="openLightbox('images/ppt_inflatable3.png', '充气水上乐园')">充气水上乐园</span></li>
+            <li><span class="clickable-img" onclick="openLightbox('images/ppt_inflatable4.png', '户外充气玩具')">户外充气玩具</span></li>
+          </ul>
+          <a href="products.html" class="btn-primary">查看详情</a>
+        </div>
       </div>
       <div class="product-card">
-        <div class="product-icon">🪑</div>
-        <h3>户外家具系列</h3>
-        <p>Outdoor Furniture</p>
-        <ul>
-          <li>户外躺椅&摇椅</li>
-          <li>户外餐桌套装</li>
-          <li>阳台休闲家具</li>
-        </ul>
-        <a href="products.html" class="btn-outline">查看详情</a>
+        <div class="product-img"><img src="images/ppt_furniture1.png" alt="户外家具" onclick="openLightbox(this.src, '户外家具系列 - 藤编躺椅')" style="cursor:pointer;" /></div>
+        <div class="product-info">
+          <h3>户外家具系列</h3>
+          <p>Outdoor Furniture</p>
+          <ul>
+            <li><span class="clickable-img" onclick="openLightbox('images/ppt_furniture2.png', '户外躺椅&摇椅')">户外躺椅&摇椅</span></li>
+            <li><span class="clickable-img" onclick="openLightbox('images/ppt_furniture3.png', '户外餐桌套装')">户外餐桌套装</span></li>
+            <li><span class="clickable-img" onclick="openLightbox('images/ppt_furniture4.png', '阳台休闲家具')">阳台休闲家具</span></li>
+          </ul>
+          <a href="products.html" class="btn-outline">查看详情</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Factory Showcase -->
+  <section class="factory-showcase">
+    <div class="factory-showcase-header">
+      <h2>全球工厂布局</h2>
+      <p>Global Factory Network · 9 大工厂 · 3 大洲布局</p>
+    </div>
+    <div class="factory-images">
+      <div class="factory-img-card large">
+        <img src="images/img02.png" alt="中国工厂" onclick="openLightbox(this.src, '中国工厂 - 广东/上海/江苏')" style="cursor:pointer;" />
+        <div class="factory-img-label">
+          <span class="fi-flag">🇨🇳</span>
+          <div><strong class="clickable-img" onclick="openLightbox('images/img02.png', '中国6大工厂')">中国 6 大工厂</strong><p>总部与研发中心 · 广东/上海/江苏</p></div>
+        </div>
+      </div>
+      <div class="factory-img-stack">
+        <div class="factory-img-card">
+          <img src="images/img03.png" alt="越南工厂" onclick="openLightbox(this.src, '越南工厂 - 胡志明市')" style="cursor:pointer;" />
+          <div class="factory-img-label">
+            <span class="fi-flag">🇻🇳</span>
+            <div><strong class="clickable-img" onclick="openLightbox('images/img03.png', '越南3大工厂')">越南 3 大工厂</strong><p>胡志明市周边工业区</p></div>
+          </div>
+        </div>
+        <div class="factory-img-card">
+          <img src="images/img05.png" alt="柬埔寨工厂" onclick="openLightbox(this.src, '柬埔寨工厂 - 西哈努克港')" style="cursor:pointer;" />
+          <div class="factory-img-label">
+            <span class="fi-flag">🇰🇭</span>
+            <div><strong class="clickable-img" onclick="openLightbox('images/img05.png', '柬埔寨工厂')">柬埔寨 1 大工厂</strong><p>西哈努克港经济特区</p></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -97,7 +172,7 @@
   <section class="section timeline-section">
     <div class="section-header">
       <h2>发展历程</h2>
-      <p>Growth Journey</p>
+      <p>Growth Journey · 1998 - 2024</p>
     </div>
     <div class="timeline-mini">
       <div class="timeline-item"><span class="year">1998</span><span class="event">合兴灯饰创立</span></div>
@@ -114,18 +189,40 @@
     </div>
   </section>
 
-  <!-- Cambodia Highlight -->
-  <section class="highlight-section">
-    <div class="highlight-content">
-      <div class="highlight-tag">🇰🇭 战略布局</div>
-      <h2>柬埔寨工厂</h2>
-      <p>位于柬埔寨的东南亚生产基地，享受政策优惠与成本优势，辐射全球市场</p>
-      <a href="about.html" class="btn-primary-light">查看详情</a>
+  <!-- Product Gallery Preview -->
+  <section class="section gallery-preview">
+    <div class="section-header">
+      <h2>产品图册</h2>
+      <p>Product Gallery · 点击图片查看大图</p>
     </div>
-    <div class="highlight-stats">
-      <div class="h-stat"><span class="h-num">3</span><span class="h-label">越南工厂</span></div>
-      <div class="h-stat"><span class="h-num">6</span><span class="h-label">中国工厂</span></div>
-      <div class="h-stat"><span class="h-num">1</span><span class="h-label">柬埔寨工厂</span></div>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="images/ppt_decor2.png" alt="户外装饰" onclick="openLightbox(this.src, 'PE仿藤编织装饰品')" />
+        <div class="gallery-overlay"><span>🏡 户外装饰</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/ppt_decor3.png" alt="户外装饰" onclick="openLightbox(this.src, 'PE仿藤置物架')" />
+        <div class="gallery-overlay"><span>🏡 户外装饰</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/ppt_inflatable2.png" alt="充气系列" onclick="openLightbox(this.src, '商用充气水池')" />
+        <div class="gallery-overlay"><span>🎈 充气系列</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/ppt_inflatable3.png" alt="充气系列" onclick="openLightbox(this.src, '充气水上乐园')" />
+        <div class="gallery-overlay"><span>🎈 充气系列</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/ppt_furniture2.png" alt="户外家具" onclick="openLightbox(this.src, '户外藤编沙发')" />
+        <div class="gallery-overlay"><span>🪑 户外家具</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/ppt_furniture3.png" alt="户外家具" onclick="openLightbox(this.src, '户外躺椅')" />
+        <div class="gallery-overlay"><span>🪑 户外家具</span></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="products.html" class="btn-outline">查看全部产品 →</a>
     </div>
   </section>
 
@@ -207,5 +304,43 @@
       <p>&copy; 2026 TGB 合兴灯饰. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" class="lightbox-img" />
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlide(n) {
+      slides.forEach(s => s.classList.remove('active'));
+      dots.forEach(d => d.classList.remove('active'));
+      currentSlide = (n + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+    }
+
+    function changeSlide(n) { showSlide(currentSlide + n); }
+    function goToSlide(n) { showSlide(n); }
+    setInterval(() => changeSlide(1), 5000);
+
+    function openLightbox(src, caption) {
+      const lb = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      const cap = document.getElementById('lightbox-caption');
+      img.src = src;
+      cap.textContent = caption;
+      lb.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
