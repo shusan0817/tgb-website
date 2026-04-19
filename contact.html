@@ -15,14 +15,16 @@
         <div class="logo-sub">Season Plus · Heathy · TGB Outdoor</div>
       </div>
     </a>
-    <div class="nav-links">
-      <a href="index.html" data-en="Home" data-cn="首页">Home</a>
-      <a href="about.html" data-en="About Us" data-cn="关于我们">About Us</a>
-      <a href="products.html" data-en="Products" data-cn="产品展示">Products</a>
-      <a href="quality.html" data-en="Quality" data-cn="品质管理">Quality</a>
-      <a class="active" href="contact.html" data-en="Contact" data-cn="联系我们">Contact</a>
-      <a href="video.html" data-en="Video" data-cn="视频">Video</a>
+    <div class="nav-links" id="navLinks">
+      <span class="nav-close" onclick="closeNav()">×</span>
+      <a href="index.html" data-en="Home" data-cn="首页" onclick="closeNav()">Home</a>
+      <a href="about.html" data-en="About Us" data-cn="关于我们" onclick="closeNav()">About Us</a>
+      <a href="products.html" data-en="Products" data-cn="产品展示" onclick="closeNav()">Products</a>
+      <a href="quality.html" data-en="Quality" data-cn="品质管理" onclick="closeNav()">Quality</a>
+      <a class="active" href="contact.html" data-en="Contact" data-cn="联系我们" onclick="closeNav()">Contact</a>
+      <a href="video.html" data-en="Video" data-cn="视频" onclick="closeNav()">Video</a>
     </div>
+    <span class="nav-toggle" onclick="toggleNav()">☰</span>
     <div class="nav-lang">
       <span class="lang-btn active" onclick="switchLang('en')">EN</span>
       <span class="lang-btn" onclick="switchLang('cn')">中文</span>
