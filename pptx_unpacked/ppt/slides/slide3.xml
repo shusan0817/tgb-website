@@ -1175,12 +1175,14 @@
           <a:p>
             <a:pPr algn="ctr"/>
             <a:r>
-              <a:rPr lang="en-US" sz="1200" dirty="0">
-                <a:solidFill>
-                  <a:schemeClr val="bg1"/>
-                </a:solidFill>
-              </a:rPr>
-              <a:t>TGB Electronic Lighting</a:t>
+              <a:rPr lang="en-US" sz="1200" dirty="0"><a:solidFill><a:srgbClr val="E53935"/></a:solidFill></a:rPr>
+              <a:t>T</a:t>
+            </a:r><a:r>
+              <a:rPr lang="en-US" sz="1200" dirty="0"><a:solidFill><a:srgbClr val="43A047"/></a:solidFill></a:rPr>
+              <a:t>G</a:t>
+            </a:r><a:r>
+              <a:rPr lang="en-US" sz="1200" dirty="0"><a:solidFill><a:srgbClr val="1E88E5"/></a:solidFill></a:rPr>
+              <a:t>B Electronic Lighting</a:t>
             </a:r>
             <a:endParaRPr lang="en-US" sz="1200" dirty="0">
               <a:solidFill>
@@ -1359,12 +1361,14 @@
           <a:p>
             <a:pPr algn="ctr"/>
             <a:r>
-              <a:rPr lang="en-US" sz="1200" dirty="0">
-                <a:solidFill>
-                  <a:schemeClr val="bg1"/>
-                </a:solidFill>
-              </a:rPr>
-              <a:t>TGB Outdoor Furniture</a:t>
+              <a:rPr lang="en-US" sz="1200" dirty="0"><a:solidFill><a:srgbClr val="E53935"/></a:solidFill></a:rPr>
+              <a:t>T</a:t>
+            </a:r><a:r>
+              <a:rPr lang="en-US" sz="1200" dirty="0"><a:solidFill><a:srgbClr val="43A047"/></a:solidFill></a:rPr>
+              <a:t>G</a:t>
+            </a:r><a:r>
+              <a:rPr lang="en-US" sz="1200" dirty="0"><a:solidFill><a:srgbClr val="1E88E5"/></a:solidFill></a:rPr>
+              <a:t>B Outdoor Furniture</a:t>
             </a:r>
             <a:endParaRPr lang="en-US" sz="1200" dirty="0">
               <a:solidFill>
@@ -1779,11 +1783,19 @@
           <a:p>
             <a:r>
               <a:rPr lang="en-US" altLang="zh-CN" sz="2800">
-                <a:solidFill>
-                  <a:schemeClr val="tx1"/>
-                </a:solidFill>
+                <a:solidFill><a:srgbClr val="E53935"/></a:solidFill>
               </a:rPr>
-              <a:t>TGB </a:t>
+              <a:t>T</a:t>
+            </a:r><a:r>
+              <a:rPr lang="en-US" altLang="zh-CN" sz="2800">
+                <a:solidFill><a:srgbClr val="43A047"/></a:solidFill>
+              </a:rPr>
+              <a:t>G</a:t>
+            </a:r><a:r>
+              <a:rPr lang="en-US" altLang="zh-CN" sz="2800">
+                <a:solidFill><a:srgbClr val="1E88E5"/></a:solidFill>
+              </a:rPr>
+              <a:t>B </a:t>
             </a:r>
             <a:r>
               <a:rPr lang="zh-CN" altLang="en-US" sz="2800">
