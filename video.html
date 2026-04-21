@@ -1,72 +1,156 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>品牌视频 - TGB 合兴灯饰</title>
+  <title>Video - TGB Outdoor</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', 'PingFang SC', sans-serif; background: #111; color: #fff; min-height: 100vh; }
-    .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
-    .header { text-align: center; margin-bottom: 40px; }
-    .logo { display: inline-flex; align-items: center; gap: 15px; margin-bottom: 20px; }
-    .logo-badge { background: linear-gradient(135deg, #e53935 0%, #43a047 50%, #1e88e5 100%); color: #fff; font-weight: 900; font-size: 1.5rem; padding: 10px 15px; border-radius: 8px; }
-    .logo-text { font-size: 1.8rem; font-weight: 700; color: #fff; }
-    h1 { font-size: 2.5rem; margin-bottom: 10px; color: #fff; }
-    .subtitle { color: rgba(255,255,255,0.7); font-size: 1.1rem; }
-    .video-container { background: #000; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.5); margin-bottom: 30px; }
-    video { width: 100%; display: block; }
-    .info { background: rgba(255,255,255,0.1); border-radius: 12px; padding: 25px; text-align: center; }
-    .info h3 { color: #FDD835; margin-bottom: 15px; font-size: 1.3rem; }
-    .info p { color: rgba(255,255,255,0.8); line-height: 1.6; }
-    .back-btn { display: inline-block; margin-top: 30px; padding: 12px 30px; background: linear-gradient(135deg, #e53935, #43a047, #1e88e5); color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.3s; }
-    .back-btn:hover { opacity: 0.9; }
-    .controls { display: flex; gap: 10px; margin-top: 15px; justify-content: center; }
-    .ctrl-btn { padding: 8px 20px; background: #333; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; }
+    .video-page { background: #111; min-height: 80vh; padding: 40px 20px; }
+    .video-container-wrap { max-width: 900px; margin: 0 auto; }
+    .video-header { text-align: center; margin-bottom: 30px; }
+    .video-header h1 { color: #fff; font-size: 2rem; margin-bottom: 10px; }
+    .video-header p { color: rgba(255,255,255,0.7); font-size: 1rem; }
+    .video-box { background: #000; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.5); margin-bottom: 25px; }
+    .video-box video { width: 100%; display: block; }
+    .video-info { background: rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; text-align: center; margin-bottom: 25px; }
+    .video-info h3 { color: #FDD835; margin-bottom: 12px; font-size: 1.2rem; }
+    .video-info p { color: rgba(255,255,255,0.8); line-height: 1.6; }
+    .video-info a { color: #FDD835; }
+    .video-controls { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .ctrl-btn { padding: 10px 24px; background: #333; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-size: 0.9rem; text-decoration: none; display: inline-block; transition: background 0.2s; }
     .ctrl-btn:hover { background: #555; }
+    .ctrl-btn-primary { background: linear-gradient(135deg, #e53935, #43a047, #1e88e5); }
+    .ctrl-btn-primary:hover { opacity: 0.9; background: linear-gradient(135deg, #e53935, #43a047, #1e88e5); }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <div class="logo">
-        <div class="logo-badge">TGB</div>
-        <div class="logo-text">合兴灯饰</div>
+  <nav class="navbar">
+    <a class="nav-logo" href="index.html">
+      <div class="logo-badge">TGB</div>
+      <div>
+        <div class="logo-name">He Xing Lighting</div>
+        <div class="logo-sub">Season Plus · Heathy · TGB Outdoor</div>
       </div>
-      <h1>品牌宣传视频</h1>
-      <p class="subtitle">Outdoor Furniture & Decor · Premium Quality Since 1995</p>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <span class="nav-close" onclick="closeNav()">×</span>
+      <a href="index.html" data-en="Home" data-cn="首页" onclick="closeNav()">Home</a>
+      <a href="about.html" data-en="About Us" data-cn="关于我们" onclick="closeNav()">About Us</a>
+      <a href="products.html" data-en="Products" data-cn="产品展示" onclick="closeNav()">Products</a>
+      <a href="quality.html" data-en="Quality" data-cn="品质管理" onclick="closeNav()">Quality</a>
+      <a href="contact.html" data-en="Contact" data-cn="联系我们" onclick="closeNav()">Contact</a>
+      <a class="active" href="video.html" data-en="Video" data-cn="视频" onclick="closeNav()">Video</a>
     </div>
-    
-    <div class="video-container">
-      <video id="mainVideo" controls poster="">
-        <source src="images/furniture/微信视频2026-04-06_183129_197.mp4" type="video/mp4">
-        您的浏览器不支持视频播放
-      </video>
+    <span class="nav-toggle" onclick="toggleNav()">☰</span>
+    <div class="nav-lang">
+      <span class="lang-btn active" onclick="switchLang('en')">EN</span>
+      <span class="lang-btn" onclick="switchLang('cn')">中文</span>
     </div>
-    
-    <div class="info">
-      <h3>🌟 TGB 品牌视频</h3>
-      <p>展示我们的户外家具、装饰品和充气系列产品。<br>
-      了解更多产品，请浏览我们的 <a href="products.html" style="color: #FDD835;">产品展示</a> 页面。</p>
-    </div>
-    
-    <div class="controls">
-      <button class="ctrl-btn" onclick="downloadVideo()">📥 下载视频</button>
-      <a href="index.html" class="ctrl-btn">🏠 返回首页</a>
-    </div>
-    
-    <div style="text-align: center;">
-      <a href="products.html" class="back-btn">查看更多产品 →</a>
+  </nav>
+
+  <div class="video-page">
+    <div class="video-container-wrap">
+      <div class="video-header">
+        <h1 data-en="Brand Video" data-cn="品牌宣传视频">Brand Video</h1>
+        <p data-en="Outdoor Furniture & Decor · Premium Quality Since 1998" data-cn="户外家具与装饰品 · 自1998年起精品制造">Outdoor Furniture & Decor · Premium Quality Since 1998</p>
+      </div>
+
+      <div class="video-box">
+        <video id="mainVideo" controls poster="">
+          <source src="images/furniture/微信视频2026-04-06_183129_197.mp4" type="video/mp4">
+          <span data-en="Your browser does not support video playback" data-cn="您的浏览器不支持视频播放">Your browser does not support video playback</span>
+        </video>
+      </div>
+
+      <div class="video-info">
+        <h3 data-en="🌟 TGB Brand Video" data-cn="🌟 TGB 品牌视频">🌟 TGB Brand Video</h3>
+        <p>
+          <span data-en="Showcasing our outdoor furniture, decor, and inflatable product series." data-cn="展示我们的户外家具、装饰品和充气系列产品。">Showcasing our outdoor furniture, decor, and inflatable product series.</span>
+          <br>
+          <span data-en="Browse more products on our " data-cn="了解更多产品，请浏览我们的 ">Browse more products on our </span><a href="products.html" data-en="Products Page" data-cn="产品展示">Products Page</a>.
+        </p>
+      </div>
+
+      <div class="video-controls">
+        <button class="ctrl-btn" onclick="downloadVideo()" data-en="📥 Download Video" data-cn="📥 下载视频">📥 Download Video</button>
+        <a href="index.html" class="ctrl-btn" data-en="🏠 Back to Home" data-cn="🏠 返回首页">🏠 Back to Home</a>
+        <a href="products.html" class="ctrl-btn ctrl-btn-primary" data-en="View More Products →" data-cn="查看更多产品 →">View More Products →</a>
+      </div>
     </div>
   </div>
-  
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-col">
+        <div class="footer-logo">
+          <div class="logo-badge">TGB</div>
+          <div>
+            <div class="logo-name">He Xing Lighting</div>
+            <div class="logo-sub">Season Plus · Heathy · TGB Outdoor</div>
+          </div>
+        </div>
+        <p data-en="Specialized in outdoor furniture, decor & inflatable products manufacturing. $80M annual revenue with 9 global factories." data-cn="专注户外家具、装饰品及充气产品制造。年营收8000万美元，全球9家工厂。">Specialized in outdoor furniture, decor & inflatable products manufacturing. $80M annual revenue with 9 global factories.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Products" data-cn="产品">Products</h4>
+        <a href="products.html" data-en="Outdoor Decor" data-cn="户外装饰品">Outdoor Decor</a>
+        <a href="products.html" data-en="Inflatable Series" data-cn="充气系列">Inflatable Series</a>
+        <a href="products.html" data-en="Outdoor Furniture" data-cn="户外家具">Outdoor Furniture</a>
+        <a href="products.html" data-en="Materials" data-cn="产品工艺">Materials</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="About Us" data-cn="关于我们">About Us</h4>
+        <a href="about.html" data-en="Company Profile" data-cn="公司简介">Company Profile</a>
+        <a href="quality.html" data-en="Quality Management" data-cn="品质管理">Quality Management</a>
+        <a href="about.html" data-en="Growth History" data-cn="发展历程">Growth History</a>
+        <a href="contact.html" data-en="Contact Us" data-cn="联系我们">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Contact" data-cn="联系方式">Contact</h4>
+        <p>Email: info@tgboutdoor.com</p>
+        <p>Tel: +86-XXX-XXXX-XXXX</p>
+        <p data-en="Address: Guangdong, China" data-cn="地址：中国广东">Address: Guangdong, China</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-en="© 2026 TGB He Xing Lighting. All rights reserved." data-cn="© 2026 TGB 合兴灯饰. 版权所有。">© 2026 TGB He Xing Lighting. All rights reserved.</p>
+    </div>
+  </footer>
+
   <script>
     function downloadVideo() {
       const a = document.createElement('a');
       a.href = 'images/furniture/微信视频2026-04-06_183129_197.mp4';
-      a.download = 'TGB产品展示视频.mp4';
+      a.download = 'TGB-Brand-Video.mp4';
       a.click();
     }
+
+    function switchLang(lang) {
+      localStorage.setItem('tgb-lang', lang);
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.trim().toLowerCase() === lang || (lang === 'cn' && btn.textContent.trim() === '中文'));
+      });
+      document.documentElement.lang = lang === 'cn' ? 'zh-CN' : 'en';
+      document.querySelectorAll('[data-en]').forEach(el => {
+        const text = lang === 'cn' ? el.getAttribute('data-cn') : el.getAttribute('data-en');
+        if (text) el.textContent = text;
+      });
+    }
+
+    function toggleNav() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+    function closeNav() {
+      document.getElementById('navLinks').classList.remove('active');
+    }
+
+    (function() {
+      const saved = localStorage.getItem('tgb-lang');
+      if (saved && saved === 'cn') {
+        switchLang('cn');
+      }
+    })();
   </script>
 </body>
 </html>
