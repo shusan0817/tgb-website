@@ -81,11 +81,11 @@
   </section>
 
   <!-- Stats -->
-  <section class="stats-bar">
-    <div class="stat"><span class="stat-num">9</span><span class="stat-label" data-en="Global Factories" data-cn="全球工厂">Global Factories</span></div>
-    <div class="stat"><span class="stat-num">$80M</span><span class="stat-label" data-en="Annual Revenue" data-cn="年营收">Annual Revenue</span></div>
-    <div class="stat"><span class="stat-num">3000+</span><span class="stat-label" data-en="Employees" data-cn="员工人数">Employees</span></div>
-    <div class="stat"><span class="stat-num">15+</span><span class="stat-label" data-en="Years Experience" data-cn="年经验">Years Experience</span></div>
+  <section class="stats-bar" id="statsBar">
+    <div class="stat"><span class="stat-num" data-target="9" data-prefix="" data-suffix="">0</span><span class="stat-label" data-en="Global Factories" data-cn="全球工厂">Global Factories</span></div>
+    <div class="stat"><span class="stat-num" data-target="80" data-prefix="$" data-suffix="M">$0M</span><span class="stat-label" data-en="Annual Revenue" data-cn="年营收">Annual Revenue</span></div>
+    <div class="stat"><span class="stat-num" data-target="3000" data-prefix="" data-suffix="+">0+</span><span class="stat-label" data-en="Employees" data-cn="员工人数">Employees</span></div>
+    <div class="stat"><span class="stat-num" data-target="15" data-prefix="" data-suffix="+">0+</span><span class="stat-label" data-en="Years Experience" data-cn="年经验">Years Experience</span></div>
   </section>
 
   <!-- Core Products -->
@@ -367,6 +367,121 @@
         switchLang('cn');
       }
     })();
+
+    // ===== 数字滚动动画 =====
+    function animateCounters() {
+      const counters = document.querySelectorAll('.stat-num[data-target]');
+      counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const prefix = counter.getAttribute('data-prefix') || '';
+        const suffix = counter.getAttribute('data-suffix') || '';
+        const duration = 2000; // 2秒完成
+        const startTime = performance.now();
+
+        function updateCount(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          // easeOutExpo 缓动函数，先快后慢
+          const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+          const current = Math.floor(eased * target);
+          counter.textContent = prefix + current.toLocaleString() + suffix;
+          if (progress < 1) {
+            requestAnimationFrame(updateCount);
+          }
+        }
+        requestAnimationFrame(updateCount);
+      });
+    }
+
+    // IntersectionObserver：元素进入视口时触发动画
+    const statsBar = document.getElementById('statsBar');
+    let statsAnimated = false;
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !statsAnimated) {
+          statsAnimated = true;
+          animateCounters();
+        }
+      });
+    }, { threshold: 0.3 });
+    if (statsBar) statsObserver.observe(statsBar);
+
+    // ===== 鼠标RGB粒子追踪特效 =====
+    const particleCanvas = document.createElement('canvas');
+    particleCanvas.id = 'particleCanvas';
+    particleCanvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;';
+    document.body.appendChild(particleCanvas);
+    const pCtx = particleCanvas.getContext('2d');
+
+    function resizeParticleCanvas() {
+      particleCanvas.width = window.innerWidth;
+      particleCanvas.height = window.innerHeight;
+    }
+    resizeParticleCanvas();
+    window.addEventListener('resize', resizeParticleCanvas);
+
+    // 品牌RGB三色粒子
+    const particleColors = [
+      { r: 229, g: 57, b: 53 },   // T-红 #e53935
+      { r: 67, g: 160, b: 71 },    // G-绿 #43a047
+      { r: 30, g: 136, b: 229 },   // B-蓝 #1e88e5
+    ];
+
+    let mouseX = -100, mouseY = -100;
+    const particles = [];
+    const MAX_PARTICLES = 80;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      // 每次移动产生2-3个粒子
+      for (let i = 0; i < 2; i++) {
+        if (particles.length < MAX_PARTICLES) {
+          const color = particleColors[Math.floor(Math.random() * 3)];
+          particles.push({
+            x: mouseX + (Math.random() - 0.5) * 8,
+            y: mouseY + (Math.random() - 0.5) * 8,
+            vx: (Math.random() - 0.5) * 2,
+            vy: (Math.random() - 0.5) * 2 - 1, // 略微向上飘
+            life: 1,
+            decay: 0.015 + Math.random() * 0.02,
+            size: 2 + Math.random() * 3,
+            color: color
+          });
+        }
+      }
+    });
+
+    function animateParticles() {
+      pCtx.clearRect(0, 0, particleCanvas.width, particleCanvas.height);
+
+      for (let i = particles.length - 1; i >= 0; i--) {
+        const p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.life -= p.decay;
+
+        if (p.life <= 0) {
+          particles.splice(i, 1);
+          continue;
+        }
+
+        const alpha = p.life * 0.8;
+        pCtx.beginPath();
+        pCtx.arc(p.x, p.y, p.size * p.life, 0, Math.PI * 2);
+        pCtx.fillStyle = `rgba(${p.color.r},${p.color.g},${p.color.b},${alpha})`;
+        pCtx.fill();
+
+        // 发光效果
+        pCtx.beginPath();
+        pCtx.arc(p.x, p.y, p.size * p.life * 2, 0, Math.PI * 2);
+        pCtx.fillStyle = `rgba(${p.color.r},${p.color.g},${p.color.b},${alpha * 0.15})`;
+        pCtx.fill();
+      }
+
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
   </script>
 </body>
 </html>

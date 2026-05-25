@@ -118,9 +118,21 @@ img { max-width: 100%; }
   display: flex; justify-content: center; gap: 4rem; padding: 2.5rem 3rem;
   background: var(--dark); color: #fff;
 }
-.stat { text-align: center; }
-.stat-num { display: block; font-size: 2rem; font-weight: 900; color: var(--gold); }
+.stat { text-align: center; position: relative; }
+.stat-num {
+  display: block; font-size: 2rem; font-weight: 900; color: var(--gold);
+  transition: transform 0.3s;
+}
+.stat-num.counting { transform: scale(1.1); }
 .stat-label { font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-top: 0.25rem; display: block; }
+.stat::after {
+  content: '';
+  position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%);
+  width: 0; height: 2px; background: var(--gold);
+  transition: width 0.6s ease;
+}
+.stat:hover::after { width: 60%; }
+.stat:hover .stat-num { transform: scale(1.15); text-shadow: 0 0 20px rgba(249,168,37,0.5); }
 
 /* ===== Section ===== */
 .section { padding: 4rem 3rem; }
