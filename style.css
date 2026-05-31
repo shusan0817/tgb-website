@@ -321,6 +321,85 @@ img { max-width: 100%; display: block; }
   background: radial-gradient(circle, rgba(229,57,53,0.03) 0%, transparent 70%);
   pointer-events: none;
 }
+
+/* ===== TV Summary Bar ===== */
+.tv-summary {
+  display: flex; justify-content: center; align-items: center;
+  max-width: 680px; margin: 0 auto 4.5rem;
+  background: #fff; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);
+  padding: 1.75rem 2.5rem; position: relative; z-index: 1;
+}
+.tv-summary-item { text-align: center; flex: 1; }
+.tv-summary-item strong { display: block; font-size: 2.2rem; font-weight: 300; color: var(--dark); letter-spacing: -0.03em; line-height: 1; }
+.tv-summary-item strong small { font-size: 1rem; font-weight: 400; }
+.tv-summary-item span { font-size: 0.72rem; color: var(--gray); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 0.4rem; display: block; font-weight: 400; }
+.tv-summary-divider { width: 1px; height: 40px; background: var(--border-soft); flex-shrink: 0; margin: 0 0.5rem; }
+
+/* ===== Timeline Vertical ===== */
+.timeline-vertical {
+  position: relative; max-width: 900px; margin: 0 auto;
+}
+.timeline-vertical::before {
+  content: '';
+  position: absolute; top: 0; bottom: 60px; left: 50%; transform: translateX(-50%);
+  width: 2px;
+  background: linear-gradient(180deg, #E53935 0%, #FB761B 14%, #43A047 28%, #1E88E5 42%, #8E24AA 56%, #00ACC1 70%, #C8A45C 85%, transparent 100%);
+  z-index: 0;
+}
+
+/* ===== TV Node ===== */
+.tv-node {
+  display: flex; align-items: flex-start; gap: 2.5rem;
+  margin-bottom: 3rem; position: relative; z-index: 1;
+}
+.tv-node.tv-left { flex-direction: row; justify-content: flex-start; padding-right: calc(50% + 2rem); }
+.tv-node.tv-right { flex-direction: row-reverse; justify-content: flex-start; padding-left: calc(50% + 2rem); }
+
+.tv-year-badge {
+  position: absolute; left: 50%; transform: translateX(-50%);
+  color: #fff; font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;
+  padding: 0.35rem 0.9rem; border-radius: 20px;
+  white-space: nowrap; top: 1.25rem; z-index: 2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.tv-year-gold { background: var(--gold) !important; box-shadow: 0 2px 12px rgba(200,164,92,0.35) !important; }
+
+/* ===== TV Card ===== */
+.tv-card {
+  background: #fff; border-radius: var(--radius-md); padding: 1.75rem;
+  box-shadow: var(--shadow-sm); transition: var(--transition-smooth);
+  display: flex; gap: 1.25rem; align-items: flex-start;
+  border: 1.5px solid transparent; width: 100%;
+}
+.tv-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); border-color: rgba(0,0,0,0.04); }
+.tv-card-gold { background: linear-gradient(135deg, #fffdf7 0%, #fef9e7 100%); border-color: rgba(200,164,92,0.2); }
+.tv-card-gold:hover { border-color: var(--gold); }
+.tv-card-icon {
+  width: 56px; height: 56px; border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.tv-card-body { flex: 1; }
+.tv-location { font-size: 0.72rem; color: var(--gray-light); letter-spacing: 0.5px; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.3rem; }
+.tv-card-body h3 { font-size: 1.05rem; color: var(--dark); margin-bottom: 0.5rem; font-weight: 500; }
+.tv-card-body p { font-size: 0.84rem; color: var(--gray); line-height: 1.75; font-weight: 300; }
+.tv-card-stats {
+  display: flex; gap: 1.25rem; margin-top: 1rem; padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+.tv-card-stats > div { text-align: center; }
+.tv-card-stats strong { display: block; font-size: 1.1rem; font-weight: 500; color: var(--dark); line-height: 1; }
+.tv-card-stats strong small { font-size: 0.75rem; font-weight: 400; }
+.tv-card-stats span { font-size: 0.68rem; color: var(--gray); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 400; }
+
+/* ===== TV Future ===== */
+.tv-future {
+  display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
+  padding-top: 1rem; position: relative; z-index: 1;
+}
+.tv-future-dot { display: flex; align-items: center; justify-content: center; }
+.tv-future span { font-size: 0.78rem; color: var(--gray-light); letter-spacing: 2px; text-transform: uppercase; font-weight: 300; font-style: italic; }
+
+/* 舊版 timeline-mini (保留相容) */
 .timeline-mini { display: flex; justify-content: space-between; position: relative; overflow-x: auto; gap: 0.5rem; padding: 1.5rem 0; }
 .timeline-mini::before { content: ''; position: absolute; top: 50%; left: 5%; right: 5%; height: 1px; background: linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent); z-index: 0; }
 .timeline-item { text-align: center; position: relative; z-index: 1; flex-shrink: 0; min-width: 100px; }
@@ -638,6 +717,16 @@ img { max-width: 100%; display: block; }
   .tl-phase { min-width: 140px; }
   .tl-phase-line { display: none; }
   .tl-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  /* Vertical timeline mobile */
+  .timeline-vertical::before { left: 18px; transform: none; }
+  .tv-node.tv-left, .tv-node.tv-right {
+    flex-direction: row !important; justify-content: flex-start !important;
+    padding-left: 48px !important; padding-right: 0 !important;
+  }
+  .tv-year-badge { left: 0 !important; transform: none !important; top: 0 !important; font-size: 0.65rem; padding: 0.2rem 0.55rem; }
+  .tv-summary { padding: 1.25rem 1.5rem; }
+  .tv-summary-divider { display: none; }
+  .timeline-section { padding: 4rem 1.25rem; }
 }
 
 /* ===== Factory ===== */
@@ -799,6 +888,8 @@ img { max-width: 100%; display: block; }
 /* ===== Contact Cards ===== */
 .contact-section { padding: 7rem 4rem; }
 .contact-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5rem; }
+.contact-cards-single { display: flex; justify-content: center; }
+.contact-cards-single .contact-card { max-width: 420px; width: 100%; }
 .contact-card { border: none; border-radius: var(--radius-lg); padding: 2.25rem; text-align: center; transition: var(--transition-smooth); box-shadow: var(--shadow-sm); }
 .contact-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-6px); }
 .contact-flag { font-size: 2.5rem; margin-bottom: 0.85rem; }
