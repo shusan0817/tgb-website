@@ -45,7 +45,7 @@
       <p data-en="Leading manufacturer of outdoor leisure products in China" data-cn="中国领先的户外休闲产品制造商">Leading manufacturer of outdoor leisure products in China</p>
     </div>
     <div class="about-intro">
-      <p data-en="He Xing Lighting (TGB) was founded in 1998 in Guangdong, China. With 15+ years of development, we have grown into a comprehensive outdoor leisure products manufacturer with 9 global factories, 3000+ employees, and $80 million annual revenue." data-cn="合兴灯饰（TGB）1998年创立于中国广东。经过15年的发展，我们已成长为拥有9家全球工厂、3000余名员工、年营收8000万美元的综合性户外休闲产品制造商。">He Xing Lighting (TGB) was founded in 1998 in Guangdong, China. With 15+ years of development, we have grown into a comprehensive outdoor leisure products manufacturer with 9 global factories, 3000+ employees, and $80 million annual revenue.</p>
+      <p data-en="He Xing Lighting (TGB) was founded in 2008 in Guangdong, China. With 17+ years of development, we have grown into a comprehensive outdoor leisure products manufacturer with 9 global factories, 3500+ employees, and $80 million annual revenue." data-cn="合兴灯饰（TGB）2008年创立于中国广东。经过17年的发展，我们已成长为拥有9家全球工厂、3500余名员工、年营收8000万美元的综合性户外休闲产品制造商。">He Xing Lighting (TGB) was founded in 2008 in Guangdong, China. With 17+ years of development, we have grown into a comprehensive outdoor leisure products manufacturer with 9 global factories, 3500+ employees, and $80 million annual revenue.</p>
       <p data-en="Our product lines include outdoor decor (PE rattan, PE wood, Textilene), inflatable products (commercial pools, water parks, toys), and outdoor furniture (lounge chairs, dining sets, sofas). We serve clients in North America, Europe, Australia, Japan, and Southeast Asia." data-cn="我们的产品涵盖户外装饰品（PE藤编、PE木制、特斯林）、充气产品（商用泳池、水上乐园、玩具）以及户外家具（躺椅、餐桌椅、沙发）。我们服务北美、欧洲、澳大利亚、日本和东南亚的客户。">Our product lines include outdoor decor (PE rattan, PE wood, Textilene), inflatable products (commercial pools, water parks, toys), and outdoor furniture (lounge chairs, dining sets, sofas). We serve clients in North America, Europe, Australia, Japan, and Southeast Asia.</p>
     </div>
     <div class="about-showcase">
@@ -147,7 +147,7 @@
       <div class="tl-phase active" data-phase="1">
         <span class="phase-num">01</span>
         <span class="phase-label" data-en="Foundation" data-cn="奠基期">Foundation</span>
-        <span class="phase-years">1998 - 2010</span>
+        <span class="phase-years">2008 - 2010</span>
       </div>
       <div class="tl-phase-line"></div>
       <div class="tl-phase" data-phase="2">
@@ -169,7 +169,7 @@
       <!-- 阶段1卡片 -->
       <div class="tl-phase-group" data-phase="1">
         <div class="tl-card-v">
-          <div class="tlcv-year">1998</div>
+          <div class="tlcv-year">2008</div>
           <div class="tlcv-dot"></div>
           <div class="tlcv-content">
             <span class="tlcv-tag" style="background:#E53935;color:#fff;">🏗️ 里程碑</span>
@@ -245,10 +245,10 @@
           <div class="tlcv-content tlcv-content-gold">
             <span class="tlcv-tag" style="background:linear-gradient(135deg,#F9A825,#FF8F00);color:#333;">🌍 现今</span>
             <h4 data-en="Global Leader" data-cn="全球扩张深化">Global Leader</h4>
-            <p data-en="9 factories · 3000+ employees · $80M revenue" data-cn="全球9家工厂 · 3000余名员工 · 年营收8000万美元">9 factories · 3000+ employees · $80M revenue</p>
+            <p data-en="9 factories · 3500+ employees · $80M revenue" data-cn="全球9家工厂 · 3500余名员工 · 年营收8000万美元">9 factories · 3500+ employees · $80M revenue</p>
             <div class="tlcv-stats">
               <div><strong>9</strong><span>Factories</span></div>
-              <div><strong>3000+</strong><span>Employees</span></div>
+              <div><strong>3500+</strong><span>Employees</span></div>
               <div><strong>$80M</strong><span>Revenue</span></div>
             </div>
           </div>
@@ -270,12 +270,12 @@
         <div class="team-title" data-en="Manufacturing Base" data-cn="制造基地">Manufacturing Base</div>
         <p data-en="6 factories in China, 3 in Vietnam, 1 in Cambodia" data-cn="中国6家，越南3家，柬埔寨1家">6 factories in China, 3 in Vietnam, 1 in Cambodia</p>
       </div>
-      <div class="team-card">
-        <div class="team-avatar">👥</div>
-        <h3 data-en="3000+ Employees" data-cn="3000+员工">3000+ Employees</h3>
-        <div class="team-title" data-en="Workforce" data-cn="劳动力">Workforce</div>
-        <p data-en="Dedicated teams across all production facilities" data-cn="分布于所有生产设施的专业团队">Dedicated teams across all production facilities</p>
-      </div>
+        <div class="team-card">
+          <div class="team-avatar">👥</div>
+          <h3 data-en="3500+ Employees" data-cn="3500+员工">3500+ Employees</h3>
+          <div class="team-title" data-en="Workforce" data-cn="劳动力">Workforce</div>
+          <p data-en="Dedicated teams across all production facilities" data-cn="分布于所有生产设施的专业团队">Dedicated teams across all production facilities</p>
+        </div>
       <div class="team-card">
         <div class="team-avatar">💰</div>
         <h3 data-en="$80M Revenue" data-cn="8000万美元营收">$80M Revenue</h3>
@@ -376,6 +376,27 @@
     function closeNav() {
       document.getElementById('navLinks').classList.remove('active');
     }
+
+    /* Timeline: switch phase on click */
+    (function() {
+      const phases = document.querySelectorAll('.tl-phase');
+      const groups = document.querySelectorAll('.tl-phase-group');
+      function switchPhase(phaseNum) {
+        groups.forEach(g => g.classList.remove('active'));
+        const target = document.querySelector('.tl-phase-group[data-phase="' + phaseNum + '"]');
+        if (target) target.classList.add('active');
+        phases.forEach(p => p.classList.remove('active'));
+        const activePhase = document.querySelector('.tl-phase[data-phase="' + phaseNum + '"]');
+        if (activePhase) activePhase.classList.add('active');
+      }
+      phases.forEach(ph => {
+        ph.addEventListener('click', function() {
+          switchPhase(this.getAttribute('data-phase'));
+        });
+      });
+      /* activate phase 1 by default */
+      switchPhase('1');
+    })();
 
     (function() {
       const saved = localStorage.getItem('tgb-lang');
