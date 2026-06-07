@@ -72,7 +72,7 @@ img { max-width: 100%; display: block; }
 .lang-btn.active { background: var(--dark); color: #fff; }
 
 /* Mobile Menu */
-.nav-toggle { display: none; font-size: 1.5rem; cursor: pointer; padding: 0.5rem; }
+.nav-toggle { display: none; font-size: 1.5rem; cursor: pointer; padding: 0.5rem; transition: transform 0.2s; }
 .nav-close { display: none; }
 
 /* ===== Hero Slider ===== */
@@ -1168,12 +1168,12 @@ img { max-width: 100%; display: block; }
     padding: 4rem 2rem;
   }
   .nav-links.active { display: flex; }
-  .nav-links a { font-size: 1.25rem; padding: 1rem 2.5rem; width: 100%; text-align: center; }
-  .nav-toggle { display: block; z-index: 10000; }
+  .nav-links.active ~ .nav-toggle { display: none; }
+  .nav-toggle { display: block; position: fixed; top: 0.75rem; right: 1rem; z-index: 10000; font-size: 1.5rem; }
   .nav-lang { position: fixed; top: 0.75rem; right: 3.5rem; z-index: 10000; }
   .nav-close {
     display: none; position: absolute; top: 1rem; right: 1rem;
-    font-size: 2.5rem; cursor: pointer; z-index: 10001; padding: 0.5rem 1rem;
+    font-size: 2rem; cursor: pointer; z-index: 10001; padding: 0.5rem 1rem;
   }
   .nav-links.active .nav-close { display: block; }
   .slide-content h1 { font-size: 1.75rem; line-height: 1.3; }

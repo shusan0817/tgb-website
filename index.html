@@ -569,10 +569,18 @@
     }
 
     function toggleNav() {
-      document.getElementById('navLinks').classList.toggle('active');
+      const nav = document.getElementById('navLinks');
+      const btn = document.querySelector('.nav-toggle');
+      nav.classList.toggle('active');
+      if (nav.classList.contains('active')) {
+        btn.textContent = '✕';
+      } else {
+        btn.textContent = '☰';
+      }
     }
     function closeNav() {
       document.getElementById('navLinks').classList.remove('active');
+      document.querySelector('.nav-toggle').textContent = '☰';
     }
 
     // 页面加载时恢复语言设置
