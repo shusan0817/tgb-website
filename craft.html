@@ -912,29 +912,52 @@
     }
     .craft-card {
       background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(201,169,98,0.2);
+      border: 2px solid rgba(201,169,98,0.25);
       border-radius: 20px;
       padding: 2.5rem 2rem;
       position: relative;
-      transition: transform 0.3s, border-color 0.3s, background 0.3s;
+      transition: transform 0.3s, border-color 0.3s, background 0.3s, box-shadow 0.3s;
       overflow: hidden;
     }
+    /* Colored border frames for each craft card */
+    .craft-card:nth-child(1) { border-color: rgba(200,80,80,0.45); }
+    .craft-card:nth-child(1):hover { border-color: rgba(200,80,80,0.7); box-shadow: 0 8px 32px rgba(200,80,80,0.15); }
+    .craft-card:nth-child(1)::before { background: linear-gradient(90deg, transparent, #c85050, transparent); }
+    .craft-card:nth-child(2) { border-color: rgba(201,169,98,0.45); }
+    .craft-card:nth-child(2):hover { border-color: rgba(201,169,98,0.7); box-shadow: 0 8px 32px rgba(201,169,98,0.15); }
+    .craft-card:nth-child(2)::before { background: linear-gradient(90deg, transparent, #c9a962, transparent); }
+    .craft-card:nth-child(3) { border-color: rgba(46,139,87,0.45); }
+    .craft-card:nth-child(3):hover { border-color: rgba(46,139,87,0.7); box-shadow: 0 8px 32px rgba(46,139,87,0.15); }
+    .craft-card:nth-child(3)::before { background: linear-gradient(90deg, transparent, #2e8b57, transparent); }
+    .craft-card:nth-child(4) { border-color: rgba(65,105,180,0.45); }
+    .craft-card:nth-child(4):hover { border-color: rgba(65,105,180,0.7); box-shadow: 0 8px 32px rgba(65,105,180,0.15); }
+    .craft-card:nth-child(4)::before { background: linear-gradient(90deg, transparent, #4169b4, transparent); }
+    .craft-card:nth-child(5) { border-color: rgba(155,89,182,0.45); }
+    .craft-card:nth-child(5):hover { border-color: rgba(155,89,182,0.7); box-shadow: 0 8px 32px rgba(155,89,182,0.15); }
+    .craft-card:nth-child(5)::before { background: linear-gradient(90deg, transparent, #9b59b6, transparent); }
+    .craft-card:nth-child(6) { border-color: rgba(38,166,154,0.45); }
+    .craft-card:nth-child(6):hover { border-color: rgba(38,166,154,0.7); box-shadow: 0 8px 32px rgba(38,166,154,0.15); }
+    .craft-card:nth-child(6)::before { background: linear-gradient(90deg, transparent, #26a69a, transparent); }
+    /* Colored icon backgrounds to match borders */
+    .craft-card:nth-child(1) .craft-icon-wrap { background: rgba(200,80,80,0.18); border-color: rgba(200,80,80,0.35); }
+    .craft-card:nth-child(2) .craft-icon-wrap { background: rgba(201,169,98,0.18); border-color: rgba(201,169,98,0.35); }
+    .craft-card:nth-child(3) .craft-icon-wrap { background: rgba(46,139,87,0.18); border-color: rgba(46,139,87,0.35); }
+    .craft-card:nth-child(4) .craft-icon-wrap { background: rgba(65,105,180,0.18); border-color: rgba(65,105,180,0.35); }
+    .craft-card:nth-child(5) .craft-icon-wrap { background: rgba(155,89,182,0.18); border-color: rgba(155,89,182,0.35); }
+    .craft-card:nth-child(6) .craft-icon-wrap { background: rgba(38,166,154,0.18); border-color: rgba(38,166,154,0.35); }
     .craft-card::before {
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 3px;
-      background: linear-gradient(90deg, transparent, var(--primary), transparent);
       transform: scaleX(0);
       transition: transform 0.4s;
     }
-    .craft-card:hover { transform: translateY(-8px); border-color: rgba(201,169,98,0.5); background: rgba(255,255,255,0.07); }
+    .craft-card:hover { transform: translateY(-8px); background: rgba(255,255,255,0.07); }
     .craft-card:hover::before { transform: scaleX(1); }
     .craft-icon-wrap {
       width: 64px; height: 64px;
       border-radius: 16px;
-      background: rgba(201,169,98,0.15);
-      border: 1px solid rgba(201,169,98,0.3);
       display: flex; align-items: center; justify-content: center;
       font-size: 1.8rem;
       margin-bottom: 1.5rem;
@@ -946,12 +969,16 @@
       margin-top: 1rem;
       font-size: 0.75rem;
       font-weight: 600;
-      color: var(--primary);
       letter-spacing: 1px;
       padding: 0.25rem 0.75rem;
-      background: rgba(201,169,98,0.12);
       border-radius: 20px;
     }
+    .craft-card:nth-child(1) .craft-badge { color: #c85050; background: rgba(200,80,80,0.12); }
+    .craft-card:nth-child(2) .craft-badge { color: #c9a962; background: rgba(201,169,98,0.12); }
+    .craft-card:nth-child(3) .craft-badge { color: #2e8b57; background: rgba(46,139,87,0.12); }
+    .craft-card:nth-child(4) .craft-badge { color: #4169b4; background: rgba(65,105,180,0.12); }
+    .craft-card:nth-child(5) .craft-badge { color: #9b59b6; background: rgba(155,89,182,0.12); }
+    .craft-card:nth-child(6) .craft-badge { color: #26a69a; background: rgba(38,166,154,0.12); }
     /* Bottom cert strip */
     .craft-certs {
       margin-top: 3.5rem;
