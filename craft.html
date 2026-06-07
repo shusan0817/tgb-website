@@ -13,7 +13,7 @@
     body {
       font-family: 'Inter', sans-serif;
       color: #2c2c2c;
-      background: #faf8f5;
+      background: #ffffff;
       overflow-x: hidden;
       overflow-wrap: break-word;
     }
@@ -878,38 +878,34 @@
 
     /* ===== CRAFT FEATURES (家具特色特点区) ===== */
     .craft-section {
-      background: linear-gradient(160deg, #0f2520 0%, #1a3a2f 60%, #0f2520 100%);
+      background: #ffffff;
       padding: 6rem 5%;
       position: relative;
       overflow: hidden;
     }
     .craft-section::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        radial-gradient(circle at 10% 20%, rgba(201,169,98,0.08) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(201,169,98,0.06) 0%, transparent 40%);
+      display: none;
     }
-    .craft-section .section-label { color: rgba(201,169,98,0.8); }
-    .craft-section .section-title { color: #fff; }
+    .craft-section .section-label { color: rgba(201,169,98,0.85); }
+    .craft-section .section-title { color: #1a1a1a; }
     .craft-section .section-title span { color: var(--primary); }
     .craft-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
     .craft-header { text-align: center; margin-bottom: 4rem; }
-    .craft-header .section-desc { color: rgba(255,255,255,0.65); margin: 1rem auto 0; }
+    .craft-header .section-desc { color: #666; margin: 1rem auto 0; }
     .craft-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
     }
     .craft-card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(201,169,98,0.2);
+      background: #fff;
+      border: 1px solid #e8e8e8;
       border-radius: 20px;
       padding: 2.5rem 2rem;
       position: relative;
-      transition: transform 0.3s, border-color 0.3s, background 0.3s;
+      transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
       overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
     }
     .craft-card::before {
       content: '';
@@ -920,25 +916,25 @@
       transform: scaleX(0);
       transition: transform 0.4s;
     }
-    .craft-card:hover { transform: translateY(-8px); border-color: rgba(201,169,98,0.5); background: rgba(255,255,255,0.07); }
+    .craft-card:hover { transform: translateY(-8px); border-color: var(--primary); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
     .craft-card:hover::before { transform: scaleX(1); }
     .craft-icon-wrap {
       width: 64px; height: 64px;
       border-radius: 16px;
-      background: rgba(201,169,98,0.15);
-      border: 1px solid rgba(201,169,98,0.3);
+      background: linear-gradient(135deg, #f5f0e8, #ede4d0);
+      border: 1px solid rgba(201,169,98,0.25);
       display: flex; align-items: center; justify-content: center;
       font-size: 1.8rem;
       margin-bottom: 1.5rem;
     }
-    .craft-card h3 { font-size: 1.1rem; font-weight: 600; color: #fff; margin-bottom: 0.8rem; }
-    .craft-card p { font-size: 0.88rem; color: rgba(255,255,255,0.6); line-height: 1.75; }
+    .craft-card h3 { font-size: 1.1rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.8rem; }
+    .craft-card p { font-size: 0.88rem; color: #666; line-height: 1.75; }
     .craft-badge {
       display: inline-block;
       margin-top: 1rem;
       font-size: 0.75rem;
       font-weight: 600;
-      color: var(--primary);
+      color: var(--primary-dark);
       letter-spacing: 1px;
       padding: 0.25rem 0.75rem;
       background: rgba(201,169,98,0.12);
@@ -953,14 +949,14 @@
       gap: 2.5rem;
       flex-wrap: wrap;
       padding: 2rem;
-      background: rgba(255,255,255,0.04);
+      background: #f9f7f3;
       border-radius: 16px;
-      border: 1px solid rgba(201,169,98,0.15);
+      border: 1px solid #eee;
     }
     .cert-item { text-align: center; }
     .cert-icon { font-size: 2rem; margin-bottom: 0.4rem; }
     .cert-name { font-size: 0.8rem; font-weight: 700; color: var(--primary); letter-spacing: 1.5px; }
-    .cert-sub { font-size: 0.72rem; color: rgba(255,255,255,0.4); margin-top: 2px; }
+    .cert-sub { font-size: 0.72rem; color: #999; margin-top: 2px; }
 
     /* ===== MEMBERSHIP SECTION (会员体系) ===== */
     .membership {
