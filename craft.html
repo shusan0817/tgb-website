@@ -1867,6 +1867,24 @@
   <!-- Scroll to top -->
   <div class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</div>
 
+  <!-- IntersectionObserver: fade-in scroll animation -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+      document.querySelectorAll('.fade-in').forEach(function(el) {
+        obs.observe(el);
+      });
+    });
+  </script>
+
   <script>
     // Navbar scroll effect
     window.addEventListener('scroll', () => {
@@ -2968,4 +2986,4 @@
 
 </body>
 </html>
-<!-- v1780802267 -->
+<!-- v1780803120 -->
